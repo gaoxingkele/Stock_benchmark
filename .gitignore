@@ -13,6 +13,7 @@ __pycache__/
 # Virtual environments
 env/
 .venv/
+.venv-*/
 venv/
 
 # Local/generated data. Regenerate with scripts and documented commands.
@@ -24,6 +25,7 @@ papers/extracted/*.txt
 
 # External cloned repositories
 external_repos/
+.tools/
 
 # OS/editor noise
 .DS_Store
