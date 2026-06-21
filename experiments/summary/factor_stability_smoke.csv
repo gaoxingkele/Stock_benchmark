@@ -1,0 +1,7 @@
+group,metric,factor,value,n,dates,extra
+raw,best_abs_rankic_h1,pe,-0.29081431,1716,6,rankicir=-2.36692384
+neutralized,best_abs_rankic_h1,pe_ind_size_neu,0.11556740,1716,6,rankicir=1.47941389
+raw,best_abs_rankic_h5,pe,-0.50912748,572,2,rankicir=-9.80241329
+neutralized,best_abs_rankic_h5,pe_ind_size_neu,0.21418563,572,2,rankicir=28.77411561
+raw,lowest_top20_turnover,size_log_circ_mv,0.00833333,60.00,7,turnover_obs=6
+neutralized,lowest_top20_turnover,pb_ind_size_neu,0.00555556,60.00,7,turnover_obs=6

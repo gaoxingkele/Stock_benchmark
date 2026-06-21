@@ -1,0 +1,25 @@
+paper_id,title,year,venue_bucket,task_bucket,code_url,inclusion_source,status
+2021_tra_lin,Learning Multiple Stock Trading Patterns with Temporal Routing Adaptor and Optimal Transport,2021,KDD 2021,stock_trend_ranking,https://github.com/microsoft/qlib/tree/main/examples/benchmarks/TRA,local_registry,active
+2023_doubleadapt_zhao,DoubleAdapt: A Meta-learning Approach to Incremental Learning for Stock Trend Forecasting,2023,KDD 2023,stock_trend_incremental,https://github.com/SJTU-DMTai/qlib,local_registry,active
+2024_master_li,MASTER: Market-Guided Stock Transformer for Stock Price Forecasting,2024,AAAI 2024,stock_trend_ranking,https://github.com/SJTU-DMTai/qlib,local_registry,active
+2022_hist_xu,HIST: A Graph-based Framework for Stock Trend Forecasting via Mining Concept-Oriented Shared Information,2022,venue_unverified,stock_trend_graph,https://github.com/microsoft/qlib,local_registry,active
+2022_thgnn_xiang,Temporal and Heterogeneous Graph Neural Network for Financial Time Series Prediction,2022,CIKM 2022,stock_trend_graph,,local_registry,active
+2023_estimate_huynh,Efficient Integration of Multi-Order Dynamics and Internal Dynamics in Stock Movement Prediction,2023,WSDM 2023,stock_movement_hypergraph,https://github.com/thanhtrunghuynh93/estimate,local_registry,active
+2024_alphaforge_shi,AlphaForge: A Framework to Mine and Dynamically Combine Formulaic Alpha Factors,2024,preprint,alpha_factor_mining,,local_registry,active
+2026_alphaprobe_guo,AlphaPROBE: Alpha Mining via Principled Retrieval and On-graph biased evolution,2026,preprint,alpha_factor_mining,https://github.com/gta0804/AlphaPROBE,local_registry,active
+2021_adarnn_du,AdaRNN: Adaptive Learning and Forecasting of Time Series,2021,venue_unverified,time_series_adaptation,https://github.com/microsoft/qlib/tree/main/examples/benchmarks/ADARNN,local_registry,active
+2022_ddg_da_li,DDG-DA: Data Distribution Generation for Predictable Concept Drift Adaptation,2022,venue_unverified,stock_trend_concept_drift,https://github.com/microsoft/qlib,local_registry,active
+2021_tcts_wu,Temporally Correlated Task Scheduling for Sequence Learning,2021,ICML 2021,time_series_alpha,https://github.com/microsoft/qlib/tree/main/examples/benchmarks/TCTS,local_registry,active
+2025_rd_agent_quant_li,R&D-Agent-Quant: A Multi-Agent Framework for Data-Centric Factors and Model Joint Optimization,2025,preprint,alpha_factor_mining_agent,https://github.com/microsoft/RD-Agent,local_registry,active
+2022_factorvae_duan,FactorVAE: A Probabilistic Dynamic Factor Model Based on Variational Autoencoder for Predicting Cross-Sectional Stock Returns,2022,AAAI 2022,cross_sectional_return_factor,,web_literature_scan,active
+2021_hatr_wang,Hierarchical Adaptive Temporal-Relational Modeling for Stock Trend Prediction,2021,IJCAI 2021,stock_trend_temporal_relational,,web_literature_scan,active
+2022_alsp_tf_wang,Adaptive Long-Short Pattern Transformer for Stock Investment Selection,2022,IJCAI 2022,stock_investment_selection,,web_literature_scan,active
+2024_ci_sthpan_xia,CI-STHPAN: Pre-trained Attention Network for Stock Selection with Channel-Independent Spatio-Temporal Hypergraph,2024,AAAI 2024,stock_selection_hypergraph,,web_literature_scan,active
+2024_mdgnn_li,MDGNN: Multi-Relational Dynamic Graph Neural Network for Comprehensive and Dynamic Stock Investment Prediction,2024,AAAI 2024,stock_investment_graph,,web_literature_scan,active
+2021_deeptrader_wang,DeepTrader: A Deep Reinforcement Learning Approach for Risk-Return Balanced Portfolio Management with Market Conditions Embedding,2021,AAAI 2021,portfolio_reinforcement_learning,,web_literature_scan,active
+2019_alphastock_wang,AlphaStock: A Buying-Winners-and-Selling-Losers Investment Strategy using Interpretable Deep Reinforcement Attention Networks,2019,KDD 2019,portfolio_reinforcement_learning,,web_literature_scan,active
+2020_doubleensemble_zhang,DoubleEnsemble: A New Ensemble Method Based on Sample Reweighting and Feature Selection for Financial Data Analysis,2020,ICDM 2020,financial_model_ensemble,https://github.com/microsoft/qlib,web_literature_scan,active
+2024_diffsformer_gao,DiffsFormer: A Diffusion Transformer on Stock Factor Augmentation,2024,preprint,stock_factor_augmentation,,web_literature_scan,active
+2025_finmamba_hu,FinMamba: Market-Aware Graph Enhanced Multi-Level Mamba for Stock Movement Prediction,2025,preprint,stock_movement_mamba,,web_literature_scan,active
+2024_lsr_igru_zhu,LSR-IGRU: Stock Trend Prediction Based on Long Short-Term Relationships and Improved GRU,2024,CIKM 2024,stock_trend_gru,,web_literature_scan,active
+2025_timefilter_hu,TimeFilter: Patch-Specific Spatial-Temporal Graph Filtration for Time Series Forecasting,2025,ICML 2025,time_series_graph_filter,,web_literature_scan,active

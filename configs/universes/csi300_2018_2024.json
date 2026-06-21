@@ -1,0 +1,14 @@
+{
+  "name": "csi300",
+  "market": "cn_a_share",
+  "index_code": "000300.SH",
+  "selection": "index_weight_members_between_start_end",
+  "dataset_config": "Stock_benchmark/configs/datasets/csi300_2018_2024_tushare.json",
+  "instrument_file": "Stock_benchmark/data/processed/cn_a_share/csi300_2018_2024/instruments/csi300.txt",
+  "calendar_file": "Stock_benchmark/data/processed/cn_a_share/csi300_2018_2024/calendars/day.txt",
+  "expected_min_symbol_count": 300,
+  "window": [
+    "2018-01-02",
+    "2024-12-31"
+  ]
+}

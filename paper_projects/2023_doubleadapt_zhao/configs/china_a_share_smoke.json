@@ -1,0 +1,30 @@
+{
+  "paper_id": "2023_doubleadapt_zhao",
+  "model": "DoubleAdapt",
+  "task": "trend_prediction_dynamic_adaptation",
+  "market": "cn_a_share",
+  "universe_config": "Stock_benchmark/configs/universes/csi300_smoke.json",
+  "split_config": "Stock_benchmark/configs/splits/csi300_by_date_smoke.json",
+  "data": {
+    "panel": "Stock_benchmark/data/processed/cn_a_share/csi300_by_date_smoke/panel.csv",
+    "qlib_provider_uri": "Stock_benchmark/data/processed/cn_a_share/csi300_by_date_smoke/qlib_bin_numeric",
+    "labels": {
+      "h1": "Stock_benchmark/data/processed/cn_a_share/csi300_by_date_smoke/labels_h1.csv",
+      "h5": "Stock_benchmark/data/processed/cn_a_share/csi300_by_date_smoke/labels_h5.csv"
+    }
+  },
+  "upstream": {
+    "repo": "Stock_benchmark/external_repos/SJTU-DMTai__qlib",
+    "workflow_dir": "examples/benchmarks_dynamic/incremental",
+    "meta_module_dir": "qlib/contrib/meta/incremental"
+  },
+  "first_target": {
+    "base_model": "GRU",
+    "adaptation_mode": "incremental rolling smoke after static baseline",
+    "formal_split": "monthly train/update/test windows after long-history data is available"
+  },
+  "blocked_by": [
+    "Full fork-compatible pyqlib runtime is unavailable.",
+    "DoubleAdapt requires long rolling windows; the current smoke sample is too short for a meaningful adaptation run."
+  ]
+}

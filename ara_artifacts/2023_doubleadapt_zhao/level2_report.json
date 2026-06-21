@@ -1,0 +1,91 @@
+{
+  "artifact": "2023_doubleadapt_zhao",
+  "artifact_dir": "C:\\aicoding\\Stock_benchmark\\ara_artifacts\\2023_doubleadapt_zhao",
+  "review_version": "local-preliminary-1.0",
+  "prerequisite": "Level 1 structural validation pending external script",
+  "overall": {
+    "grade": "Weak Accept",
+    "mean_score": 3.2,
+    "one_line_summary": "ARA is structurally grounded with source-backed local run evidence.",
+    "strengths_summary": [
+      "Local PDF and registry evidence are explicit",
+      "Missing verification evidence is not hidden"
+    ],
+    "weaknesses_summary": []
+  },
+  "dimensions": {
+    "D1_evidence_relevance": {
+      "score": 4,
+      "strengths": [
+        "Claims are linked to local source evidence"
+      ],
+      "weaknesses": [],
+      "suggestions": []
+    },
+    "D2_falsifiability": {
+      "score": 3,
+      "strengths": [
+        "Claims include falsification criteria"
+      ],
+      "weaknesses": [
+        "Criteria are local-project oriented"
+      ],
+      "suggestions": [
+        "Add official reproduction parity criteria"
+      ]
+    },
+    "D3_scope_calibration": {
+      "score": 4,
+      "strengths": [
+        "Official reproduction parity is not over-claimed"
+      ],
+      "weaknesses": [],
+      "suggestions": []
+    },
+    "D4_argument_coherence": {
+      "score": 3,
+      "strengths": [
+        "Problem, claims, experiments, and evidence share IDs"
+      ],
+      "weaknesses": [
+        "Text-only evidence extraction is shallow"
+      ],
+      "suggestions": [
+        "Add visual figure extraction"
+      ]
+    },
+    "D5_exploration_integrity": {
+      "score": 3,
+      "strengths": [
+        "Missing runs are represented as explicit dead ends"
+      ],
+      "weaknesses": [
+        "Historical exploration is reconstructed from available files"
+      ],
+      "suggestions": [
+        "Append live trace during future work"
+      ]
+    },
+    "D6_methodological_rigor": {
+      "score": 3,
+      "strengths": [
+        "Local metrics are recorded"
+      ],
+      "weaknesses": [],
+      "suggestions": []
+    }
+  },
+  "findings": [],
+  "questions_for_authors": [],
+  "read_order": [
+    "PAPER.md",
+    "logic/claims.md",
+    "logic/experiments.md",
+    "logic/problem.md",
+    "logic/concepts.md",
+    "logic/solution",
+    "logic/related_work.md",
+    "trace/exploration_tree.yaml",
+    "evidence/README.md"
+  ]
+}

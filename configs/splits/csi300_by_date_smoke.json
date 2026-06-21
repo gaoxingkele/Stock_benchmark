@@ -1,0 +1,15 @@
+{
+  "id": "csi300_by_date_smoke_split",
+  "calendar": "Stock_benchmark/data/processed/cn_a_share/csi300_by_date_smoke/calendars/day.txt",
+  "splits": {
+    "train": [
+      "2024-01-02",
+      "2024-01-05"
+    ],
+    "test": [
+      "2024-01-08",
+      "2024-01-10"
+    ]
+  },
+  "notes": "Smoke split only. Formal benchmark splits must use long history and include train/valid/test."
+}

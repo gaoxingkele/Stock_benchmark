@@ -1,0 +1,41 @@
+{
+  "market": "cn_a_share",
+  "universe": {
+    "name": "csi300",
+    "index_code": "000300.SH",
+    "first_sample_stock": "600519.SH"
+  },
+  "calendar": {
+    "exchange": "SSE",
+    "frequency": "day"
+  },
+  "sample_window": {
+    "start_date": "20240102",
+    "end_date": "20240105"
+  },
+  "full_benchmark_window": {
+    "train": ["2010-01-01", "2018-12-31"],
+    "valid": ["2019-01-01", "2020-12-31"],
+    "test": ["2021-01-01", "latest_complete_year"]
+  },
+  "tushare_tables": [
+    "trade_cal",
+    "stock_basic",
+    "index_weight",
+    "daily",
+    "adj_factor",
+    "daily_basic",
+    "index_daily"
+  ],
+  "first_metrics": [
+    "IC",
+    "ICIR",
+    "RankIC",
+    "RankICIR",
+    "annualized_return",
+    "information_ratio",
+    "max_drawdown",
+    "turnover"
+  ]
+}
+

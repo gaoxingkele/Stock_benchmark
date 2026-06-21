@@ -1,0 +1,51 @@
+{
+  "id": "csi300_2018_2024_tushare",
+  "market": "cn_a_share",
+  "provider": "tushare",
+  "universe": "csi300",
+  "index_code": "000300.SH",
+  "frequency": "day",
+  "start_date": "20180102",
+  "end_date": "20241231",
+  "raw_dir": "Stock_benchmark/data/raw/tushare/csi300_2018_2024",
+  "processed_dir": "Stock_benchmark/data/processed/cn_a_share/csi300_2018_2024",
+  "qlib_dir": "Stock_benchmark/data/processed/cn_a_share/csi300_2018_2024/qlib_bin_numeric",
+  "download_command": [
+    "python",
+    "Stock_benchmark/scripts/download_csi300_by_date_fragments.py",
+    "--start-date",
+    "20180102",
+    "--end-date",
+    "20241231",
+    "--sleep",
+    "0.35",
+    "--out-dir",
+    "Stock_benchmark/data/raw/tushare/csi300_2018_2024"
+  ],
+  "validate_raw_command": [
+    "python",
+    "Stock_benchmark/scripts/validate_tushare_raw_dataset.py",
+    "--raw-dir",
+    "Stock_benchmark/data/raw/tushare/csi300_2018_2024"
+  ],
+  "build_panel_command": [
+    "python",
+    "Stock_benchmark/scripts/build_cn_panel.py",
+    "--raw-dir",
+    "Stock_benchmark/data/raw/tushare/csi300_2018_2024",
+    "--out-dir",
+    "Stock_benchmark/data/processed/cn_a_share/csi300_2018_2024",
+    "--adjust",
+    "forward",
+    "--universe-only"
+  ],
+  "labels": {
+    "h1": "Stock_benchmark/data/processed/cn_a_share/csi300_2018_2024/labels_h1.csv",
+    "h5": "Stock_benchmark/data/processed/cn_a_share/csi300_2018_2024/labels_h5.csv"
+  },
+  "features": {
+    "alpha158_compatible": "Stock_benchmark/data/features/alpha158/csi300_2018_2024.csv",
+    "alpha360_compatible": "Stock_benchmark/data/features/alpha360/csi300_2018_2024.csv"
+  },
+  "notes": "Formal first long-history dataset profile. Per-date fragments are cached under _fragments for resumable long-window downloads."
+}

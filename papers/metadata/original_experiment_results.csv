@@ -1,0 +1,299 @@
+paper_id,source_table,dataset,model,method,horizon,metric,value,stderr_or_pm,rank_scope,source_text,extraction_status
+2024_master_li,Table 1,CSI300,MASTER,proposed,H5,IC,0.064,0.006,overall,papers/extracted/2024_master_li.txt:601,verified_from_extracted_text
+2024_master_li,Table 1,CSI300,MASTER,proposed,H5,ICIR,0.42,0.04,overall,papers/extracted/2024_master_li.txt:601,verified_from_extracted_text
+2024_master_li,Table 1,CSI300,MASTER,proposed,H5,RankIC,0.076,0.005,overall,papers/extracted/2024_master_li.txt:601,verified_from_extracted_text
+2024_master_li,Table 1,CSI300,MASTER,proposed,H5,RankICIR,0.49,0.04,overall,papers/extracted/2024_master_li.txt:601,verified_from_extracted_text
+2024_master_li,Table 1,CSI300,MASTER,proposed,H5,AR,0.27,0.05,top30,papers/extracted/2024_master_li.txt:601,verified_from_extracted_text
+2024_master_li,Table 1,CSI300,MASTER,proposed,H5,IR,2.4,0.4,top30,papers/extracted/2024_master_li.txt:601,verified_from_extracted_text
+2024_master_li,Table 1,CSI800,MASTER,proposed,H5,IC,0.052,0.006,overall,papers/extracted/2024_master_li.txt:610,verified_from_extracted_text
+2024_master_li,Table 1,CSI800,MASTER,proposed,H5,ICIR,0.40,0.06,overall,papers/extracted/2024_master_li.txt:610,verified_from_extracted_text
+2024_master_li,Table 1,CSI800,MASTER,proposed,H5,RankIC,0.066,0.007,overall,papers/extracted/2024_master_li.txt:610,verified_from_extracted_text
+2024_master_li,Table 1,CSI800,MASTER,proposed,H5,RankICIR,0.48,0.06,overall,papers/extracted/2024_master_li.txt:610,verified_from_extracted_text
+2024_master_li,Table 1,CSI800,MASTER,proposed,H5,AR,0.28,0.02,top30,papers/extracted/2024_master_li.txt:610,verified_from_extracted_text
+2024_master_li,Table 1,CSI800,MASTER,proposed,H5,IR,2.3,0.3,top30,papers/extracted/2024_master_li.txt:610,verified_from_extracted_text
+2023_doubleadapt_zhao,Table 1,CSI300,Transformer,DoubleAdapt,not_specified,IC,0.0516,,overall,papers/extracted/2023_doubleadapt_zhao.txt:978,verified_from_extracted_text
+2023_doubleadapt_zhao,Table 1,CSI300,Transformer,DoubleAdapt,not_specified,ICIR,0.3889,,overall,papers/extracted/2023_doubleadapt_zhao.txt:978,verified_from_extracted_text
+2023_doubleadapt_zhao,Table 1,CSI300,Transformer,DoubleAdapt,not_specified,RankIC,0.0475,,overall,papers/extracted/2023_doubleadapt_zhao.txt:978,verified_from_extracted_text
+2023_doubleadapt_zhao,Table 1,CSI300,Transformer,DoubleAdapt,not_specified,RankICIR,0.3585,,overall,papers/extracted/2023_doubleadapt_zhao.txt:978,verified_from_extracted_text
+2023_doubleadapt_zhao,Table 1,CSI300,Transformer,DoubleAdapt,not_specified,Return,0.1041,,portfolio,papers/extracted/2023_doubleadapt_zhao.txt:978,verified_from_extracted_text
+2023_doubleadapt_zhao,Table 1,CSI300,Transformer,DoubleAdapt,not_specified,IR,1.1035,,portfolio,papers/extracted/2023_doubleadapt_zhao.txt:978,verified_from_extracted_text
+2023_doubleadapt_zhao,Table 1,CSI300,LSTM,DoubleAdapt,not_specified,IC,0.0632,,overall,papers/extracted/2023_doubleadapt_zhao.txt:985,verified_from_extracted_text
+2023_doubleadapt_zhao,Table 1,CSI300,LSTM,DoubleAdapt,not_specified,ICIR,0.5126,,overall,papers/extracted/2023_doubleadapt_zhao.txt:985,verified_from_extracted_text
+2023_doubleadapt_zhao,Table 1,CSI300,LSTM,DoubleAdapt,not_specified,RankIC,0.0567,,overall,papers/extracted/2023_doubleadapt_zhao.txt:985,verified_from_extracted_text
+2023_doubleadapt_zhao,Table 1,CSI300,LSTM,DoubleAdapt,not_specified,RankICIR,0.4669,,overall,papers/extracted/2023_doubleadapt_zhao.txt:985,verified_from_extracted_text
+2023_doubleadapt_zhao,Table 1,CSI300,LSTM,DoubleAdapt,not_specified,Return,0.1117,,portfolio,papers/extracted/2023_doubleadapt_zhao.txt:985,verified_from_extracted_text
+2023_doubleadapt_zhao,Table 1,CSI300,LSTM,DoubleAdapt,not_specified,IR,1.3029,,portfolio,papers/extracted/2023_doubleadapt_zhao.txt:985,verified_from_extracted_text
+2023_doubleadapt_zhao,Table 1,CSI300,ALSTM,DoubleAdapt,not_specified,IC,0.0679,,overall,papers/extracted/2023_doubleadapt_zhao.txt:992,verified_from_extracted_text
+2023_doubleadapt_zhao,Table 1,CSI300,ALSTM,DoubleAdapt,not_specified,ICIR,0.5480,,overall,papers/extracted/2023_doubleadapt_zhao.txt:992,verified_from_extracted_text
+2023_doubleadapt_zhao,Table 1,CSI300,ALSTM,DoubleAdapt,not_specified,RankIC,0.0594,,overall,papers/extracted/2023_doubleadapt_zhao.txt:992,verified_from_extracted_text
+2023_doubleadapt_zhao,Table 1,CSI300,ALSTM,DoubleAdapt,not_specified,RankICIR,0.4882,,overall,papers/extracted/2023_doubleadapt_zhao.txt:992,verified_from_extracted_text
+2023_doubleadapt_zhao,Table 1,CSI300,ALSTM,DoubleAdapt,not_specified,Return,0.1225,,portfolio,papers/extracted/2023_doubleadapt_zhao.txt:992,verified_from_extracted_text
+2023_doubleadapt_zhao,Table 1,CSI300,ALSTM,DoubleAdapt,not_specified,IR,1.4717,,portfolio,papers/extracted/2023_doubleadapt_zhao.txt:992,verified_from_extracted_text
+2023_doubleadapt_zhao,Table 1,CSI300,GRU,DoubleAdapt,not_specified,IC,0.0687,,overall,papers/extracted/2023_doubleadapt_zhao.txt:999,verified_from_extracted_text
+2023_doubleadapt_zhao,Table 1,CSI300,GRU,DoubleAdapt,not_specified,ICIR,0.5497,,overall,papers/extracted/2023_doubleadapt_zhao.txt:999,verified_from_extracted_text
+2023_doubleadapt_zhao,Table 1,CSI300,GRU,DoubleAdapt,not_specified,RankIC,0.0621,,overall,papers/extracted/2023_doubleadapt_zhao.txt:999,verified_from_extracted_text
+2023_doubleadapt_zhao,Table 1,CSI300,GRU,DoubleAdapt,not_specified,RankICIR,0.5110,,overall,papers/extracted/2023_doubleadapt_zhao.txt:999,verified_from_extracted_text
+2023_doubleadapt_zhao,Table 1,CSI300,GRU,DoubleAdapt,not_specified,Return,0.1296,,portfolio,papers/extracted/2023_doubleadapt_zhao.txt:999,verified_from_extracted_text
+2023_doubleadapt_zhao,Table 1,CSI300,GRU,DoubleAdapt,not_specified,IR,1.5123,,portfolio,papers/extracted/2023_doubleadapt_zhao.txt:999,verified_from_extracted_text
+2021_tra_lin,Table 1,CSI800,ALSTM+TRA,Ours,1M,MSE,0.157,0.000,ranking,papers/extracted/2021_tra_lin.txt:table1_page8,verified_from_extracted_text
+2021_tra_lin,Table 1,CSI800,ALSTM+TRA,Ours,1M,MAE,0.318,0.000,ranking,papers/extracted/2021_tra_lin.txt:table1_page8,verified_from_extracted_text
+2021_tra_lin,Table 1,CSI800,ALSTM+TRA,Ours,1M,IC,0.059,,ranking,papers/extracted/2021_tra_lin.txt:table1_page8,verified_from_extracted_text
+2021_tra_lin,Table 1,CSI800,ALSTM+TRA,Ours,1M,ICIR,0.460,,ranking,papers/extracted/2021_tra_lin.txt:table1_page8,verified_from_extracted_text
+2021_tra_lin,Table 1,CSI800,ALSTM+TRA,Ours,1M,AR_percent,12.4,,long_short,papers/extracted/2021_tra_lin.txt:table1_page8,verified_from_extracted_text
+2021_tra_lin,Table 1,CSI800,ALSTM+TRA,Ours,1M,AV_percent,14.0,,long_short,papers/extracted/2021_tra_lin.txt:table1_page8,verified_from_extracted_text
+2021_tra_lin,Table 1,CSI800,ALSTM+TRA,Ours,1M,SR,0.885,,long_short,papers/extracted/2021_tra_lin.txt:table1_page8,verified_from_extracted_text
+2021_tra_lin,Table 1,CSI800,ALSTM+TRA,Ours,1M,MDD_percent,20.4,,long_short,papers/extracted/2021_tra_lin.txt:table1_page8,verified_from_extracted_text
+2021_tra_lin,Table 1,CSI800,Trans.+TRA,Ours,1M,MSE,0.157,0.000,ranking,papers/extracted/2021_tra_lin.txt:table1_page8,verified_from_extracted_text
+2021_tra_lin,Table 1,CSI800,Trans.+TRA,Ours,1M,MAE,0.320,0.000,ranking,papers/extracted/2021_tra_lin.txt:table1_page8,verified_from_extracted_text
+2021_tra_lin,Table 1,CSI800,Trans.+TRA,Ours,1M,IC,0.056,,ranking,papers/extracted/2021_tra_lin.txt:table1_page8,verified_from_extracted_text
+2021_tra_lin,Table 1,CSI800,Trans.+TRA,Ours,1M,ICIR,0.442,,ranking,papers/extracted/2021_tra_lin.txt:table1_page8,verified_from_extracted_text
+2021_tra_lin,Table 1,CSI800,Trans.+TRA,Ours,1M,AR_percent,16.1,,long_short,papers/extracted/2021_tra_lin.txt:table1_page8,verified_from_extracted_text
+2021_tra_lin,Table 1,CSI800,Trans.+TRA,Ours,1M,AV_percent,14.2,,long_short,papers/extracted/2021_tra_lin.txt:table1_page8,verified_from_extracted_text
+2021_tra_lin,Table 1,CSI800,Trans.+TRA,Ours,1M,SR,1.133,,long_short,papers/extracted/2021_tra_lin.txt:table1_page8,verified_from_extracted_text
+2021_tra_lin,Table 1,CSI800,Trans.+TRA,Ours,1M,MDD_percent,23.1,,long_short,papers/extracted/2021_tra_lin.txt:table1_page8,verified_from_extracted_text
+2022_hist_xu,Table 1,CSI100,HIST,proposed,not_specified,IC,0.120,0.0017,overall,papers/extracted/2022_hist_xu.txt:table1_page7,verified_from_extracted_text
+2022_hist_xu,Table 1,CSI100,HIST,proposed,not_specified,RankIC,0.115,0.0016,overall,papers/extracted/2022_hist_xu.txt:table1_page7,verified_from_extracted_text
+2022_hist_xu,Table 1,CSI100,HIST,proposed,not_specified,Precision@3_percent,61.87,0.47,topN,papers/extracted/2022_hist_xu.txt:table1_page7,verified_from_extracted_text
+2022_hist_xu,Table 1,CSI100,HIST,proposed,not_specified,Precision@5_percent,60.82,0.43,topN,papers/extracted/2022_hist_xu.txt:table1_page7,verified_from_extracted_text
+2022_hist_xu,Table 1,CSI100,HIST,proposed,not_specified,Precision@10_percent,59.38,0.24,topN,papers/extracted/2022_hist_xu.txt:table1_page7,verified_from_extracted_text
+2022_hist_xu,Table 1,CSI100,HIST,proposed,not_specified,Precision@30_percent,56.04,0.19,topN,papers/extracted/2022_hist_xu.txt:table1_page7,verified_from_extracted_text
+2022_hist_xu,Table 1,CSI300,HIST,proposed,not_specified,IC,0.131,0.0022,overall,papers/extracted/2022_hist_xu.txt:table1_page7,verified_from_extracted_text
+2022_hist_xu,Table 1,CSI300,HIST,proposed,not_specified,RankIC,0.126,0.0022,overall,papers/extracted/2022_hist_xu.txt:table1_page7,verified_from_extracted_text
+2022_hist_xu,Table 1,CSI300,HIST,proposed,not_specified,Precision@3_percent,61.60,0.59,topN,papers/extracted/2022_hist_xu.txt:table1_page7,verified_from_extracted_text
+2022_hist_xu,Table 1,CSI300,HIST,proposed,not_specified,Precision@5_percent,61.08,0.56,topN,papers/extracted/2022_hist_xu.txt:table1_page7,verified_from_extracted_text
+2022_hist_xu,Table 1,CSI300,HIST,proposed,not_specified,Precision@10_percent,60.51,0.40,topN,papers/extracted/2022_hist_xu.txt:table1_page7,verified_from_extracted_text
+2022_hist_xu,Table 1,CSI300,HIST,proposed,not_specified,Precision@30_percent,58.79,0.31,topN,papers/extracted/2022_hist_xu.txt:table1_page7,verified_from_extracted_text
+2021_adarnn_du,Table 4,private_stock_price,AdaRNN,proposed,not_specified,IC,0.115,,overall,papers/extracted/2021_adarnn_du.txt:1323,verified_from_extracted_text
+2021_adarnn_du,Table 4,private_stock_price,AdaRNN,proposed,not_specified,ICIR,1.071,,overall,papers/extracted/2021_adarnn_du.txt:1323,verified_from_extracted_text
+2021_adarnn_du,Table 4,private_stock_price,AdaRNN,proposed,not_specified,RankIC,0.110,,overall,papers/extracted/2021_adarnn_du.txt:1323,verified_from_extracted_text
+2021_adarnn_du,Table 4,private_stock_price,AdaRNN,proposed,not_specified,RankICIR,1.035,,overall,papers/extracted/2021_adarnn_du.txt:1323,verified_from_extracted_text
+2021_adarnn_du,Table 4,private_stock_price,AdaRNN,proposed,not_specified,RawIC,0.116,,overall,papers/extracted/2021_adarnn_du.txt:1323,verified_from_extracted_text
+2021_adarnn_du,Table 4,private_stock_price,AdaRNN,proposed,not_specified,RawICIR,1.077,,overall,papers/extracted/2021_adarnn_du.txt:1323,verified_from_extracted_text
+2021_tcts_wu,Table 3,CSI300,Ours,T3,Task1,RankIC,0.071,,ranking,papers/extracted/2021_tcts_wu.txt:733,verified_from_extracted_text
+2021_tcts_wu,Table 3,CSI300,Ours,T3,Task1,MSE,1.851,,ranking,papers/extracted/2021_tcts_wu.txt:733,verified_from_extracted_text
+2021_tcts_wu,Table 3,CSI300,Ours,T3,Task2,RankIC,0.030,,ranking,papers/extracted/2021_tcts_wu.txt:733,verified_from_extracted_text
+2021_tcts_wu,Table 3,CSI300,Ours,T3,Task2,MSE,1.939,,ranking,papers/extracted/2021_tcts_wu.txt:733,verified_from_extracted_text
+2021_tcts_wu,Table 3,CSI300,Ours,T3,Task3,RankIC,0.017,,ranking,papers/extracted/2021_tcts_wu.txt:733,verified_from_extracted_text
+2021_tcts_wu,Table 3,CSI300,Ours,T3,Task3,MSE,1.963,,ranking,papers/extracted/2021_tcts_wu.txt:733,verified_from_extracted_text
+2021_tcts_wu,Table 3,CSI300,Ours,T5,Task1,RankIC,0.075,,ranking,papers/extracted/2021_tcts_wu.txt:734,verified_from_extracted_text
+2021_tcts_wu,Table 3,CSI300,Ours,T5,Task1,MSE,1.849,,ranking,papers/extracted/2021_tcts_wu.txt:734,verified_from_extracted_text
+2021_tcts_wu,Table 3,CSI300,Ours,T5,Task2,RankIC,0.032,,ranking,papers/extracted/2021_tcts_wu.txt:734,verified_from_extracted_text
+2021_tcts_wu,Table 3,CSI300,Ours,T5,Task2,MSE,1.939,,ranking,papers/extracted/2021_tcts_wu.txt:734,verified_from_extracted_text
+2021_tcts_wu,Table 3,CSI300,Ours,T5,Task3,RankIC,0.021,,ranking,papers/extracted/2021_tcts_wu.txt:734,verified_from_extracted_text
+2021_tcts_wu,Table 3,CSI300,Ours,T5,Task3,MSE,1.955,,ranking,papers/extracted/2021_tcts_wu.txt:734,verified_from_extracted_text
+2021_tcts_wu,Table 3,CSI300,Ours,T10,Task1,RankIC,0.067,,ranking,papers/extracted/2021_tcts_wu.txt:737,verified_from_extracted_text
+2021_tcts_wu,Table 3,CSI300,Ours,T10,Task1,MSE,1.867,,ranking,papers/extracted/2021_tcts_wu.txt:737,verified_from_extracted_text
+2021_tcts_wu,Table 3,CSI300,Ours,T10,Task2,RankIC,0.030,,ranking,papers/extracted/2021_tcts_wu.txt:737,verified_from_extracted_text
+2021_tcts_wu,Table 3,CSI300,Ours,T10,Task2,MSE,1.960,,ranking,papers/extracted/2021_tcts_wu.txt:737,verified_from_extracted_text
+2021_tcts_wu,Table 3,CSI300,Ours,T10,Task3,RankIC,0.022,,ranking,papers/extracted/2021_tcts_wu.txt:737,verified_from_extracted_text
+2021_tcts_wu,Table 3,CSI300,Ours,T10,Task3,MSE,1.942,,ranking,papers/extracted/2021_tcts_wu.txt:737,verified_from_extracted_text
+2022_thgnn_xiang,Table 2,S&P500,THGNN,proposed,2020,ACC,0.579,,overall,papers/extracted/2022_thgnn_xiang.txt:593,verified_from_extracted_text
+2022_thgnn_xiang,Table 2,S&P500,THGNN,proposed,2020,ARR,0.665,,portfolio,papers/extracted/2022_thgnn_xiang.txt:593,verified_from_extracted_text
+2022_thgnn_xiang,Table 2,S&P500,THGNN,proposed,2020,AV,0.468,,portfolio,papers/extracted/2022_thgnn_xiang.txt:593,verified_from_extracted_text
+2022_thgnn_xiang,Table 2,S&P500,THGNN,proposed,2020,MDD,-0.369,,portfolio,papers/extracted/2022_thgnn_xiang.txt:593,verified_from_extracted_text
+2022_thgnn_xiang,Table 2,S&P500,THGNN,proposed,2020,ASR,1.421,,portfolio,papers/extracted/2022_thgnn_xiang.txt:593,verified_from_extracted_text
+2022_thgnn_xiang,Table 2,S&P500,THGNN,proposed,2020,CR,1.804,,portfolio,papers/extracted/2022_thgnn_xiang.txt:593,verified_from_extracted_text
+2022_thgnn_xiang,Table 2,S&P500,THGNN,proposed,2020,IR,1.340,,portfolio,papers/extracted/2022_thgnn_xiang.txt:593,verified_from_extracted_text
+2022_thgnn_xiang,Table 2,CSI300,THGNN,proposed,2020,ACC,0.551,,overall,papers/extracted/2022_thgnn_xiang.txt:593,verified_from_extracted_text
+2022_thgnn_xiang,Table 2,CSI300,THGNN,proposed,2020,ARR,0.632,,portfolio,papers/extracted/2022_thgnn_xiang.txt:593,verified_from_extracted_text
+2022_thgnn_xiang,Table 2,CSI300,THGNN,proposed,2020,AV,0.336,,portfolio,papers/extracted/2022_thgnn_xiang.txt:593,verified_from_extracted_text
+2022_thgnn_xiang,Table 2,CSI300,THGNN,proposed,2020,MDD,-0.237,,portfolio,papers/extracted/2022_thgnn_xiang.txt:593,verified_from_extracted_text
+2022_thgnn_xiang,Table 2,CSI300,THGNN,proposed,2020,ASR,1.881,,portfolio,papers/extracted/2022_thgnn_xiang.txt:593,verified_from_extracted_text
+2022_thgnn_xiang,Table 2,CSI300,THGNN,proposed,2020,CR,2.667,,portfolio,papers/extracted/2022_thgnn_xiang.txt:593,verified_from_extracted_text
+2022_thgnn_xiang,Table 2,CSI300,THGNN,proposed,2020,IR,1.875,,portfolio,papers/extracted/2022_thgnn_xiang.txt:593,verified_from_extracted_text
+2023_estimate_huynh,Table 3,Average,ESTIMATE,proposed,phases_average,Return,0.102,,overall,papers/extracted/2023_estimate_huynh.txt:790,verified_from_extracted_text
+2023_estimate_huynh,Table 3,Average,ESTIMATE,proposed,phases_average,IC,0.080,,overall,papers/extracted/2023_estimate_huynh.txt:790,verified_from_extracted_text
+2023_estimate_huynh,Table 3,Average,ESTIMATE,proposed,phases_average,RankIC,0.516,,overall,papers/extracted/2023_estimate_huynh.txt:790,verified_from_extracted_text
+2023_estimate_huynh,Table 3,Average,ESTIMATE,proposed,phases_average,Prec@N,0.627,,overall,papers/extracted/2023_estimate_huynh.txt:790,verified_from_extracted_text
+2022_ddg_da_li,Table 1,Stock Price Trend Forecasting,DDG-DA,proposed,main,IC,0.1312,,overall,papers/extracted/2022_ddg_da_li.txt:641,verified_from_extracted_text
+2022_ddg_da_li,Table 1,Stock Price Trend Forecasting,DDG-DA,proposed,main,ICIR,1.1299,,overall,papers/extracted/2022_ddg_da_li.txt:641,verified_from_extracted_text
+2022_ddg_da_li,Table 1,Stock Price Trend Forecasting,DDG-DA,proposed,main,Ann.Ret.,0.2565,,portfolio,papers/extracted/2022_ddg_da_li.txt:641,verified_from_extracted_text
+2022_ddg_da_li,Table 1,Stock Price Trend Forecasting,DDG-DA,proposed,main,Sharpe,2.4063,,portfolio,papers/extracted/2022_ddg_da_li.txt:641,verified_from_extracted_text
+2022_ddg_da_li,Table 1,Stock Price Trend Forecasting,DDG-DA,proposed,main,MDD,-0.1381,,portfolio,papers/extracted/2022_ddg_da_li.txt:641,verified_from_extracted_text
+2022_factorvae_duan,Table 1,China A-share test set,FactorVAE,proposed,main,RankIC,0.055,0.004,overall,papers/extracted/2022_factorvae_duan.txt:737,verified_from_extracted_text
+2022_factorvae_duan,Table 1,China A-share test set,FactorVAE,proposed,main,RankICIR,0.568,0.044,overall,papers/extracted/2022_factorvae_duan.txt:737,verified_from_extracted_text
+2022_factorvae_duan,Table 3,CSI300 excess return,FactorVAE,proposed,main,AR,0.1532,,portfolio,papers/extracted/2022_factorvae_duan.txt:870,verified_from_extracted_text
+2022_factorvae_duan,Table 3,CSI300 excess return,FactorVAE,proposed,main,SR,1.92,,portfolio,papers/extracted/2022_factorvae_duan.txt:870,verified_from_extracted_text
+2022_factorvae_duan,Table 3,CSI300 excess return,FactorVAE,proposed,main,MDD,0.0447,,portfolio,papers/extracted/2022_factorvae_duan.txt:870,verified_from_extracted_text
+2022_factorvae_duan,Table 3,CSI300 excess return,FactorVAE(TDrisk),proposed_variant,main,AR,0.1632,,portfolio,papers/extracted/2022_factorvae_duan.txt:871,verified_from_extracted_text
+2022_factorvae_duan,Table 3,CSI300 excess return,FactorVAE(TDrisk),proposed_variant,main,SR,2.09,,portfolio,papers/extracted/2022_factorvae_duan.txt:871,verified_from_extracted_text
+2022_factorvae_duan,Table 3,CSI300 excess return,FactorVAE(TDrisk),proposed_variant,main,MDD,0.0450,,portfolio,papers/extracted/2022_factorvae_duan.txt:871,verified_from_extracted_text
+2021_hatr_wang,Table 2,CSI,HATR,proposed,main,ACC,0.6770,,overall,papers/extracted/2021_hatr_wang.txt:673,verified_from_extracted_text
+2021_hatr_wang,Table 2,CSI,HATR,proposed,main,AUC,0.6364,,overall,papers/extracted/2021_hatr_wang.txt:673,verified_from_extracted_text
+2021_hatr_wang,Table 2,CSI,HATR,proposed,main,F1,0.6259,,overall,papers/extracted/2021_hatr_wang.txt:673,verified_from_extracted_text
+2021_hatr_wang,Table 2,CSI,HATR,proposed,main,MCC,0.1519,,overall,papers/extracted/2021_hatr_wang.txt:673,verified_from_extracted_text
+2021_hatr_wang,Table 2,SPX,HATR,proposed,main,ACC,0.6147,,overall,papers/extracted/2021_hatr_wang.txt:673,verified_from_extracted_text
+2021_hatr_wang,Table 2,SPX,HATR,proposed,main,AUC,0.5778,,overall,papers/extracted/2021_hatr_wang.txt:673,verified_from_extracted_text
+2021_hatr_wang,Table 2,SPX,HATR,proposed,main,F1,0.5780,,overall,papers/extracted/2021_hatr_wang.txt:673,verified_from_extracted_text
+2021_hatr_wang,Table 2,SPX,HATR,proposed,main,MCC,0.1303,,overall,papers/extracted/2021_hatr_wang.txt:673,verified_from_extracted_text
+2021_hatr_wang,Table 2,Topix,HATR,proposed,main,ACC,0.6578,,overall,papers/extracted/2021_hatr_wang.txt:673,verified_from_extracted_text
+2021_hatr_wang,Table 2,Topix,HATR,proposed,main,AUC,0.5777,,overall,papers/extracted/2021_hatr_wang.txt:673,verified_from_extracted_text
+2021_hatr_wang,Table 2,Topix,HATR,proposed,main,F1,0.6206,,overall,papers/extracted/2021_hatr_wang.txt:673,verified_from_extracted_text
+2021_hatr_wang,Table 2,Topix,HATR,proposed,main,MCC,0.1086,,overall,papers/extracted/2021_hatr_wang.txt:673,verified_from_extracted_text
+2022_alsp_tf_wang,Table 1,NASDAQ,ALSP-TF,proposed,main,SR,1.55,,portfolio,papers/extracted/2022_alsp_tf_wang.txt:623,verified_from_extracted_text
+2022_alsp_tf_wang,Table 1,NASDAQ,ALSP-TF,proposed,main,IRR,0.53,,portfolio,papers/extracted/2022_alsp_tf_wang.txt:623,verified_from_extracted_text
+2022_alsp_tf_wang,Table 1,NYSE,ALSP-TF,proposed,main,SR,1.24,,portfolio,papers/extracted/2022_alsp_tf_wang.txt:623,verified_from_extracted_text
+2022_alsp_tf_wang,Table 1,NYSE,ALSP-TF,proposed,main,IRR,0.41,,portfolio,papers/extracted/2022_alsp_tf_wang.txt:623,verified_from_extracted_text
+2022_alsp_tf_wang,Table 1,TSE,ALSP-TF,proposed,main,SR,1.27,,portfolio,papers/extracted/2022_alsp_tf_wang.txt:623,verified_from_extracted_text
+2022_alsp_tf_wang,Table 1,TSE,ALSP-TF,proposed,main,IRR,0.71,,portfolio,papers/extracted/2022_alsp_tf_wang.txt:623,verified_from_extracted_text
+2024_alphaforge_shi,Table 1,CSI300,Ours,proposed,main,IC,0.0440,0.0056,overall,papers/extracted/2024_alphaforge_shi.txt:507,verified_from_extracted_text
+2024_alphaforge_shi,Table 1,CSI300,Ours,proposed,main,RankIC,0.0589,0.0069,overall,papers/extracted/2024_alphaforge_shi.txt:507,verified_from_extracted_text
+2024_alphaforge_shi,Table 1,CSI500,Ours,proposed,main,IC,0.0284,0.0058,overall,papers/extracted/2024_alphaforge_shi.txt:507,verified_from_extracted_text
+2024_alphaforge_shi,Table 1,CSI500,Ours,proposed,main,RankIC,0.0557,0.0058,overall,papers/extracted/2024_alphaforge_shi.txt:507,verified_from_extracted_text
+2026_alphaprobe_guo,Table 1,CSI300,AlphaPROBE,proposed,main,IC,0.0584,,overall,papers/extracted/2026_alphaprobe_guo.txt:614,verified_from_extracted_text
+2026_alphaprobe_guo,Table 1,CSI300,AlphaPROBE,proposed,main,ICIR,39.02,,overall,papers/extracted/2026_alphaprobe_guo.txt:614,verified_from_extracted_text
+2026_alphaprobe_guo,Table 1,CSI300,AlphaPROBE,proposed,main,RankIC,0.0720,,overall,papers/extracted/2026_alphaprobe_guo.txt:614,verified_from_extracted_text
+2026_alphaprobe_guo,Table 1,CSI300,AlphaPROBE,proposed,main,RankICIR,46.94,,overall,papers/extracted/2026_alphaprobe_guo.txt:614,verified_from_extracted_text
+2026_alphaprobe_guo,Table 1,CSI300,AlphaPROBE,proposed,main,AR,0.0750,,portfolio,papers/extracted/2026_alphaprobe_guo.txt:630,verified_from_extracted_text
+2026_alphaprobe_guo,Table 1,CSI300,AlphaPROBE,proposed,main,MDD,0.2225,,portfolio,papers/extracted/2026_alphaprobe_guo.txt:630,verified_from_extracted_text
+2026_alphaprobe_guo,Table 1,CSI300,AlphaPROBE,proposed,main,SR,0.4411,,portfolio,papers/extracted/2026_alphaprobe_guo.txt:630,verified_from_extracted_text
+2026_alphaprobe_guo,Table 1,CSI500,AlphaPROBE,proposed,main,IC,0.0626,,overall,papers/extracted/2026_alphaprobe_guo.txt:614,verified_from_extracted_text
+2026_alphaprobe_guo,Table 1,CSI500,AlphaPROBE,proposed,main,ICIR,52.39,,overall,papers/extracted/2026_alphaprobe_guo.txt:614,verified_from_extracted_text
+2026_alphaprobe_guo,Table 1,CSI500,AlphaPROBE,proposed,main,RankIC,0.0878,,overall,papers/extracted/2026_alphaprobe_guo.txt:614,verified_from_extracted_text
+2026_alphaprobe_guo,Table 1,CSI500,AlphaPROBE,proposed,main,RankICIR,73.18,,overall,papers/extracted/2026_alphaprobe_guo.txt:614,verified_from_extracted_text
+2026_alphaprobe_guo,Table 1,CSI500,AlphaPROBE,proposed,main,AR,0.1745,,portfolio,papers/extracted/2026_alphaprobe_guo.txt:630,verified_from_extracted_text
+2026_alphaprobe_guo,Table 1,CSI500,AlphaPROBE,proposed,main,MDD,0.2298,,portfolio,papers/extracted/2026_alphaprobe_guo.txt:630,verified_from_extracted_text
+2026_alphaprobe_guo,Table 1,CSI500,AlphaPROBE,proposed,main,SR,0.8262,,portfolio,papers/extracted/2026_alphaprobe_guo.txt:630,verified_from_extracted_text
+2026_alphaprobe_guo,Table 1,CSI1000,AlphaPROBE,proposed,main,IC,0.0904,,overall,papers/extracted/2026_alphaprobe_guo.txt:614,verified_from_extracted_text
+2026_alphaprobe_guo,Table 1,CSI1000,AlphaPROBE,proposed,main,ICIR,70.49,,overall,papers/extracted/2026_alphaprobe_guo.txt:614,verified_from_extracted_text
+2026_alphaprobe_guo,Table 1,CSI1000,AlphaPROBE,proposed,main,RankIC,0.1135,,overall,papers/extracted/2026_alphaprobe_guo.txt:614,verified_from_extracted_text
+2026_alphaprobe_guo,Table 1,CSI1000,AlphaPROBE,proposed,main,RankICIR,88.02,,overall,papers/extracted/2026_alphaprobe_guo.txt:614,verified_from_extracted_text
+2026_alphaprobe_guo,Table 1,CSI1000,AlphaPROBE,proposed,main,AR,0.1668,,portfolio,papers/extracted/2026_alphaprobe_guo.txt:630,verified_from_extracted_text
+2026_alphaprobe_guo,Table 1,CSI1000,AlphaPROBE,proposed,main,MDD,0.3195,,portfolio,papers/extracted/2026_alphaprobe_guo.txt:630,verified_from_extracted_text
+2026_alphaprobe_guo,Table 1,CSI1000,AlphaPROBE,proposed,main,SR,0.6475,,portfolio,papers/extracted/2026_alphaprobe_guo.txt:630,verified_from_extracted_text
+2025_rd_agent_quant_li,Table 1,CSI300,R&D-Agent(Q) GPT-4o,proposed,main,IC,0.0497,,overall,papers/extracted/2025_rd_agent_quant_li.txt:507,verified_from_extracted_text
+2025_rd_agent_quant_li,Table 1,CSI300,R&D-Agent(Q) GPT-4o,proposed,main,ICIR,0.4069,,overall,papers/extracted/2025_rd_agent_quant_li.txt:507,verified_from_extracted_text
+2025_rd_agent_quant_li,Table 1,CSI300,R&D-Agent(Q) GPT-4o,proposed,main,RankIC,0.0499,,overall,papers/extracted/2025_rd_agent_quant_li.txt:507,verified_from_extracted_text
+2025_rd_agent_quant_li,Table 1,CSI300,R&D-Agent(Q) GPT-4o,proposed,main,RankICIR,0.4122,,overall,papers/extracted/2025_rd_agent_quant_li.txt:507,verified_from_extracted_text
+2025_rd_agent_quant_li,Table 1,CSI300,R&D-Agent(Q) GPT-4o,proposed,main,ARR,0.1144,,portfolio,papers/extracted/2025_rd_agent_quant_li.txt:507,verified_from_extracted_text
+2025_rd_agent_quant_li,Table 1,CSI300,R&D-Agent(Q) GPT-4o,proposed,main,IR,1.3167,,portfolio,papers/extracted/2025_rd_agent_quant_li.txt:507,verified_from_extracted_text
+2025_rd_agent_quant_li,Table 1,CSI300,R&D-Agent(Q) GPT-4o,proposed,main,MDD,-0.0811,,portfolio,papers/extracted/2025_rd_agent_quant_li.txt:507,verified_from_extracted_text
+2025_rd_agent_quant_li,Table 1,CSI300,R&D-Agent(Q) GPT-4o,proposed,main,CR,1.4108,,portfolio,papers/extracted/2025_rd_agent_quant_li.txt:507,verified_from_extracted_text
+2025_rd_agent_quant_li,Table 1,CSI300,R&D-Agent(Q) o3-mini,proposed,main,IC,0.0532,,overall,papers/extracted/2025_rd_agent_quant_li.txt:507,verified_from_extracted_text
+2025_rd_agent_quant_li,Table 1,CSI300,R&D-Agent(Q) o3-mini,proposed,main,ICIR,0.4278,,overall,papers/extracted/2025_rd_agent_quant_li.txt:507,verified_from_extracted_text
+2025_rd_agent_quant_li,Table 1,CSI300,R&D-Agent(Q) o3-mini,proposed,main,RankIC,0.0495,,overall,papers/extracted/2025_rd_agent_quant_li.txt:507,verified_from_extracted_text
+2025_rd_agent_quant_li,Table 1,CSI300,R&D-Agent(Q) o3-mini,proposed,main,RankICIR,0.4091,,overall,papers/extracted/2025_rd_agent_quant_li.txt:507,verified_from_extracted_text
+2025_rd_agent_quant_li,Table 1,CSI300,R&D-Agent(Q) o3-mini,proposed,main,ARR,0.1421,,portfolio,papers/extracted/2025_rd_agent_quant_li.txt:507,verified_from_extracted_text
+2025_rd_agent_quant_li,Table 1,CSI300,R&D-Agent(Q) o3-mini,proposed,main,IR,1.7382,,portfolio,papers/extracted/2025_rd_agent_quant_li.txt:507,verified_from_extracted_text
+2025_rd_agent_quant_li,Table 1,CSI300,R&D-Agent(Q) o3-mini,proposed,main,MDD,-0.0742,,portfolio,papers/extracted/2025_rd_agent_quant_li.txt:507,verified_from_extracted_text
+2025_rd_agent_quant_li,Table 1,CSI300,R&D-Agent(Q) o3-mini,proposed,main,CR,1.9150,,portfolio,papers/extracted/2025_rd_agent_quant_li.txt:507,verified_from_extracted_text
+2019_alphastock_wang,Table 1,US markets,AlphaStock,proposed,main,APR,0.143,,portfolio,papers/extracted/2019_alphastock_wang.txt:943,verified_from_extracted_text
+2019_alphastock_wang,Table 1,US markets,AlphaStock,proposed,main,AVOL,0.067,,portfolio,papers/extracted/2019_alphastock_wang.txt:943,verified_from_extracted_text
+2019_alphastock_wang,Table 1,US markets,AlphaStock,proposed,main,ASR,2.132,,portfolio,papers/extracted/2019_alphastock_wang.txt:943,verified_from_extracted_text
+2019_alphastock_wang,Table 1,US markets,AlphaStock,proposed,main,MDD,0.027,,portfolio,papers/extracted/2019_alphastock_wang.txt:943,verified_from_extracted_text
+2019_alphastock_wang,Table 1,US markets,AlphaStock,proposed,main,CR,5.296,,portfolio,papers/extracted/2019_alphastock_wang.txt:943,verified_from_extracted_text
+2019_alphastock_wang,Table 1,US markets,AlphaStock,proposed,main,DDR,6.397,,portfolio,papers/extracted/2019_alphastock_wang.txt:943,verified_from_extracted_text
+2019_alphastock_wang,Table 2,Chinese markets,AlphaStock,proposed,main,APR,0.125,,portfolio,papers/extracted/2019_alphastock_wang.txt:1024,verified_from_extracted_text
+2019_alphastock_wang,Table 2,Chinese markets,AlphaStock,proposed,main,AVOL,0.103,,portfolio,papers/extracted/2019_alphastock_wang.txt:1024,verified_from_extracted_text
+2019_alphastock_wang,Table 2,Chinese markets,AlphaStock,proposed,main,ASR,1.220,,portfolio,papers/extracted/2019_alphastock_wang.txt:1024,verified_from_extracted_text
+2019_alphastock_wang,Table 2,Chinese markets,AlphaStock,proposed,main,MDD,0.135,,portfolio,papers/extracted/2019_alphastock_wang.txt:1024,verified_from_extracted_text
+2019_alphastock_wang,Table 2,Chinese markets,AlphaStock,proposed,main,CR,0.296,,portfolio,papers/extracted/2019_alphastock_wang.txt:1024,verified_from_extracted_text
+2019_alphastock_wang,Table 2,Chinese markets,AlphaStock,proposed,main,DDR,1.704,,portfolio,papers/extracted/2019_alphastock_wang.txt:1024,verified_from_extracted_text
+2020_doubleensemble_zhang,Table II,Daily stock trading MLP,DoubleEnsemble SR+FS,proposed,daily,Ann.Ret.,0.5137,,portfolio,papers/extracted/2020_doubleensemble_zhang.txt:821,verified_from_extracted_text
+2020_doubleensemble_zhang,Table II,Daily stock trading MLP,DoubleEnsemble SR+FS,proposed,daily,Sharpe,4.941,,portfolio,papers/extracted/2020_doubleensemble_zhang.txt:821,verified_from_extracted_text
+2020_doubleensemble_zhang,Table II,Daily stock trading MLP,DoubleEnsemble SR+FS,proposed,daily,MDD,0.0598,,portfolio,papers/extracted/2020_doubleensemble_zhang.txt:821,verified_from_extracted_text
+2020_doubleensemble_zhang,Table II,Daily stock trading MLP,DoubleEnsemble SR+FS,proposed,daily,IC,0.115,,overall,papers/extracted/2020_doubleensemble_zhang.txt:821,verified_from_extracted_text
+2020_doubleensemble_zhang,Table II,Daily stock trading MLP,DoubleEnsemble SR+FS,proposed,daily,IR,1.035,,overall,papers/extracted/2020_doubleensemble_zhang.txt:821,verified_from_extracted_text
+2020_doubleensemble_zhang,Table II,Weekly stock trading MLP,DoubleEnsemble SR+FS,proposed,weekly,Ann.Ret.,0.2567,,portfolio,papers/extracted/2020_doubleensemble_zhang.txt:821,verified_from_extracted_text
+2020_doubleensemble_zhang,Table II,Weekly stock trading MLP,DoubleEnsemble SR+FS,proposed,weekly,Sharpe,4.448,,portfolio,papers/extracted/2020_doubleensemble_zhang.txt:821,verified_from_extracted_text
+2020_doubleensemble_zhang,Table II,Weekly stock trading MLP,DoubleEnsemble SR+FS,proposed,weekly,MDD,0.0241,,portfolio,papers/extracted/2020_doubleensemble_zhang.txt:821,verified_from_extracted_text
+2020_doubleensemble_zhang,Table II,Weekly stock trading MLP,DoubleEnsemble SR+FS,proposed,weekly,IC,0.078,,overall,papers/extracted/2020_doubleensemble_zhang.txt:821,verified_from_extracted_text
+2020_doubleensemble_zhang,Table II,Weekly stock trading MLP,DoubleEnsemble SR+FS,proposed,weekly,IR,0.773,,overall,papers/extracted/2020_doubleensemble_zhang.txt:821,verified_from_extracted_text
+2024_diffsformer_gao,Table III,CSI300,DiffsFormer+Transformer,proposed_augmentation,main,RR,0.3127,0.0113,overall,papers/extracted/2024_diffsformer_gao.txt:819,verified_from_extracted_text
+2024_diffsformer_gao,Table III,CSI300,DiffsFormer+Transformer,proposed_augmentation,main,IC,0.0603,0.0025,overall,papers/extracted/2024_diffsformer_gao.txt:819,verified_from_extracted_text
+2024_diffsformer_gao,Table III,CSI300,DiffsFormer+Transformer,proposed_augmentation,main,RankIC,0.0672,0.0017,overall,papers/extracted/2024_diffsformer_gao.txt:819,verified_from_extracted_text
+2024_diffsformer_gao,Table IV,CSI800,DiffsFormer+Transformer,proposed_augmentation,main,RR,0.1903,0.0382,overall,papers/extracted/2024_diffsformer_gao.txt:831,verified_from_extracted_text
+2024_diffsformer_gao,Table IV,CSI800,DiffsFormer+Transformer,proposed_augmentation,main,IC,0.0426,0.0018,overall,papers/extracted/2024_diffsformer_gao.txt:831,verified_from_extracted_text
+2024_diffsformer_gao,Table IV,CSI800,DiffsFormer+Transformer,proposed_augmentation,main,RankIC,0.0556,0.0022,overall,papers/extracted/2024_diffsformer_gao.txt:831,verified_from_extracted_text
+2025_finmamba_hu,Table 1,CSI300,FinMamba,proposed,main,ARR,0.106,,portfolio,papers/extracted/2025_finmamba_hu.txt:694,verified_from_extracted_text
+2025_finmamba_hu,Table 1,CSI300,FinMamba,proposed,main,AVol,0.163,,portfolio,papers/extracted/2025_finmamba_hu.txt:694,verified_from_extracted_text
+2025_finmamba_hu,Table 1,CSI300,FinMamba,proposed,main,MDD,-0.102,,portfolio,papers/extracted/2025_finmamba_hu.txt:694,verified_from_extracted_text
+2025_finmamba_hu,Table 1,CSI300,FinMamba,proposed,main,ASR,0.653,,portfolio,papers/extracted/2025_finmamba_hu.txt:694,verified_from_extracted_text
+2025_finmamba_hu,Table 1,CSI300,FinMamba,proposed,main,IR,0.705,,portfolio,papers/extracted/2025_finmamba_hu.txt:694,verified_from_extracted_text
+2025_finmamba_hu,Table 1,CSI500,FinMamba,proposed,main,ARR,0.227,,portfolio,papers/extracted/2025_finmamba_hu.txt:694,verified_from_extracted_text
+2025_finmamba_hu,Table 1,CSI500,FinMamba,proposed,main,AVol,0.163,,portfolio,papers/extracted/2025_finmamba_hu.txt:694,verified_from_extracted_text
+2025_finmamba_hu,Table 1,CSI500,FinMamba,proposed,main,MDD,-0.106,,portfolio,papers/extracted/2025_finmamba_hu.txt:694,verified_from_extracted_text
+2025_finmamba_hu,Table 1,CSI500,FinMamba,proposed,main,ASR,1.389,,portfolio,papers/extracted/2025_finmamba_hu.txt:694,verified_from_extracted_text
+2025_finmamba_hu,Table 1,CSI500,FinMamba,proposed,main,IR,1.339,,portfolio,papers/extracted/2025_finmamba_hu.txt:694,verified_from_extracted_text
+2025_finmamba_hu,Table 1,S&P500,FinMamba,proposed,main,ARR,0.341,,portfolio,papers/extracted/2025_finmamba_hu.txt:694,verified_from_extracted_text
+2025_finmamba_hu,Table 1,S&P500,FinMamba,proposed,main,AVol,0.164,,portfolio,papers/extracted/2025_finmamba_hu.txt:694,verified_from_extracted_text
+2025_finmamba_hu,Table 1,S&P500,FinMamba,proposed,main,MDD,-0.086,,portfolio,papers/extracted/2025_finmamba_hu.txt:694,verified_from_extracted_text
+2025_finmamba_hu,Table 1,S&P500,FinMamba,proposed,main,ASR,2.063,,portfolio,papers/extracted/2025_finmamba_hu.txt:694,verified_from_extracted_text
+2025_finmamba_hu,Table 1,S&P500,FinMamba,proposed,main,IR,1.937,,portfolio,papers/extracted/2025_finmamba_hu.txt:694,verified_from_extracted_text
+2025_finmamba_hu,Table 1,NASDAQ100,FinMamba,proposed,main,ARR,0.685,,portfolio,papers/extracted/2025_finmamba_hu.txt:694,verified_from_extracted_text
+2025_finmamba_hu,Table 1,NASDAQ100,FinMamba,proposed,main,AVol,0.190,,portfolio,papers/extracted/2025_finmamba_hu.txt:694,verified_from_extracted_text
+2025_finmamba_hu,Table 1,NASDAQ100,FinMamba,proposed,main,MDD,-0.097,,portfolio,papers/extracted/2025_finmamba_hu.txt:694,verified_from_extracted_text
+2025_finmamba_hu,Table 1,NASDAQ100,FinMamba,proposed,main,ASR,3.601,,portfolio,papers/extracted/2025_finmamba_hu.txt:694,verified_from_extracted_text
+2025_finmamba_hu,Table 1,NASDAQ100,FinMamba,proposed,main,IR,2.851,,portfolio,papers/extracted/2025_finmamba_hu.txt:694,verified_from_extracted_text
+2024_lsr_igru_zhu,Table 1,CSI300,LSR-IGRU,proposed,main,ARR,0.192,,portfolio,papers/extracted/2024_lsr_igru_zhu.txt:456,verified_from_extracted_text
+2024_lsr_igru_zhu,Table 1,CSI300,LSR-IGRU,proposed,main,AVol,0.187,,portfolio,papers/extracted/2024_lsr_igru_zhu.txt:456,verified_from_extracted_text
+2024_lsr_igru_zhu,Table 1,CSI300,LSR-IGRU,proposed,main,MDD,-0.168,,portfolio,papers/extracted/2024_lsr_igru_zhu.txt:456,verified_from_extracted_text
+2024_lsr_igru_zhu,Table 1,CSI300,LSR-IGRU,proposed,main,ASR,1.026,,portfolio,papers/extracted/2024_lsr_igru_zhu.txt:456,verified_from_extracted_text
+2024_lsr_igru_zhu,Table 1,CSI300,LSR-IGRU,proposed,main,CR,1.143,,portfolio,papers/extracted/2024_lsr_igru_zhu.txt:456,verified_from_extracted_text
+2024_lsr_igru_zhu,Table 1,CSI300,LSR-IGRU,proposed,main,IR,1.009,,portfolio,papers/extracted/2024_lsr_igru_zhu.txt:456,verified_from_extracted_text
+2024_lsr_igru_zhu,Table 1,CSI500,LSR-IGRU,proposed,main,ARR,0.330,,portfolio,papers/extracted/2024_lsr_igru_zhu.txt:456,verified_from_extracted_text
+2024_lsr_igru_zhu,Table 1,CSI500,LSR-IGRU,proposed,main,AVol,0.203,,portfolio,papers/extracted/2024_lsr_igru_zhu.txt:456,verified_from_extracted_text
+2024_lsr_igru_zhu,Table 1,CSI500,LSR-IGRU,proposed,main,MDD,-0.198,,portfolio,papers/extracted/2024_lsr_igru_zhu.txt:456,verified_from_extracted_text
+2024_lsr_igru_zhu,Table 1,CSI500,LSR-IGRU,proposed,main,ASR,1.626,,portfolio,papers/extracted/2024_lsr_igru_zhu.txt:456,verified_from_extracted_text
+2024_lsr_igru_zhu,Table 1,CSI500,LSR-IGRU,proposed,main,CR,1.663,,portfolio,papers/extracted/2024_lsr_igru_zhu.txt:456,verified_from_extracted_text
+2024_lsr_igru_zhu,Table 1,CSI500,LSR-IGRU,proposed,main,IR,1.382,,portfolio,papers/extracted/2024_lsr_igru_zhu.txt:456,verified_from_extracted_text
+2024_lsr_igru_zhu,Table 1,S&P500,LSR-IGRU,proposed,main,ARR,0.506,,portfolio,papers/extracted/2024_lsr_igru_zhu.txt:456,verified_from_extracted_text
+2024_lsr_igru_zhu,Table 1,S&P500,LSR-IGRU,proposed,main,AVol,0.177,,portfolio,papers/extracted/2024_lsr_igru_zhu.txt:456,verified_from_extracted_text
+2024_lsr_igru_zhu,Table 1,S&P500,LSR-IGRU,proposed,main,MDD,-0.093,,portfolio,papers/extracted/2024_lsr_igru_zhu.txt:456,verified_from_extracted_text
+2024_lsr_igru_zhu,Table 1,S&P500,LSR-IGRU,proposed,main,ASR,2.863,,portfolio,papers/extracted/2024_lsr_igru_zhu.txt:456,verified_from_extracted_text
+2024_lsr_igru_zhu,Table 1,S&P500,LSR-IGRU,proposed,main,CR,5.453,,portfolio,papers/extracted/2024_lsr_igru_zhu.txt:456,verified_from_extracted_text
+2024_lsr_igru_zhu,Table 1,S&P500,LSR-IGRU,proposed,main,IR,2.450,,portfolio,papers/extracted/2024_lsr_igru_zhu.txt:456,verified_from_extracted_text
+2024_lsr_igru_zhu,Table 1,NASDAQ100,LSR-IGRU,proposed,main,ARR,0.835,,portfolio,papers/extracted/2024_lsr_igru_zhu.txt:456,verified_from_extracted_text
+2024_lsr_igru_zhu,Table 1,NASDAQ100,LSR-IGRU,proposed,main,AVol,0.222,,portfolio,papers/extracted/2024_lsr_igru_zhu.txt:456,verified_from_extracted_text
+2024_lsr_igru_zhu,Table 1,NASDAQ100,LSR-IGRU,proposed,main,MDD,-0.109,,portfolio,papers/extracted/2024_lsr_igru_zhu.txt:456,verified_from_extracted_text
+2024_lsr_igru_zhu,Table 1,NASDAQ100,LSR-IGRU,proposed,main,ASR,3.747,,portfolio,papers/extracted/2024_lsr_igru_zhu.txt:456,verified_from_extracted_text
+2024_lsr_igru_zhu,Table 1,NASDAQ100,LSR-IGRU,proposed,main,CR,7.604,,portfolio,papers/extracted/2024_lsr_igru_zhu.txt:456,verified_from_extracted_text
+2024_lsr_igru_zhu,Table 1,NASDAQ100,LSR-IGRU,proposed,main,IR,2.914,,portfolio,papers/extracted/2024_lsr_igru_zhu.txt:456,verified_from_extracted_text
+2025_timefilter_hu,Table 1,ETT average,TimeFilter,proposed,L96_avg_horizons,MSE,0.358,,overall,papers/extracted/2025_timefilter_hu.txt:803,verified_from_extracted_text
+2025_timefilter_hu,Table 1,ETT average,TimeFilter,proposed,L96_avg_horizons,MAE,0.385,,overall,papers/extracted/2025_timefilter_hu.txt:803,verified_from_extracted_text
+2025_timefilter_hu,Table 1,Weather,TimeFilter,proposed,L96_avg_horizons,MSE,0.239,,overall,papers/extracted/2025_timefilter_hu.txt:803,verified_from_extracted_text
+2025_timefilter_hu,Table 1,Weather,TimeFilter,proposed,L96_avg_horizons,MAE,0.269,,overall,papers/extracted/2025_timefilter_hu.txt:803,verified_from_extracted_text
+2025_timefilter_hu,Table 1,Electricity,TimeFilter,proposed,L96_avg_horizons,MSE,0.158,,overall,papers/extracted/2025_timefilter_hu.txt:803,verified_from_extracted_text
+2025_timefilter_hu,Table 1,Electricity,TimeFilter,proposed,L96_avg_horizons,MAE,0.256,,overall,papers/extracted/2025_timefilter_hu.txt:803,verified_from_extracted_text
+2025_timefilter_hu,Table 1,Traffic,TimeFilter,proposed,L96_avg_horizons,MSE,0.407,,overall,papers/extracted/2025_timefilter_hu.txt:803,verified_from_extracted_text
+2025_timefilter_hu,Table 1,Traffic,TimeFilter,proposed,L96_avg_horizons,MAE,0.268,,overall,papers/extracted/2025_timefilter_hu.txt:803,verified_from_extracted_text
+2025_timefilter_hu,Table 1,Solar-Energy,TimeFilter,proposed,L96_avg_horizons,MSE,0.223,,overall,papers/extracted/2025_timefilter_hu.txt:803,verified_from_extracted_text
+2025_timefilter_hu,Table 1,Solar-Energy,TimeFilter,proposed,L96_avg_horizons,MAE,0.250,,overall,papers/extracted/2025_timefilter_hu.txt:803,verified_from_extracted_text
+2024_ci_sthpan_xia,Table 1,NASDAQ,CI-STHPAN,proposed,main,IRR,0.66,,portfolio,https://scispace.com/pdf/ci-sthpan-pre-trained-attention-network-for-stock-selection-36zm34cv3u.pdf:541,verified_from_browser_pdf_text
+2024_ci_sthpan_xia,Table 1,NASDAQ,CI-STHPAN,proposed,main,SR,2.01,,portfolio,https://scispace.com/pdf/ci-sthpan-pre-trained-attention-network-for-stock-selection-36zm34cv3u.pdf:541,verified_from_browser_pdf_text
+2024_ci_sthpan_xia,Table 1,NYSE,CI-STHPAN,proposed,main,IRR,0.79,,portfolio,https://scispace.com/pdf/ci-sthpan-pre-trained-attention-network-for-stock-selection-36zm34cv3u.pdf:541,verified_from_browser_pdf_text
+2024_ci_sthpan_xia,Table 1,NYSE,CI-STHPAN,proposed,main,SR,2.14,,portfolio,https://scispace.com/pdf/ci-sthpan-pre-trained-attention-network-for-stock-selection-36zm34cv3u.pdf:541,verified_from_browser_pdf_text
+2024_ci_sthpan_xia,Table 3,NASDAQ,CI-STHPAN,proposed,ablation_full,IRR,0.657,,portfolio,https://scispace.com/pdf/ci-sthpan-pre-trained-attention-network-for-stock-selection-36zm34cv3u.pdf:659,verified_from_browser_pdf_text
+2024_ci_sthpan_xia,Table 3,NASDAQ,CI-STHPAN,proposed,ablation_full,SR,2.013,,portfolio,https://scispace.com/pdf/ci-sthpan-pre-trained-attention-network-for-stock-selection-36zm34cv3u.pdf:659,verified_from_browser_pdf_text
+2024_ci_sthpan_xia,Table 3,NASDAQ,CI-STHPAN,proposed,ablation_full,IC,0.043,,overall,https://scispace.com/pdf/ci-sthpan-pre-trained-attention-network-for-stock-selection-36zm34cv3u.pdf:659,verified_from_browser_pdf_text
+2024_ci_sthpan_xia,Table 3,NASDAQ,CI-STHPAN,proposed,ablation_full,ICIR,0.360,,overall,https://scispace.com/pdf/ci-sthpan-pre-trained-attention-network-for-stock-selection-36zm34cv3u.pdf:659,verified_from_browser_pdf_text
+2024_ci_sthpan_xia,Table 3,NYSE,CI-STHPAN,proposed,ablation_full,IRR,0.789,,portfolio,https://scispace.com/pdf/ci-sthpan-pre-trained-attention-network-for-stock-selection-36zm34cv3u.pdf:659,verified_from_browser_pdf_text
+2024_ci_sthpan_xia,Table 3,NYSE,CI-STHPAN,proposed,ablation_full,SR,2.136,,portfolio,https://scispace.com/pdf/ci-sthpan-pre-trained-attention-network-for-stock-selection-36zm34cv3u.pdf:659,verified_from_browser_pdf_text
+2024_ci_sthpan_xia,Table 3,NYSE,CI-STHPAN,proposed,ablation_full,IC,0.053,,overall,https://scispace.com/pdf/ci-sthpan-pre-trained-attention-network-for-stock-selection-36zm34cv3u.pdf:659,verified_from_browser_pdf_text
+2024_ci_sthpan_xia,Table 3,NYSE,CI-STHPAN,proposed,ablation_full,ICIR,0.569,,overall,https://scispace.com/pdf/ci-sthpan-pre-trained-attention-network-for-stock-selection-36zm34cv3u.pdf:659,verified_from_browser_pdf_text
+2024_mdgnn_li,Table 2,CSI100,MDGNN,proposed,main,IC,0.0123,0.00275,overall,papers/extracted/2024_mdgnn_li.txt:593,verified_from_extracted_text
+2024_mdgnn_li,Table 2,CSI100,MDGNN,proposed,main,IR,0.0746,0.0159,overall,papers/extracted/2024_mdgnn_li.txt:593,verified_from_extracted_text
+2024_mdgnn_li,Table 2,CSI100,MDGNN,proposed,main,CR,0.2741,0.0811,portfolio,papers/extracted/2024_mdgnn_li.txt:593,verified_from_extracted_text
+2024_mdgnn_li,Table 2,CSI100,MDGNN,proposed,main,Prec@30,0.5081,0.00322,overall,papers/extracted/2024_mdgnn_li.txt:593,verified_from_extracted_text
+2024_mdgnn_li,Table 2,CSI300,MDGNN,proposed,main,IC,0.0322,0.00243,overall,papers/extracted/2024_mdgnn_li.txt:593,verified_from_extracted_text
+2024_mdgnn_li,Table 2,CSI300,MDGNN,proposed,main,IR,0.2488,0.00419,overall,papers/extracted/2024_mdgnn_li.txt:593,verified_from_extracted_text
+2024_mdgnn_li,Table 2,CSI300,MDGNN,proposed,main,CR,0.9828,0.0113,portfolio,papers/extracted/2024_mdgnn_li.txt:593,verified_from_extracted_text
+2024_mdgnn_li,Table 2,CSI300,MDGNN,proposed,main,Prec@30,0.5232,0.00301,overall,papers/extracted/2024_mdgnn_li.txt:593,verified_from_extracted_text
+2021_deeptrader_wang,Table 2,DJIA,DeepTrader,proposed,main,ARR,0.1235,,portfolio,https://ojs.aaai.org/index.php/AAAI/article/view/16144/15951:611,verified_from_browser_pdf_text
+2021_deeptrader_wang,Table 2,DJIA,DeepTrader,proposed,main,AVol,0.172,,portfolio,https://ojs.aaai.org/index.php/AAAI/article/view/16144/15951:611,verified_from_browser_pdf_text
+2021_deeptrader_wang,Table 2,DJIA,DeepTrader,proposed,main,ASR,0.718,,portfolio,https://ojs.aaai.org/index.php/AAAI/article/view/16144/15951:611,verified_from_browser_pdf_text
+2021_deeptrader_wang,Table 2,DJIA,DeepTrader,proposed,main,SoR,2.782,,portfolio,https://ojs.aaai.org/index.php/AAAI/article/view/16144/15951:611,verified_from_browser_pdf_text
+2021_deeptrader_wang,Table 2,DJIA,DeepTrader,proposed,main,MDD,0.2261,,portfolio,https://ojs.aaai.org/index.php/AAAI/article/view/16144/15951:611,verified_from_browser_pdf_text
+2021_deeptrader_wang,Table 2,DJIA,DeepTrader,proposed,main,CR,0.546,,portfolio,https://ojs.aaai.org/index.php/AAAI/article/view/16144/15951:611,verified_from_browser_pdf_text
+2021_deeptrader_wang,Table 2,HSI,DeepTrader,proposed,main,ARR,0.2185,,portfolio,https://ojs.aaai.org/index.php/AAAI/article/view/16144/15951:611,verified_from_browser_pdf_text
+2021_deeptrader_wang,Table 2,HSI,DeepTrader,proposed,main,AVol,0.209,,portfolio,https://ojs.aaai.org/index.php/AAAI/article/view/16144/15951:611,verified_from_browser_pdf_text
+2021_deeptrader_wang,Table 2,HSI,DeepTrader,proposed,main,ASR,1.044,,portfolio,https://ojs.aaai.org/index.php/AAAI/article/view/16144/15951:611,verified_from_browser_pdf_text
+2021_deeptrader_wang,Table 2,HSI,DeepTrader,proposed,main,SoR,5.140,,portfolio,https://ojs.aaai.org/index.php/AAAI/article/view/16144/15951:611,verified_from_browser_pdf_text
+2021_deeptrader_wang,Table 2,HSI,DeepTrader,proposed,main,MDD,0.1711,,portfolio,https://ojs.aaai.org/index.php/AAAI/article/view/16144/15951:611,verified_from_browser_pdf_text
+2021_deeptrader_wang,Table 2,HSI,DeepTrader,proposed,main,CR,1.277,,portfolio,https://ojs.aaai.org/index.php/AAAI/article/view/16144/15951:611,verified_from_browser_pdf_text
+2021_deeptrader_wang,Table 2,CSI100,DeepTrader-NM,proposed_variant,main,ARR,0.3567,,portfolio,https://ojs.aaai.org/index.php/AAAI/article/view/16144/15951:611,verified_from_browser_pdf_text
+2021_deeptrader_wang,Table 2,CSI100,DeepTrader-NM,proposed_variant,main,AVol,0.324,,portfolio,https://ojs.aaai.org/index.php/AAAI/article/view/16144/15951:611,verified_from_browser_pdf_text
+2021_deeptrader_wang,Table 2,CSI100,DeepTrader-NM,proposed_variant,main,ASR,1.100,,portfolio,https://ojs.aaai.org/index.php/AAAI/article/view/16144/15951:611,verified_from_browser_pdf_text
+2021_deeptrader_wang,Table 2,CSI100,DeepTrader-NM,proposed_variant,main,SoR,6.059,,portfolio,https://ojs.aaai.org/index.php/AAAI/article/view/16144/15951:611,verified_from_browser_pdf_text
+2021_deeptrader_wang,Table 2,CSI100,DeepTrader-NM,proposed_variant,main,MDD,0.1813,,portfolio,https://ojs.aaai.org/index.php/AAAI/article/view/16144/15951:611,verified_from_browser_pdf_text
+2021_deeptrader_wang,Table 2,CSI100,DeepTrader-NM,proposed_variant,main,CR,1.967,,portfolio,https://ojs.aaai.org/index.php/AAAI/article/view/16144/15951:611,verified_from_browser_pdf_text

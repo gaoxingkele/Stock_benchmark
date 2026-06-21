@@ -1,0 +1,28 @@
+nodes:
+  - id: Q01
+    type: question
+    title: "Can 2023_doubleadapt_zhao be represented and verified independently?"
+    support_level: explicit
+    source_refs:
+      - papers/metadata/paper_registry.csv
+      - papers/metadata/pdf_download_status.csv
+    children:
+      - id: D01
+        type: decision
+        title: "Use downloaded local PDF and extracted text as primary paper evidence"
+        choice: "Compile an ARA from local sources"
+        alternatives:
+          - "Rely on network paper URL"
+        rationale: "Local PDF header is valid and extracted text exists."
+        support_level: explicit
+        source_refs:
+          - papers/extracted/2023_doubleadapt_zhao.txt
+      - id: E03
+        type: experiment
+        title: "Independent local model verification"
+        result: "complete"
+        support_level: explicit
+        source_refs:
+          - experiments/summary/smoke_results.csv
+        evidence:
+          - C03

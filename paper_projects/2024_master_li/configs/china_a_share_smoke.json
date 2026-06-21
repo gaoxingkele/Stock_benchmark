@@ -1,0 +1,32 @@
+{
+  "paper_id": "2024_master_li",
+  "model": "MASTER",
+  "task": "trend_prediction",
+  "market": "cn_a_share",
+  "universe_config": "Stock_benchmark/configs/universes/csi300_smoke.json",
+  "split_config": "Stock_benchmark/configs/splits/csi300_by_date_smoke.json",
+  "data": {
+    "panel": "Stock_benchmark/data/processed/cn_a_share/csi300_by_date_smoke/panel.csv",
+    "qlib_provider_uri": "Stock_benchmark/data/processed/cn_a_share/csi300_by_date_smoke/qlib_bin_numeric",
+    "labels": {
+      "h1": "Stock_benchmark/data/processed/cn_a_share/csi300_by_date_smoke/labels_h1.csv",
+      "h5": "Stock_benchmark/data/processed/cn_a_share/csi300_by_date_smoke/labels_h5.csv"
+    },
+    "market_features_needed": true
+  },
+  "upstream": {
+    "repo": "Stock_benchmark/external_repos/SJTU-DMTai__qlib",
+    "workflow_dir": "examples/benchmarks/MASTER",
+    "model_file": "qlib/contrib/model/pytorch_master_ts.py",
+    "dataset_file": "qlib/contrib/data/dataset.py"
+  },
+  "first_target": {
+    "feature_handler": "Alpha158 or fork-specific MASTER handler",
+    "label": "h1 smoke, then h5 formal",
+    "baseline_before_run": "Transformer or Qlib LightGBM on the same provider_uri"
+  },
+  "blocked_by": [
+    "Full fork-compatible pyqlib runtime is unavailable.",
+    "MASTER market-guided component needs index or market feature construction for China A shares."
+  ]
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "paper_id": "2024_ci_sthpan_xia",
+    "status": "error",
+    "path": "C:\\aicoding\\Stock_benchmark\\papers\\raw\\2024_ci_sthpan_xia.pdf",
+    "bytes": 0,
+    "valid_pdf_header": false,
+    "error": "HTTP Error 403: Forbidden",
+    "pdf_url": "https://scispace.com/pdf/ci-sthpan-pre-trained-attention-network-for-stock-selection-36zm34cv3u.pdf"
+  },
+  {
+    "paper_id": "2024_mdgnn_li",
+    "status": "downloaded",
+    "path": "C:\\aicoding\\Stock_benchmark\\papers\\raw\\2024_mdgnn_li.pdf",
+    "bytes": 1095617,
+    "valid_pdf_header": true,
+    "content_type": "application/pdf",
+    "pdf_url": "https://arxiv.org/pdf/2402.06633.pdf"
+  },
+  {
+    "paper_id": "2021_deeptrader_wang",
+    "status": "error",
+    "path": "C:\\aicoding\\Stock_benchmark\\papers\\raw\\2021_deeptrader_wang.pdf",
+    "bytes": 0,
+    "valid_pdf_header": false,
+    "error": "Remote end closed connection without response",
+    "pdf_url": "https://ojs.aaai.org/index.php/AAAI/article/view/16144/15951"
+  }
+]

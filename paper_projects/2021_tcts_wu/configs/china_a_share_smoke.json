@@ -1,0 +1,29 @@
+{
+  "paper_id": "2021_tcts_wu",
+  "model": "TCTS",
+  "task": "trend_prediction",
+  "market": "cn_a_share",
+  "universe_config": "Stock_benchmark/configs/universes/csi300_smoke.json",
+  "split_config": "Stock_benchmark/configs/splits/csi300_by_date_smoke.json",
+  "data": {
+    "panel": "Stock_benchmark/data/processed/cn_a_share/csi300_by_date_smoke/panel.csv",
+    "qlib_provider_uri": "Stock_benchmark/data/processed/cn_a_share/csi300_by_date_smoke/qlib_bin_numeric",
+    "labels": {
+      "h1": "Stock_benchmark/data/processed/cn_a_share/csi300_by_date_smoke/labels_h1.csv",
+      "h5": "Stock_benchmark/data/processed/cn_a_share/csi300_by_date_smoke/labels_h5.csv"
+    }
+  },
+  "upstream": {
+    "repo": "Stock_benchmark/external_repos/microsoft__qlib",
+    "workflow": "examples/benchmarks/TCTS/workflow_config_tcts_Alpha360.yaml"
+  },
+  "first_target": {
+    "feature_handler": "Alpha360",
+    "label": "h1 smoke, then multi-horizon formal",
+    "baseline_before_run": "Transformer and TRA on the same provider_uri"
+  },
+  "blocked_by": [
+    "Full pyqlib runtime is unavailable in the current Python environment.",
+    "Paper URL and venue metadata still need verification before final literature notes."
+  ]
+}

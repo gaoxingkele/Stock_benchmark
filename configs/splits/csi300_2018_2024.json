@@ -1,0 +1,25 @@
+{
+  "id": "csi300_2018_2024_split",
+  "market": "cn_a_share",
+  "universe": "csi300",
+  "frequency": "day",
+  "splits": {
+    "train": [
+      "2018-01-02",
+      "2021-12-31"
+    ],
+    "valid": [
+      "2022-01-04",
+      "2022-12-30"
+    ],
+    "test": [
+      "2023-01-03",
+      "2024-12-31"
+    ]
+  },
+  "label_horizons": [
+    1,
+    5
+  ],
+  "notes": "First formal CSI300 split for reproducible Qlib and paper-model experiments. Later full-history profiles can extend to 2010-2025."
+}

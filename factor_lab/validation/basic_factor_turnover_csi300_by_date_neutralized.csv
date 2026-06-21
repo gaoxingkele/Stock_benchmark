@@ -1,0 +1,15 @@
+factor,top_frac,dates,turnover_obs,avg_top_size,avg_turnover
+pb_ind_size_neu,0.2000,7,6,60.00,0.00555556
+pe_ind_size_neu,0.2000,7,6,58.00,0.01436782
+size_log_circ_mv_ind_size_neu,0.2000,7,6,60.00,0.01944444
+turnover_rate_ind_size_neu,0.2000,7,6,60.00,0.20833333
+ret_3_ind_size_neu,0.2000,4,3,60.00,0.40000000
+high_low_spread_ind_size_neu,0.2000,7,6,60.00,0.58888889
+volume_ratio_ind_size_neu,0.2000,7,6,60.00,0.65000000
+close_to_high_ind_size_neu,0.2000,7,6,60.00,0.66388889
+close_to_low_ind_size_neu,0.2000,7,6,60.00,0.68611111
+intraday_ret_ind_size_neu,0.2000,7,6,60.00,0.69722222
+ret_1_ind_size_neu,0.2000,6,5,60.00,0.70666667
+overnight_ret_ind_size_neu,0.2000,7,6,60.00,0.73611111
+amount_ratio_3_ind_size_neu,0.2000,7,6,60.00,0.75833333
+volume_ratio_3_ind_size_neu,0.2000,7,6,60.00,0.76944444

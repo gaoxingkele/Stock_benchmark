@@ -1,0 +1,13 @@
+{
+  "name": "csi300",
+  "market": "cn_a_share",
+  "index_code": "000300.SH",
+  "selection": "latest_index_weight_in_sample",
+  "instrument_file": "Stock_benchmark/data/processed/cn_a_share/csi300_by_date_smoke/instruments/csi300.txt",
+  "calendar_file": "Stock_benchmark/data/processed/cn_a_share/csi300_by_date_smoke/calendars/day.txt",
+  "expected_symbol_count": 300,
+  "sample_window": [
+    "2024-01-02",
+    "2024-01-10"
+  ]
+}

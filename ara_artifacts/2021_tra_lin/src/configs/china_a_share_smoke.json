@@ -1,0 +1,30 @@
+{
+  "paper_id": "2021_tra_lin",
+  "model": "TRA",
+  "task": "trend_prediction",
+  "market": "cn_a_share",
+  "universe_config": "Stock_benchmark/configs/universes/csi300_smoke.json",
+  "split_config": "Stock_benchmark/configs/splits/csi300_by_date_smoke.json",
+  "data": {
+    "panel": "Stock_benchmark/data/processed/cn_a_share/csi300_by_date_smoke/panel.csv",
+    "qlib_provider_uri": "Stock_benchmark/data/processed/cn_a_share/csi300_by_date_smoke/qlib_bin_numeric",
+    "labels": {
+      "h1": "Stock_benchmark/data/processed/cn_a_share/csi300_by_date_smoke/labels_h1.csv",
+      "h5": "Stock_benchmark/data/processed/cn_a_share/csi300_by_date_smoke/labels_h5.csv"
+    }
+  },
+  "upstream": {
+    "repo": "Stock_benchmark/external_repos/microsoft__qlib",
+    "workflow": "examples/benchmarks/TRA/workflow_config_tra_Alpha360.yaml",
+    "model_file": "qlib/contrib/model/pytorch_tra.py"
+  },
+  "first_target": {
+    "feature_handler": "Alpha360",
+    "label": "h1 smoke, then h5 formal",
+    "baseline_before_run": "Stock_benchmark/configs/qlib/workflow_lightgbm_csi300_by_date_smoke.yaml"
+  },
+  "blocked_by": [
+    "Full pyqlib runtime is unavailable in the current Python environment.",
+    "Formal Alpha360 needs longer history than the current 7-trading-day smoke sample."
+  ]
+}

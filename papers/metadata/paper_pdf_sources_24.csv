@@ -1,0 +1,19 @@
+paper_id,pdf_url,source_type,source_note
+2022_thgnn_xiang,https://arxiv.org/pdf/2305.08740.pdf,arxiv,THGNN arXiv abstract located by title search
+2023_estimate_huynh,https://arxiv.org/pdf/2211.07400.pdf,arxiv,ESTIMATE arXiv abstract located by title search
+2024_alphaforge_shi,https://arxiv.org/pdf/2406.18394.pdf,arxiv,AlphaForge arXiv abstract located by title search
+2026_alphaprobe_guo,https://arxiv.org/pdf/2602.11917.pdf,arxiv,AlphaPROBE arXiv abstract located by title search
+2022_ddg_da_li,https://arxiv.org/pdf/2201.04038.pdf,arxiv,DDG-DA arXiv abstract located by title search
+2025_rd_agent_quant_li,https://arxiv.org/pdf/2505.15155.pdf,arxiv,RD-Agent-Quant arXiv abstract located by title search
+2022_factorvae_duan,https://cdn.aaai.org/ojs/20369/20369-13-24382-1-2-20220628.pdf,aaai_pdf,AAAI PDF located by title search
+2021_hatr_wang,https://www.ijcai.org/proceedings/2021/0508.pdf,ijcai_pdf,IJCAI PDF located by title search
+2022_alsp_tf_wang,https://www.ijcai.org/proceedings/2022/0551.pdf,ijcai_pdf,IJCAI PDF located by title search
+2024_ci_sthpan_xia,https://scispace.com/pdf/ci-sthpan-pre-trained-attention-network-for-stock-selection-36zm34cv3u.pdf,pdf_mirror,Scispace PDF mirror found after AAAI command-line TLS failures
+2024_mdgnn_li,https://arxiv.org/pdf/2402.06633.pdf,arxiv,arXiv PDF found after AAAI command-line TLS failures
+2021_deeptrader_wang,https://ojs.aaai.org/index.php/AAAI/article/view/16144/15951,aaai_pdf,AAAI PDF located by title search
+2019_alphastock_wang,https://arxiv.org/pdf/1908.02646.pdf,arxiv,AlphaStock arXiv abstract located by title search
+2020_doubleensemble_zhang,https://arxiv.org/pdf/2010.01265.pdf,arxiv,DoubleEnsemble arXiv abstract located by title search
+2024_diffsformer_gao,https://arxiv.org/pdf/2402.06656.pdf,arxiv,DiffsFormer arXiv abstract located by title search
+2025_finmamba_hu,https://arxiv.org/pdf/2502.06707.pdf,arxiv,FinMamba arXiv abstract located by title search
+2024_lsr_igru_zhu,https://arxiv.org/pdf/2409.08282.pdf,arxiv,LSR-IGRU arXiv abstract located by title search
+2025_timefilter_hu,https://arxiv.org/pdf/2501.13041.pdf,arxiv,TimeFilter arXiv abstract located by title search

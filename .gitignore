@@ -1,0 +1,39 @@
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+env/
+.venv/
+venv/
+
+# Local/generated data. Regenerate with scripts and documented commands.
+data/
+
+# Third-party paper full text/PDF artifacts. Keep metadata and manifests tracked.
+papers/raw/*.pdf
+papers/extracted/*.txt
+
+# External cloned repositories
+external_repos/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Large local model/cache artifacts
+*.pkl
+*.joblib
+*.parquet
+*.h5
+*.hdf5

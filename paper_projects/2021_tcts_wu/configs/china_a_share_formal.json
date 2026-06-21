@@ -1,0 +1,27 @@
+{
+  "paper_id": "2021_tcts_wu",
+  "model": "TCTS",
+  "task": "trend_prediction",
+  "market": "cn_a_share",
+  "universe_config": "Stock_benchmark/configs/universes/csi300_2018_2024.json",
+  "split_config": "Stock_benchmark/configs/splits/csi300_2018_2024.json",
+  "data": {
+    "panel": "Stock_benchmark/data/processed/cn_a_share/csi300_2018_2024/panel.csv",
+    "qlib_provider_uri": "Stock_benchmark/data/processed/cn_a_share/csi300_2018_2024/qlib_bin_numeric",
+    "labels": {
+      "h1": "Stock_benchmark/data/processed/cn_a_share/csi300_2018_2024/labels_h1.csv",
+      "h5": "Stock_benchmark/data/processed/cn_a_share/csi300_2018_2024/labels_h5.csv"
+    }
+  },
+  "first_runnable": {
+    "script": "Stock_benchmark/scripts/run_paper_model_baseline.py",
+    "mode": "tcts",
+    "lookback": 20,
+    "max_train_rows": 50000,
+    "outputs": {
+      "h1": "Stock_benchmark/experiments/paper_runs/tcts_formal_csi300_2018_2024_h1.csv",
+      "h5": "Stock_benchmark/experiments/paper_runs/tcts_formal_csi300_2018_2024_h5.csv"
+    }
+  },
+  "official_runtime_status": "Blocked until PyTorch/Qlib runtime is provisioned."
+}

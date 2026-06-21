@@ -1,0 +1,79 @@
+{
+  "id": "csi300_by_date_smoke_lightgbm_h1",
+  "task": "trend_prediction",
+  "market": "cn_a_share",
+  "universe": {
+    "name": "csi300",
+    "index_code": "000300.SH",
+    "selection": "latest_index_weight_in_sample"
+  },
+  "data": {
+    "provider": "tushare",
+    "frequency": "day",
+    "panel": "Stock_benchmark/data/processed/cn_a_share/csi300_by_date_smoke/panel.csv",
+    "raw_root": "Stock_benchmark/data/raw/tushare/csi300_by_date_smoke",
+    "processed_root": "Stock_benchmark/data/processed/cn_a_share/csi300_by_date_smoke"
+  },
+  "features": {
+    "kind": "panel_columns",
+    "columns": [
+      "open",
+      "high",
+      "low",
+      "close",
+      "pre_close",
+      "volume",
+      "amount",
+      "change",
+      "pct_chg",
+      "turnover_rate",
+      "volume_ratio",
+      "pe",
+      "pb",
+      "total_mv",
+      "circ_mv",
+      "factor"
+    ]
+  },
+  "label": {
+    "kind": "forward_return",
+    "price": "close",
+    "horizon": 1
+  },
+  "split": {
+    "train": [
+      "2024-01-02",
+      "2024-01-05"
+    ],
+    "test": [
+      "2024-01-08",
+      "2024-01-10"
+    ]
+  },
+  "model": {
+    "family": "gbdt",
+    "name": "lightgbm",
+    "params": {
+      "objective": "regression",
+      "learning_rate": 0.1,
+      "num_leaves": 4,
+      "min_data_in_leaf": 1,
+      "verbosity": -1,
+      "seed": 42
+    },
+    "num_boost_round": 10
+  },
+  "evaluation": {
+    "metrics": [
+      "IC",
+      "ICIR",
+      "RankIC",
+      "RankICIR"
+    ],
+    "group_by": "date"
+  },
+  "outputs": {
+    "predictions_or_scores": "Stock_benchmark/experiments/baselines/lightgbm_smoke_csi300_by_date.csv",
+    "summary": "Stock_benchmark/docs/reports/csi300_by_date_smoke_lightgbm_h1.md"
+  }
+}

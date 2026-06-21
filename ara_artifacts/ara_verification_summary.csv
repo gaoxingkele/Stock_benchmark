@@ -1,0 +1,7 @@
+paper_id,title,artifact_dir,pdf_valid,has_project,matching_runs,independent_verification,tables_detected,figures_detected
+2021_adarnn_du,AdaRNN: Adaptive Learning and Forecasting of Time Series,ara_artifacts\2021_adarnn_du,True,False,2,complete,6,5
+2021_tcts_wu,Temporally Correlated Task Scheduling for Sequence Learning,ara_artifacts\2021_tcts_wu,True,True,2,complete,3,5
+2021_tra_lin,Learning Multiple Stock Trading Patterns with Temporal Routing Adaptor and Optimal Transport,ara_artifacts\2021_tra_lin,True,True,2,complete,2,8
+2022_hist_xu,HIST: A Graph-based Framework for Stock Trend Forecasting via Mining Concept-Oriented Shared Information,ara_artifacts\2022_hist_xu,True,False,2,complete,3,6
+2023_doubleadapt_zhao,DoubleAdapt: A Meta-learning Approach to Incremental Learning for Stock Trend Forecasting,ara_artifacts\2023_doubleadapt_zhao,True,True,2,complete,3,7
+2024_master_li,MASTER: Market-Guided Stock Transformer for Stock Price Forecasting,ara_artifacts\2024_master_li,True,True,2,complete,2,6
