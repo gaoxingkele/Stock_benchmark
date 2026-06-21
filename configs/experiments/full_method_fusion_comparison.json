@@ -1,0 +1,52 @@
+{
+  "protocol": {
+    "universe": "CSI300 A-share panel",
+    "horizon": 5,
+    "portfolio": "Top30 equal-weight long-only",
+    "rebalance": "daily",
+    "cost_bps_one_way": 10,
+    "raw_and_neutralized": true,
+    "panel_2023_2024": "data/processed/cn_a_share/csi300_2018_2024/panel.csv",
+    "stock_basic_2023_2024": "data/raw/tushare/csi300_2018_2024/stock_basic.csv"
+  },
+  "methods": [
+    {
+      "name": "rd_agent_doubleadapt_proxy",
+      "status": "completed",
+      "type": "local_proxy",
+      "summary": "experiments/trade_validation/trade_validation_summary.csv",
+      "notes": "Current best runnable strategy: Ridge base model plus DoubleAdapt-style symbol residual adaptation."
+    },
+    {
+      "name": "doubleadapt_official",
+      "status": "blocked_runtime",
+      "type": "official_reference_method",
+      "paper": "DoubleAdapt: A Meta-learning Approach to Incremental Learning for Stock Trend Forecasting",
+      "repo": "external_repos/SJTU-DMTai__qlib",
+      "required_score_output": "experiments/official_scores/doubleadapt_official_h5.csv",
+      "required_columns": ["date", "symbol", "score"],
+      "blocking_items": ["Python 3.8/3.9 compatible environment", "torch==1.9.0", "higher==0.2.1", "forked qlib runtime"]
+    },
+    {
+      "name": "rd_agent_quant_official",
+      "status": "blocked_runtime",
+      "type": "official_reference_method",
+      "paper": "R&D-Agent-Quant: A Multi-Agent Framework for Data-Centric Factors and Model Joint Optimization",
+      "repo": "external_repos/microsoft__RD-Agent",
+      "required_score_output": "experiments/official_scores/rd_agent_quant_official_h5.csv",
+      "required_columns": ["date", "symbol", "score"],
+      "blocking_items": ["complete RD-Agent clone", "RD-Agent quant scenario setup", "Qlib-backed data config", "LLM API credentials", "factor/model evolution run"]
+    },
+    {
+      "name": "rda_doubleadapt_full",
+      "status": "blocked_upstream_outputs",
+      "type": "fusion_full_method",
+      "required_score_output": "experiments/official_scores/rda_doubleadapt_full_h5.csv",
+      "required_columns": ["date", "symbol", "score"],
+      "definition": "RD-Agent(Q) factor/model output adapted by the official DoubleAdapt online adapter, then validated by the same Top30 trading protocol.",
+      "blocking_items": ["doubleadapt_official scores", "rd_agent_quant_official scores or model/factor outputs"]
+    }
+  ],
+  "validation_command_template": "python scripts/run_score_trade_validation.py --scores {score_csv} --panel data/processed/cn_a_share/csi300_2018_2024/panel.csv --stock-basic data/raw/tushare/csi300_2018_2024/stock_basic.csv --method {method} --horizon 5 --topk 30 --cost-bps 10"
+}
+
