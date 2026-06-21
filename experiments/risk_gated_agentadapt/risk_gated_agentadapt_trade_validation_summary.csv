@@ -1,0 +1,3 @@
+method,variant,horizon,topk,cost_bps,days,ann_return,ann_vol,sharpe,mdd,cum_return,active_ann_return,active_sharpe,avg_turnover,hit_rate,avg_max_industry_weight,avg_size_exposure,yearly_ann_returns,daily_source
+risk_gated_agentadapt,raw,5,30,10.00,419,0.27140796,0.13106552,2.07078069,-0.10756252,0.49071417,0.20973361,3.00970799,0.14892601,0.51312649,0.17907717,0.17841561,2023:0.0056;2024:0.5223,experiments\risk_gated_agentadapt\risk_gated_agentadapt_h5_top30_raw_daily.csv
+risk_gated_agentadapt,industry_size_neutral,5,30,10.00,419,0.16828275,0.12561290,1.33969324,-0.17177547,0.29512562,0.11187449,2.05216187,0.15640414,0.47971360,0.13969769,0.04071486,2023:-0.0482;2024:0.3673,experiments\risk_gated_agentadapt\risk_gated_agentadapt_h5_top30_industry_size_neutral_daily.csv
