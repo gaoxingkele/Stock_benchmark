@@ -9,6 +9,7 @@ Risk-Gated AgentAdapt 用 `RD-Agent-Quant / DoubleAdapt-family` proxy 作为主 
 实现文件：
 
 - `scripts/run_risk_gated_agentadapt.py`
+- `scripts/run_regime_gated_agentadapt.py`
 - `scripts/run_score_sensitivity_grid.py`
 
 ## 主协议
@@ -56,6 +57,44 @@ Risk-Gated AgentAdapt 用 `RD-Agent-Quant / DoubleAdapt-family` proxy 作为主 
 | 2025 overlap | 0 / 18 | -9.33 pct | -4.44 pct | 全网格输给 proxy |
 | 2026 YTD overlap | 15 / 18 | +0.88 pct | -0.04 pct | raw 小幅改善，样本短 |
 
+## 显式 Regime Gate 增强版
+
+`scripts/run_regime_gated_agentadapt.py` 在上一版滞后表现门控的基础上，加入了显式市场状态和组合暴露输入：
+
+- CSI300 过去 20 日趋势、波动和回撤。
+- proxy 与 adapter 的滞后 IC。
+- 候选组合的滞后回撤、换手、行业集中度和规模暴露。
+- 当 adapter IC 明显弱于 proxy 时惩罚 adapter 权重。
+- 当市场处于高波动、下跌或回撤状态且 adapter 降低候选回撤时，允许提高 adapter 权重。
+- 当候选组合行业集中度或规模暴露偏高时惩罚 adapter 权重。
+
+Top30 / 10bps 主协议结果：
+
+| 区间 | Regime-Gated 变体 | 天数 | 累计净收益 | 年化收益 | Sharpe | MDD | 平均换手 |
+|---|---|---:|---:|---:|---:|---:|---:|
+| 2023-2024 overlap | raw | 419 | 47.20% | 26.18% | 1.99 | -10.70% | 14.73% |
+| 2023-2024 overlap | neutral | 419 | 30.20% | 17.20% | 1.37 | -17.84% | 15.49% |
+| 2025 overlap | raw | 183 | 100.41% | 160.46% | 13.66 | -6.37% | 12.04% |
+| 2025 overlap | neutral | 183 | 84.39% | 132.24% | 13.11 | -6.25% | 13.06% |
+| 2026 YTD overlap | raw | 44 | 39.20% | 564.71% | 35.90 | -4.32% | 10.30% |
+| 2026 YTD overlap | neutral | 44 | 19.98% | 183.84% | 18.40 | -2.94% | 17.42% |
+
+Regime-Gated 相对 proxy 的敏感性网格：
+
+| 区间 | 胜出组合 | raw 平均累计收益差 | neutral 平均累计收益差 | 结论 |
+|---|---:|---:|---:|---|
+| 2023-2024 overlap | 13 / 18 | +7.34 pct | -0.67 pct | 比上一版更好，但 neutral 仍未稳健 |
+| 2025 overlap | 2 / 18 | -6.98 pct | -2.41 pct | 明显改善上一版，但仍输给 proxy |
+| 2026 YTD overlap | 9 / 18 | +0.94 pct | -0.40 pct | raw 稳定小胜，neutral 全输 |
+
+Regime-Gated 的 adapter 权重分布：
+
+| 区间 | adapter weight 分布 | 主要门控原因 |
+|---|---|---|
+| 2023-2024 overlap | 0.0: 75 天；0.1: 49 天；0.25: 65 天；0.4: 230 天 | exposure_penalty 198 天；risk_regime_adapter_helped 143 天 |
+| 2025 overlap | 0.0: 104 天；0.25: 27 天；0.4: 52 天 | base 79 天；exposure_penalty 52 天；adapter_ic_weak 16 天 |
+| 2026 YTD overlap | 0.0: 39 天；0.25: 3 天；0.4: 2 天 | cold_start/base 为主 |
+
 ## 门控行为
 
 | 区间 | adapter weight 分布 |
@@ -72,6 +111,7 @@ Risk-Gated AgentAdapt 用 `RD-Agent-Quant / DoubleAdapt-family` proxy 作为主 
 2. 当前实现没有达到“新最佳策略”标准。关键证据是 2025 overlap 的 TopK/成本敏感性网格中 18/18 全部输给 proxy。
 3. DoubleAdapt core 更适合被研究为风险状态模块，而不是固定正权重 alpha。它在 2023-2024 和 2026 YTD 可改善 raw 或回撤，但 2025 会拖累收益。
 4. 当前生产/交易候选仍应保留 `RD-Agent-Quant / DoubleAdapt-family H5 Top30` proxy。Risk-Gated AgentAdapt 应作为论文候选方向继续迭代。
+5. 显式 Regime-Gated 增强版验证了市场状态和暴露约束能缓解 2025 退化，但仍不足以跨年份稳定超过 proxy，因此学术结论应写成“可解释负结果 + 候选机制”，不能写成“新 SOTA 策略”。
 
 ## 下一步研究方向
 
@@ -89,4 +129,6 @@ python scripts\run_risk_gated_agentadapt.py --proxy experiments\official_scores\
 python scripts\run_score_trade_validation.py --scores experiments\official_scores\risk_gated_agentadapt_h5.csv --panel data\processed\cn_a_share\csi300_2018_2024\panel.csv --stock-basic data\raw\tushare\csi300_2018_2024\stock_basic.csv --method risk_gated_agentadapt --horizon 5 --topk 30 --cost-bps 10 --test-start 2023-01-03 --test-end 2024-12-31 --out-dir experiments\risk_gated_agentadapt
 
 python scripts\run_score_sensitivity_grid.py --scores experiments\official_scores\risk_gated_agentadapt_h5.csv --panel data\processed\cn_a_share\csi300_2018_2024\panel.csv --stock-basic data\raw\tushare\csi300_2018_2024\stock_basic.csv --method risk_gated_2023_2024 --test-start 2023-04-04 --test-end 2024-12-31 --out experiments\risk_gated_agentadapt\risk_gated_2023_2024_sensitivity.csv
+
+python scripts\run_regime_gated_agentadapt.py --proxy experiments\official_scores\rd_agent_quant_proxy_h5_scores.csv --adapter experiments\official_scores\doubleadapt_official_core_h5.csv --panel data\processed\cn_a_share\csi300_2018_2024\panel.csv --stock-basic data\raw\tushare\csi300_2018_2024\stock_basic.csv --index-daily data\raw\tushare\csi300_2018_2024\index_daily.csv --out experiments\official_scores\regime_gated_agentadapt_h5.csv --diagnostics-out experiments\regime_gated_agentadapt\regime_gated_agentadapt_diagnostics.csv --horizon 5 --topk 30 --cost-bps 10
 ```
