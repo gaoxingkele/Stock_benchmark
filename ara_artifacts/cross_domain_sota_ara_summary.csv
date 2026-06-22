@@ -1,0 +1,15 @@
+candidate_id,artifact_dir,method_family,priority,dataset_count,ara_dir_exists
+2023_patchtst,ara_artifacts\2023_patchtst,patch_transformer,3,9,True
+2023_timesnet,ara_artifacts\2023_timesnet,periodicity_2d_variation,5,10,True
+2024_itransformer,ara_artifacts\2024_itransformer,variate_attention,1,9,True
+2024_timemixer,ara_artifacts\2024_timemixer,multiscale_mlp,4,9,True
+2025_timemixerpp,ara_artifacts\2025_timemixerpp,multiresolution_pattern_machine,4,1,True
+2022_nonstationary_transformer,ara_artifacts\2022_nonstationary_transformer,nonstationarity_correction,2,7,True
+2022_fedformer,ara_artifacts\2022_fedformer,frequency_decomposition,4,6,True
+2023_nhits,ara_artifacts\2023_nhits,hierarchical_interpolation,4,1,True
+2023_dlinear,ara_artifacts\2023_dlinear,decomposition_linear,0,9,True
+2024_timesfm,ara_artifacts\2024_timesfm,foundation_forecaster,6,0,True
+2024_chronos,ara_artifacts\2024_chronos,tokenized_foundation_model,6,2,True
+2024_moirai,ara_artifacts\2024_moirai,universal_forecasting_transformer,6,2,True
+2024_moment,ara_artifacts\2024_moment,foundation_model_multitask,6,3,True
+2024_ttm,ara_artifacts\2024_ttm,tiny_pretrained_ts_model,5,1,True

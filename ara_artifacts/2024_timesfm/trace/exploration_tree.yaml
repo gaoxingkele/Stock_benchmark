@@ -1,0 +1,18 @@
+tree:
+  - id: N01
+    type: question
+    support_level: inferred
+    title: "Can 2024_timesfm inform Lingxi10/Lingxi5 upgrades?"
+    description: "Assess whether the method family foundation_forecaster can become a local, point-in-time proxy module."
+    children:
+      - id: N02
+        type: decision
+        support_level: explicit
+        source_refs: ["papers/metadata/lingxi_cross_domain_ts_sota_candidates.csv"]
+        title: "Classify candidate method family"
+        description: "The candidate is classified as foundation_forecaster with priority 6."
+      - id: N03
+        type: experiment
+        support_level: inferred
+        title: "Run Lingxi proxy validation"
+        description: "Future work: implement Later-stage foundation-model feature source and compare against Lingxi10/Lingxi5."

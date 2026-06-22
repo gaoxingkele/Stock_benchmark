@@ -1,0 +1,18 @@
+tree:
+  - id: N01
+    type: question
+    support_level: inferred
+    title: "Can 2023_timesnet inform Lingxi10/Lingxi5 upgrades?"
+    description: "Assess whether the method family periodicity_2d_variation can become a local, point-in-time proxy module."
+    children:
+      - id: N02
+        type: decision
+        support_level: explicit
+        source_refs: ["papers/metadata/lingxi_cross_domain_ts_sota_candidates.csv"]
+        title: "Classify candidate method family"
+        description: "The candidate is classified as periodicity_2d_variation with priority 5."
+      - id: N03
+        type: experiment
+        support_level: inferred
+        title: "Run Lingxi proxy validation"
+        description: "Future work: implement Periodic/multi-task feature inspiration for multiscale proxies and compare against Lingxi10/Lingxi5."

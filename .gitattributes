@@ -1,0 +1,2 @@
+data/external/time_series_sota/*.csv -text -diff
+data/external/time_series_sota/**/*.csv -text -diff
