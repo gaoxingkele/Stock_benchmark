@@ -14,14 +14,15 @@ Scope:
 | Deduplicated papers | 31 | Current full comparison/research pool |
 | Full ARA-engineered artifacts | 6 | `ara_artifacts/<paper_id>/` exists with `PAPER.md`, `logic/`, `src/`, `trace/`, `evidence/`, and formal H1/H5 run evidence |
 | Not yet ARA-engineered | 25 | No full ARA directory yet |
-| Formal local experiment validation complete | 24 | Present in the 24-paper matrix with China A-share H1/H5 proxy runs |
-| Not yet locally experiment-validated | 7 | Expansion-only candidates; no local benchmark run yet |
+| Formal / proxy local experiment validation complete | 31 | 24 papers in the original metric matrix; 7 expansion-only papers now validated through `scripts/run_unvalidated_paper_candidates.py` |
+| Not yet locally experiment-validated | 0 | The expansion-only candidates now have China A-share, US large-cap, and HK large-cap proxy runs |
 | Full ARA + local experiment validation | 6 | Current strongest reproducible subset |
 
 Important distinction:
-- "Experiment validation complete" here means the paper has been bound to the local China A-share H1/H5 paper-inspired proxy protocol and structured original-paper metrics.
-- It does not mean every official implementation has been fully reproduced.
-- Cross-market US/HK/Crypto validation currently covers 9 implemented model proxies / 5 method families, not all 31 papers.
+- For the original 24-paper matrix, "experiment validation complete" means the paper has structured original-paper metrics plus local China A-share H1/H5 paper-inspired proxy results.
+- For the seven expansion-only papers, "experiment validation complete" means the paper has a runnable proxy experiment on China A-share, US large-cap, and HK large-cap under the H5 Top30 trading protocol.
+- Neither category means every official implementation has been fully reproduced.
+- Cross-market US/HK validation now covers the seven expansion-only candidates through paper-inspired proxies. The earlier US/HK/Crypto validation covers 9 implemented model proxies / 5 method families.
 
 ## ARA Criteria Used
 
@@ -65,13 +66,13 @@ A paper is marked `complete` for ARA engineering only if all of the following ex
 | 22 | `2025_finmamba_hu` | preprint | missing | complete | In 24-paper matrix; no ARA package yet |
 | 23 | `2024_lsr_igru_zhu` | CIKM 2024 | missing | complete | In 24-paper matrix; no ARA package yet |
 | 24 | `2025_timefilter_hu` | ICML 2025 | missing | complete | In 24-paper matrix; no ARA package yet |
-| 25 | `2020_qlib_yang` | arXiv 2020 | missing | missing | Expansion-only infrastructure paper; should be converted into benchmark/protocol ARA rather than strategy ARA |
-| 26 | `2025_alphaagent_tang` | KDD 2025 / arXiv | missing | missing | Expansion-only candidate; requires local factor-operator search implementation |
-| 27 | `2025_cogalpha_liu` | arXiv 2025/2026 | missing | missing | Expansion-only candidate; requires code-based factor generation protocol |
-| 28 | `2025_quantbench_wang` | arXiv / OpenReview / FITEE 2026 | missing | missing | Expansion-only benchmark paper; should be treated as evaluation-protocol ARA |
-| 29 | `2025_fintsb` | arXiv 2025 | missing | missing | Expansion-only benchmark paper; no local financial time-series benchmark binding yet |
-| 30 | `2024_technical_indicator_impact` | arXiv 2024 | missing | missing | Expansion-only TA-Lib-style feature paper; no local indicator ablation yet |
-| 31 | `2025_tin` | arXiv 2025 | missing | missing | Expansion-only technical-indicator modeling paper; no local model implementation yet |
+| 25 | `2020_qlib_yang` | arXiv 2020 | missing | complete | Validated through Alpha158-style OHLCV/value ridge proxy on China A-share, US large-cap, and HK large-cap |
+| 26 | `2025_alphaagent_tang` | KDD 2025 / arXiv | missing | complete | Validated through regularized formula-alpha selection proxy on China A-share, US large-cap, and HK large-cap |
+| 27 | `2025_cogalpha_liu` | arXiv 2025/2026 | missing | complete | Validated through code-generated formula feature ridge proxy on China A-share, US large-cap, and HK large-cap |
+| 28 | `2025_quantbench_wang` | arXiv / OpenReview / FITEE 2026 | missing | complete | Validated through Alpha/indicator/time-series ensemble proxy on China A-share, US large-cap, and HK large-cap |
+| 29 | `2025_fintsb` | arXiv 2025 | missing | complete | Validated through financial time-series momentum/volatility benchmark proxy on China A-share, US large-cap, and HK large-cap |
+| 30 | `2024_technical_indicator_impact` | arXiv 2024 | missing | complete | Validated through TA-Lib-style indicator ridge proxy on China A-share, US large-cap, and HK large-cap |
+| 31 | `2025_tin` | arXiv 2025 | missing | complete | Validated through technical-indicator interaction proxy on China A-share, US large-cap, and HK large-cap |
 
 ## Conclusion
 
@@ -80,11 +81,13 @@ The current repository is not yet a full 31-paper ARA benchmark.
 Current state:
 - Strongest subset: 6 papers with complete ARA engineering and local H1/H5 evidence.
 - Formal comparison subset: 24 papers with structured original metrics and local China A-share H1/H5 proxy validation.
-- Expansion-only subset: 7 papers that are useful for the next research direction but still need ARA compilation and experiment binding.
+- Expansion-only subset: 7 papers now have runnable proxy validation across China A-share, US large-cap, and HK large-cap, but still need full ARA compilation.
 
 Recommended next engineering order:
 
 1. Convert `2025_rd_agent_quant_li`, `2024_alphaforge_shi`, and `2026_alphaprobe_guo` into full ARA artifacts because they are closest to the current best strategy and alpha-mining direction.
 2. Convert `2020_qlib_yang` and `2025_quantbench_wang` as protocol/benchmark ARAs, not strategy ARAs.
 3. Add TA-Lib-style indicator experiments for `2024_technical_indicator_impact` and `2025_tin`.
-4. Only after those bindings exist, call the project a 31-paper ARA-engineered benchmark.
+4. Only after those ARA packages exist, call the project a 31-paper ARA-engineered benchmark.
+
+See `docs/reports/unvalidated_paper_candidate_validation.md` for the new seven-paper validation results.

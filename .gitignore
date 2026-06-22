@@ -39,3 +39,6 @@ Thumbs.db
 *.parquet
 *.h5
 *.hdf5
+
+# Regenerable per-stock score dumps from expansion-candidate validation.
+experiments/unvalidated_candidates/**/*_scores.csv
