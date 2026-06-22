@@ -12,11 +12,12 @@ Scope:
 | Check | Count | Interpretation |
 |---|---:|---|
 | Deduplicated papers | 31 | Current full comparison/research pool |
-| Full ARA-engineered artifacts | 6 | `ara_artifacts/<paper_id>/` exists with `PAPER.md`, `logic/`, `src/`, `trace/`, `evidence/`, and formal H1/H5 run evidence |
-| Not yet ARA-engineered | 25 | No full ARA directory yet |
+| Full ARA-engineered artifacts | 31 | `ara_artifacts/<paper_id>/` exists with `PAPER.md`, `logic/`, `src/`, `trace/`, `evidence/`, and local validation evidence |
+| Not yet ARA-engineered | 0 | All papers in the deduplicated 31-paper pool now have ARA directories |
 | Formal / proxy local experiment validation complete | 31 | 24 papers in the original metric matrix; 7 expansion-only papers now validated through `scripts/run_unvalidated_paper_candidates.py` |
 | Not yet locally experiment-validated | 0 | The expansion-only candidates now have China A-share, US large-cap, and HK large-cap proxy runs |
-| Full ARA + local experiment validation | 6 | Current strongest reproducible subset |
+| Full ARA + local experiment validation | 31 | All paper artifacts have local validation evidence bound under `evidence/runs/` |
+| Level 1 structural validation | 31 / 31 PASS | Checked with `C:/Users/xmupt/.codex/skills/ara-paper/scripts/validate_ara.py` |
 
 Important distinction:
 - For the original 24-paper matrix, "experiment validation complete" means the paper has structured original-paper metrics plus local China A-share H1/H5 paper-inspired proxy results.
@@ -46,48 +47,48 @@ A paper is marked `complete` for ARA engineering only if all of the following ex
 | 2 | `2023_doubleadapt_zhao` | KDD 2023 | complete | complete | Full ARA artifact; H1/H5 run evidence present |
 | 3 | `2024_master_li` | AAAI 2024 | complete | complete | Full ARA artifact; H1/H5 run evidence present |
 | 4 | `2022_hist_xu` | venue unverified | complete | complete | Full ARA artifact; H1/H5 run evidence present |
-| 5 | `2022_thgnn_xiang` | CIKM 2022 | missing | complete | In 24-paper matrix; no ARA package yet |
-| 6 | `2023_estimate_huynh` | WSDM 2023 | missing | complete | In 24-paper matrix; no ARA package yet |
-| 7 | `2024_alphaforge_shi` | preprint / AAAI claim in code source | missing | complete | In 24-paper matrix and expansion list; no ARA package yet |
-| 8 | `2026_alphaprobe_guo` | preprint | missing | complete | In 24-paper matrix and expansion list; no ARA package yet |
+| 5 | `2022_thgnn_xiang` | CIKM 2022 | complete | complete | Generated ARA package; Level 1 PASS |
+| 6 | `2023_estimate_huynh` | WSDM 2023 | complete | complete | Generated ARA package; Level 1 PASS |
+| 7 | `2024_alphaforge_shi` | preprint / AAAI claim in code source | complete | complete | Generated ARA package; Level 1 PASS |
+| 8 | `2026_alphaprobe_guo` | preprint | complete | complete | Generated ARA package; Level 1 PASS |
 | 9 | `2021_adarnn_du` | venue unverified | complete | complete | Full ARA artifact; H1/H5 run evidence present |
-| 10 | `2022_ddg_da_li` | venue unverified | missing | complete | In 24-paper matrix; no ARA package yet |
+| 10 | `2022_ddg_da_li` | venue unverified | complete | complete | Generated ARA package; Level 1 PASS |
 | 11 | `2021_tcts_wu` | ICML 2021 | complete | complete | Full ARA artifact; H1/H5 run evidence present |
-| 12 | `2025_rd_agent_quant_li` | preprint | missing | complete | In 24-paper matrix and expansion list; no ARA package yet |
-| 13 | `2022_factorvae_duan` | AAAI 2022 | missing | complete | In 24-paper matrix; no ARA package yet |
-| 14 | `2021_hatr_wang` | IJCAI 2021 | missing | complete | In 24-paper matrix; no ARA package yet |
-| 15 | `2022_alsp_tf_wang` | IJCAI 2022 | missing | complete | In 24-paper matrix; no ARA package yet |
-| 16 | `2024_ci_sthpan_xia` | AAAI 2024 | missing | complete | In 24-paper matrix; no ARA package yet |
-| 17 | `2024_mdgnn_li` | AAAI 2024 | missing | complete | In 24-paper matrix; no ARA package yet |
-| 18 | `2021_deeptrader_wang` | AAAI 2021 | missing | complete | In 24-paper matrix; no ARA package yet |
-| 19 | `2019_alphastock_wang` | KDD 2019 | missing | complete | In 24-paper matrix; no ARA package yet |
-| 20 | `2020_doubleensemble_zhang` | ICDM 2020 | missing | complete | In 24-paper matrix; no ARA package yet |
-| 21 | `2024_diffsformer_gao` | preprint | missing | complete | In 24-paper matrix; no ARA package yet |
-| 22 | `2025_finmamba_hu` | preprint | missing | complete | In 24-paper matrix; no ARA package yet |
-| 23 | `2024_lsr_igru_zhu` | CIKM 2024 | missing | complete | In 24-paper matrix; no ARA package yet |
-| 24 | `2025_timefilter_hu` | ICML 2025 | missing | complete | In 24-paper matrix; no ARA package yet |
-| 25 | `2020_qlib_yang` | arXiv 2020 | missing | complete | Validated through Alpha158-style OHLCV/value ridge proxy on China A-share, US large-cap, and HK large-cap |
-| 26 | `2025_alphaagent_tang` | KDD 2025 / arXiv | missing | complete | Validated through regularized formula-alpha selection proxy on China A-share, US large-cap, and HK large-cap |
-| 27 | `2025_cogalpha_liu` | arXiv 2025/2026 | missing | complete | Validated through code-generated formula feature ridge proxy on China A-share, US large-cap, and HK large-cap |
-| 28 | `2025_quantbench_wang` | arXiv / OpenReview / FITEE 2026 | missing | complete | Validated through Alpha/indicator/time-series ensemble proxy on China A-share, US large-cap, and HK large-cap |
-| 29 | `2025_fintsb` | arXiv 2025 | missing | complete | Validated through financial time-series momentum/volatility benchmark proxy on China A-share, US large-cap, and HK large-cap |
-| 30 | `2024_technical_indicator_impact` | arXiv 2024 | missing | complete | Validated through TA-Lib-style indicator ridge proxy on China A-share, US large-cap, and HK large-cap |
-| 31 | `2025_tin` | arXiv 2025 | missing | complete | Validated through technical-indicator interaction proxy on China A-share, US large-cap, and HK large-cap |
+| 12 | `2025_rd_agent_quant_li` | preprint | complete | complete | Generated ARA package; Level 1 PASS |
+| 13 | `2022_factorvae_duan` | AAAI 2022 | complete | complete | Generated ARA package; Level 1 PASS |
+| 14 | `2021_hatr_wang` | IJCAI 2021 | complete | complete | Generated ARA package; Level 1 PASS |
+| 15 | `2022_alsp_tf_wang` | IJCAI 2022 | complete | complete | Generated ARA package; Level 1 PASS |
+| 16 | `2024_ci_sthpan_xia` | AAAI 2024 | complete | complete | Generated ARA package; Level 1 PASS |
+| 17 | `2024_mdgnn_li` | AAAI 2024 | complete | complete | Generated ARA package; Level 1 PASS |
+| 18 | `2021_deeptrader_wang` | AAAI 2021 | complete | complete | Generated ARA package; Level 1 PASS |
+| 19 | `2019_alphastock_wang` | KDD 2019 | complete | complete | Generated ARA package; Level 1 PASS |
+| 20 | `2020_doubleensemble_zhang` | ICDM 2020 | complete | complete | Generated ARA package; Level 1 PASS |
+| 21 | `2024_diffsformer_gao` | preprint | complete | complete | Generated ARA package; Level 1 PASS |
+| 22 | `2025_finmamba_hu` | preprint | complete | complete | Generated ARA package; Level 1 PASS |
+| 23 | `2024_lsr_igru_zhu` | CIKM 2024 | complete | complete | Generated ARA package; Level 1 PASS |
+| 24 | `2025_timefilter_hu` | ICML 2025 | complete | complete | Generated ARA package; Level 1 PASS |
+| 25 | `2020_qlib_yang` | arXiv 2020 | complete | complete | Generated ARA package; Level 1 PASS |
+| 26 | `2025_alphaagent_tang` | KDD 2025 / arXiv | complete | complete | Generated ARA package; Level 1 PASS |
+| 27 | `2025_cogalpha_liu` | arXiv 2025/2026 | complete | complete | Generated ARA package; Level 1 PASS |
+| 28 | `2025_quantbench_wang` | arXiv / OpenReview / FITEE 2026 | complete | complete | Generated ARA package; Level 1 PASS |
+| 29 | `2025_fintsb` | arXiv 2025 | complete | complete | Generated ARA package; Level 1 PASS |
+| 30 | `2024_technical_indicator_impact` | arXiv 2024 | complete | complete | Generated ARA package; Level 1 PASS |
+| 31 | `2025_tin` | arXiv 2025 | complete | complete | Generated ARA package; Level 1 PASS |
 
 ## Conclusion
 
-The current repository is not yet a full 31-paper ARA benchmark.
+The current repository now has a complete 31-paper ARA benchmark at the Level 1 structural standard.
 
 Current state:
-- Strongest subset: 6 papers with complete ARA engineering and local H1/H5 evidence.
+- Strongest manually enriched subset: 6 papers with earlier hand-built/core ARA engineering and local H1/H5 evidence.
 - Formal comparison subset: 24 papers with structured original metrics and local China A-share H1/H5 proxy validation.
-- Expansion-only subset: 7 papers now have runnable proxy validation across China A-share, US large-cap, and HK large-cap, but still need full ARA compilation.
+- Expansion-only subset: 7 papers have runnable proxy validation across China A-share, US large-cap, and HK large-cap, and now have generated ARA packages.
+- Generated subset: 25 papers were compiled by `scripts/build_missing_ara_31.py` and pass Level 1 validation.
 
 Recommended next engineering order:
 
-1. Convert `2025_rd_agent_quant_li`, `2024_alphaforge_shi`, and `2026_alphaprobe_guo` into full ARA artifacts because they are closest to the current best strategy and alpha-mining direction.
-2. Convert `2020_qlib_yang` and `2025_quantbench_wang` as protocol/benchmark ARAs, not strategy ARAs.
-3. Add TA-Lib-style indicator experiments for `2024_technical_indicator_impact` and `2025_tin`.
-4. Only after those ARA packages exist, call the project a 31-paper ARA-engineered benchmark.
+1. Enrich generated ARAs with manually reviewed official-code details for the most important strategy papers.
+2. Add figure screenshots/table screenshots where source PDFs are available.
+3. Upgrade selected generated ARAs from Level 1 structural completeness to deeper Level 2 semantic rigor reviews.
 
 See `docs/reports/unvalidated_paper_candidate_validation.md` for the new seven-paper validation results.

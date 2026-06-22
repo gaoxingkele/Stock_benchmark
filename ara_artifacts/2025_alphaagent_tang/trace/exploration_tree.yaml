@@ -1,0 +1,23 @@
+tree:
+  - id: Q01
+    type: question
+    support_level: inferred
+    title: "Can 2025_alphaagent_tang be made into a complete ARA package?"
+    description: "The user requested completion of the remaining 25 missing ARA packages."
+    children:
+      - id: D01
+        type: decision
+        support_level: explicit
+        source_refs:
+          - docs/literature_notes/qlib_talib_arxiv_ccf_expansion.md
+        title: "Use repository-local evidence as the compilation source"
+        description: "Avoid inventing official implementation details and bind exact validation rows into evidence."
+      - id: E01
+        type: experiment
+        support_level: explicit
+        source_refs:
+          - evidence/runs/local_validation.md
+        title: "Local validation binding"
+        description: "Runnable proxy validation exists for China A-share, US large-cap, and HK large-cap under the H5 Top30 trading protocol."
+        evidence:
+          - C03

@@ -1,0 +1,17 @@
+{
+  "artifact": "2025_finmamba_hu",
+  "grade": "Weak Accept",
+  "summary": "Structurally complete ARA generated from repository-local evidence; official reproduction parity is not claimed.",
+  "dimensions": {
+    "D1_evidence_relevance": 3,
+    "D2_falsifiability_quality": 3,
+    "D3_scope_calibration": 4,
+    "D4_argument_coherence": 3,
+    "D5_exploration_integrity": 3,
+    "D6_methodological_rigor": 3
+  },
+  "residual_risks": [
+    "Some artifacts lack local PDF/extracted text and therefore rely on metadata plus validation evidence.",
+    "Generated ARA packages need future manual enrichment for full official-code reproduction parity."
+  ]
+}

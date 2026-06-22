@@ -1,0 +1,23 @@
+tree:
+  - id: Q01
+    type: question
+    support_level: inferred
+    title: "Can 2026_alphaprobe_guo be made into a complete ARA package?"
+    description: "The user requested completion of the remaining 25 missing ARA packages."
+    children:
+      - id: D01
+        type: decision
+        support_level: explicit
+        source_refs:
+          - papers/metadata/paper_target_24.csv
+        title: "Use repository-local evidence as the compilation source"
+        description: "Avoid inventing official implementation details and bind exact validation rows into evidence."
+      - id: E01
+        type: experiment
+        support_level: explicit
+        source_refs:
+          - evidence/runs/local_validation.md
+        title: "Local validation binding"
+        description: "Local China A-share H1/H5 proxy validation status is `formal_h1_h5_complete`."
+        evidence:
+          - C03

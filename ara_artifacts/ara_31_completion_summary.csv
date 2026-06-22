@@ -1,0 +1,32 @@
+paper_id,title,artifact_dir,source_group,ara_dir_exists,local_validation,generated_this_run
+2021_tra_lin,Learning Multiple Stock Trading Patterns with Temporal Routing Adaptor and Optimal Transport,ara_artifacts\2021_tra_lin,paper_24_matrix,True,complete,False
+2023_doubleadapt_zhao,DoubleAdapt: A Meta-learning Approach to Incremental Learning for Stock Trend Forecasting,ara_artifacts\2023_doubleadapt_zhao,paper_24_matrix,True,complete,False
+2024_master_li,MASTER: Market-Guided Stock Transformer for Stock Price Forecasting,ara_artifacts\2024_master_li,paper_24_matrix,True,complete,False
+2022_hist_xu,HIST: A Graph-based Framework for Stock Trend Forecasting via Mining Concept-Oriented Shared Information,ara_artifacts\2022_hist_xu,paper_24_matrix,True,complete,False
+2022_thgnn_xiang,Temporal and Heterogeneous Graph Neural Network for Financial Time Series Prediction,ara_artifacts\2022_thgnn_xiang,paper_24_matrix,True,complete,True
+2023_estimate_huynh,Efficient Integration of Multi-Order Dynamics and Internal Dynamics in Stock Movement Prediction,ara_artifacts\2023_estimate_huynh,paper_24_matrix,True,complete,True
+2024_alphaforge_shi,AlphaForge: A Framework to Mine and Dynamically Combine Formulaic Alpha Factors,ara_artifacts\2024_alphaforge_shi,paper_24_matrix,True,complete,True
+2026_alphaprobe_guo,AlphaPROBE: Alpha Mining via Principled Retrieval and On-graph biased evolution,ara_artifacts\2026_alphaprobe_guo,paper_24_matrix,True,complete,True
+2021_adarnn_du,AdaRNN: Adaptive Learning and Forecasting of Time Series,ara_artifacts\2021_adarnn_du,paper_24_matrix,True,complete,False
+2022_ddg_da_li,DDG-DA: Data Distribution Generation for Predictable Concept Drift Adaptation,ara_artifacts\2022_ddg_da_li,paper_24_matrix,True,complete,True
+2021_tcts_wu,Temporally Correlated Task Scheduling for Sequence Learning,ara_artifacts\2021_tcts_wu,paper_24_matrix,True,complete,False
+2025_rd_agent_quant_li,R&D-Agent-Quant: A Multi-Agent Framework for Data-Centric Factors and Model Joint Optimization,ara_artifacts\2025_rd_agent_quant_li,paper_24_matrix,True,complete,True
+2022_factorvae_duan,FactorVAE: A Probabilistic Dynamic Factor Model Based on Variational Autoencoder for Predicting Cross-Sectional Stock Returns,ara_artifacts\2022_factorvae_duan,paper_24_matrix,True,complete,True
+2021_hatr_wang,Hierarchical Adaptive Temporal-Relational Modeling for Stock Trend Prediction,ara_artifacts\2021_hatr_wang,paper_24_matrix,True,complete,True
+2022_alsp_tf_wang,Adaptive Long-Short Pattern Transformer for Stock Investment Selection,ara_artifacts\2022_alsp_tf_wang,paper_24_matrix,True,complete,True
+2024_ci_sthpan_xia,CI-STHPAN: Pre-trained Attention Network for Stock Selection with Channel-Independent Spatio-Temporal Hypergraph,ara_artifacts\2024_ci_sthpan_xia,paper_24_matrix,True,complete,True
+2024_mdgnn_li,MDGNN: Multi-Relational Dynamic Graph Neural Network for Comprehensive and Dynamic Stock Investment Prediction,ara_artifacts\2024_mdgnn_li,paper_24_matrix,True,complete,True
+2021_deeptrader_wang,DeepTrader: A Deep Reinforcement Learning Approach for Risk-Return Balanced Portfolio Management with Market Conditions Embedding,ara_artifacts\2021_deeptrader_wang,paper_24_matrix,True,complete,True
+2019_alphastock_wang,AlphaStock: A Buying-Winners-and-Selling-Losers Investment Strategy using Interpretable Deep Reinforcement Attention Networks,ara_artifacts\2019_alphastock_wang,paper_24_matrix,True,complete,True
+2020_doubleensemble_zhang,DoubleEnsemble: A New Ensemble Method Based on Sample Reweighting and Feature Selection for Financial Data Analysis,ara_artifacts\2020_doubleensemble_zhang,paper_24_matrix,True,complete,True
+2024_diffsformer_gao,DiffsFormer: A Diffusion Transformer on Stock Factor Augmentation,ara_artifacts\2024_diffsformer_gao,paper_24_matrix,True,complete,True
+2025_finmamba_hu,FinMamba: Market-Aware Graph Enhanced Multi-Level Mamba for Stock Movement Prediction,ara_artifacts\2025_finmamba_hu,paper_24_matrix,True,complete,True
+2024_lsr_igru_zhu,LSR-IGRU: Stock Trend Prediction Based on Long Short-Term Relationships and Improved GRU,ara_artifacts\2024_lsr_igru_zhu,paper_24_matrix,True,complete,True
+2025_timefilter_hu,TimeFilter: Patch-Specific Spatial-Temporal Graph Filtration for Time Series Forecasting,ara_artifacts\2025_timefilter_hu,paper_24_matrix,True,complete,True
+2020_qlib_yang,Qlib: An AI-oriented Quantitative Investment Platform,ara_artifacts\2020_qlib_yang,expansion_only,True,complete,True
+2025_alphaagent_tang,AlphaAgent: LLM-Driven Alpha Mining with Regularized Exploration to Counteract Alpha Decay,ara_artifacts\2025_alphaagent_tang,expansion_only,True,complete,True
+2025_cogalpha_liu,Cognitive Alpha Mining via LLM-Driven Code-Based Evolution,ara_artifacts\2025_cogalpha_liu,expansion_only,True,complete,True
+2025_quantbench_wang,QuantBench: Benchmarking AI Methods for Quantitative Investment,ara_artifacts\2025_quantbench_wang,expansion_only,True,complete,True
+2025_fintsb,FinTSB: A Comprehensive and Practical Benchmark for Financial Time Series,ara_artifacts\2025_fintsb,expansion_only,True,complete,True
+2024_technical_indicator_impact,Assessing the Impact of Technical Indicators on Machine Learning Models for High-Frequency Stock Price Prediction,ara_artifacts\2024_technical_indicator_impact,expansion_only,True,complete,True
+2025_tin,Technical Indicator Networks: An Interpretable Neural Approach,ara_artifacts\2025_tin,expansion_only,True,complete,True
