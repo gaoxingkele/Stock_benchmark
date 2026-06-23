@@ -2,26 +2,26 @@
   "artifact": "ara_artifacts/case_lingxi",
   "review_type": "ARA Level 2 semantic rigor review",
   "review_date": "2026-06-23",
-  "overall_grade": "Weak Accept",
-  "mean_score": 3.83,
-  "summary": "CASE-Lingxi has a coherent evidence-backed thesis: conservative static production menus currently dominate tested adaptive routers, and agents should remain in the research/audit layer until OOS promotion gates are passed. The ARA is structurally complete, claims are falsifiable, and negative paths are preserved. A first paired bootstrap promotion audit and transaction-cost sensitivity audit have now been added. The main remaining weaknesses are broader statistical testing, capacity/slippage/data-bias constraints beyond simple cost levels, and submission-grade bibliographic detail.",
+  "overall_grade": "Accept",
+  "mean_score": 4.0,
+  "summary": "CASE-Lingxi has a coherent evidence-backed thesis: conservative static production menus currently dominate tested adaptive routers, and agents should remain in the research/audit layer until frozen out-of-sample promotion gates are passed. Since the prior review, the artifact added Sharpe and MDD bootstrap intervals, nonlinear capacity/slippage stress, full 31-method citation coverage, and BibTeX hygiene validation. The main remaining limitations are no live timestamped LLM-debate tag experiment, incomplete provenance timestamps in the exploration trace, and unquantified static-universe/data-bias sensitivity.",
   "dimensions": [
     {
       "id": "D1",
       "name": "Evidence Relevance",
       "score": 4,
       "strengths": [
-        "Every core claim points to a named experiment ID.",
-        "Router, RL, tag, and meta-selector claims cite exact summary artifacts and win counts.",
-        "Evidence includes both positive production-menu support and negative adaptation results."
+        "Every core claim points to named experiment IDs and committed CSV artifacts.",
+        "Router, RL, tag, meta-selector, promotion, cost, capacity/slippage, and citation claims cite exact summary artifacts and row counts.",
+        "Evidence includes both production-menu support and negative adaptation results."
       ],
       "weaknesses": [
-        "The production-menu claim relies on a benchmark master table plus reports rather than a single unified promotion-test manifest.",
-        "The new promotion audit adds paired daily-return bootstrap intervals for the main adaptive candidates, but not yet for every older Lingxi/SOTA comparison."
+        "Earlier Lingxi/SOTA proxy branches are summarized in reports rather than re-expressed through the newest bootstrap audit schema.",
+        "Data-bias and universe-construction sensitivity are acknowledged but not quantified."
       ],
       "suggestions": [
-        "Extend the promotion audit to earlier sparse-regime, market-regime, and SOTA-proxy candidates.",
-        "Add drawdown and Sharpe bootstrap intervals, not only annualized return difference intervals."
+        "Optionally re-run the unified bootstrap schema for older sparse-regime, market-regime, and SOTA-proxy candidates.",
+        "Add a future data-bias appendix covering survivorship, delisting, and alternate universe construction."
       ]
     },
     {
@@ -29,15 +29,17 @@
       "name": "Falsifiability Quality",
       "score": 4,
       "strengths": [
-        "Claims include clear falsification criteria such as future OOS routers beating the static menu.",
-        "Production versus research-only labels are testable against committed scripts and artifacts."
+        "Production promotion rules are numeric and scenario-based.",
+        "Claims include concrete falsification criteria such as a future frozen OOS router beating the static menu under the promotion gate.",
+        "Risk-control and production labels are separated."
       ],
       "weaknesses": [
-        "Production thresholds are now numeric, but future-falsification criteria still need minimum OOS window length and market coverage rules."
+        "Future-falsification criteria still do not state a minimum calendar length for new OOS tests.",
+        "No formal multiple-comparison rule is specified for future candidate sweeps."
       ],
       "suggestions": [
-        "Add minimum OOS window length.",
-        "Separate production gate criteria for return-seeking and risk-control sleeves."
+        "Add a minimum OOS window length for future promotion claims.",
+        "Define whether future large candidate sweeps require multiple-comparison adjustment or a held-out final gate."
       ]
     },
     {
@@ -47,15 +49,15 @@
       "strengths": [
         "The artifact repeatedly limits claims to current evidence.",
         "RL and LLM-tag methods are explicitly labeled research-only or negative controls.",
-        "Constraints mention static universe bias, proxy implementations, and simplified transaction costs."
+        "Capacity/slippage stress now makes the trading-readiness boundary clearer."
       ],
       "weaknesses": [
-        "The abstract-level claim that the static menu is supported across A-share, US, HK, and crypto could be misread as live-trading readiness.",
-        "Capacity, borrow, liquidity, and real execution constraints remain underdeveloped."
+        "The static production-menu claim could still be misread as live-trading readiness without reading the constraints.",
+        "Real liquidity, borrow, ADV, and execution constraints are not calibrated to market microstructure data."
       ],
       "suggestions": [
-        "Add a trading-readiness disclaimer to the paper introduction and ARA constraints.",
-        "Add a capacity/slippage stress-test plan before any deployment claim."
+        "Keep the production-menu phrase tied to benchmark production, not live deployment.",
+        "Add calibrated market-specific capacity analysis if real ADV/liquidity data is introduced."
       ]
     },
     {
@@ -65,15 +67,15 @@
       "strengths": [
         "Problem, method, claims, experiments, and evidence form a coherent chain.",
         "The validation echo trap provides a clear bridge from empirical results to theoretical framing.",
-        "The paper draft and ARA use the same conceptual vocabulary."
+        "Related work now has BibTeX-backed citations for finance, time-series SOTA, foundation models, and multi-agent LLM references."
       ],
       "weaknesses": [
-        "The theory section would benefit from a tighter formal statement of promotion gates and research-agent policy.",
-        "Related work is currently local-source based and needs submission-grade citation detail."
+        "The ARA and manuscript share concepts but still duplicate some framing across `paper/`, `docs/theory/`, and `ara_artifacts/`.",
+        "The target venue/template is not selected, so final manuscript structure is not venue-specific."
       ],
       "suggestions": [
-        "Move the formalization in paper/formulation.md into the ARA logic layer or cross-link it.",
-        "Add BibTeX-backed citations for the final manuscript."
+        "After choosing a venue, consolidate duplicated framing into the manuscript sections required by that template.",
+        "Keep ARA files as the evidence-first source of truth and paper files as the human-readable narrative."
       ]
     },
     {
@@ -82,68 +84,44 @@
       "score": 4,
       "strengths": [
         "The trace records real rejected paths including validation-only meta-selection.",
-        "Negative router, RL, and market-tag results are preserved rather than hidden.",
-        "The artifact distinguishes production, research-only, and rejected states."
+        "Negative router, RL, market-tag, cost, and capacity/slippage results are preserved rather than hidden.",
+        "The artifact distinguishes production, risk-control, research-only, and rejected states."
       ],
       "weaknesses": [
-        "The trace now includes prior adaptive, market-regime, sparse-regime, SOTA/PITNorm, and promotion-audit branches.",
-        "Some decisions are still summarized after the fact rather than linked to full chronological logs."
+        "Some decisions are summarized after the fact rather than linked to full chronological logs.",
+        "Trace entries do not yet consistently include provenance tags or timestamps."
       ],
       "suggestions": [
-        "Add provenance tags for user-suggested, AI-suggested, and AI-executed events.",
-        "Add chronological timestamps if a full research-process reconstruction is needed."
+        "Add provenance tags for user-suggested, AI-suggested, AI-executed, and user-revised events if a full research-process reconstruction is needed.",
+        "Add chronological timestamps in a later trace refinement."
       ]
     },
     {
       "id": "D6",
       "name": "Methodological Rigor",
-      "score": 3,
+      "score": 4,
       "strengths": [
         "Experiments use explicit scripts, row counts, costs, OOS windows, and comparable scenario matrices.",
-        "A unified promotion audit now adds paired daily-return block bootstrap intervals for the main adaptive candidates.",
-        "A cost sensitivity audit tests 0, 5, 10, 20, and 50 bps transaction-cost assumptions.",
-        "The RL router freezes training before OOS evaluation.",
-        "LLM-compatible tags are generated with a leakage-aware point-in-time schema."
+        "Promotion audit includes paired block-bootstrap confidence intervals for annualized return, Sharpe, and MDD differences.",
+        "Cost sensitivity tests 0, 5, 10, 20, and 50 bps assumptions.",
+        "Capacity/slippage stress tests nonlinear impact across 0.5-10x AUM and 0-20 impact bps.",
+        "Citation coverage and BibTeX hygiene validation are automated."
       ],
       "weaknesses": [
-        "Bootstrap confidence intervals currently cover annualized daily-return differences only for the main adaptive candidates.",
+        "The LLM-tag experiment uses deterministic proxy tags rather than actual timestamped LLM debate outputs.",
         "No multiple-comparison correction is applied despite many scenarios and candidates.",
-        "Execution realism now includes multiple linear cost levels, but does not include nonlinear market impact or capacity.",
-        "The LLM-tag experiment uses deterministic proxy tags rather than actual timestamped LLM debate outputs."
+        "Execution realism remains a stress model rather than a calibrated real-market impact model."
       ],
       "suggestions": [
-        "Extend paired bootstrap tests to Sharpe, drawdown, and earlier candidate families.",
-        "Add sensitivity grids for transaction cost, TopK, and OOS window definitions.",
-        "Add a future experiment with frozen timestamped LLM debate tags while preserving the same schema.",
-        "Add capacity and liquidity diagnostics for production-facing claims."
+        "Run a future frozen timestamped LLM-debate tag experiment while preserving the same schema.",
+        "Add multiple-comparison handling if candidate sweeps expand further.",
+        "Replace stress-model capacity assumptions with calibrated ADV/liquidity estimates if live-trading relevance becomes a claim."
       ]
     }
   ],
   "findings": [
     {
-      "finding_id": "F-L2-001",
-      "dimension": "D6 Methodological Rigor",
-      "severity": "major",
-      "target_file": "ara_artifacts/case_lingxi/logic/experiments.md",
-      "target_entity": "E02-E04",
-      "evidence_span": "E06 adds block-bootstrap intervals for candidate-minus-menu daily returns.",
-      "observation": "The main router conclusions now include paired annualized daily-return bootstrap intervals, but the audit does not yet cover Sharpe or drawdown intervals.",
-      "reasoning": "Annualized return intervals improve rigor, but promotion decisions also depend on Sharpe and drawdown.",
-      "suggestion": "Add paired bootstrap confidence intervals for Sharpe and drawdown differences."
-    },
-    {
-      "finding_id": "F-L2-002",
-      "dimension": "D2 Falsifiability Quality",
-      "severity": "minor",
-      "target_file": "ara_artifacts/case_lingxi/logic/claims.md",
-      "target_entity": "C01-C04 falsification criteria",
-      "evidence_span": "A future OOS experiment shows a dynamic router beating the static menu across the required market/TopK/variant matrix under transaction costs.",
-      "observation": "Falsification criteria are meaningful but not fully parameterized.",
-      "reasoning": "A reviewer cannot tell the exact OOS length, number of markets, or metric thresholds required for promotion.",
-      "suggestion": "Define a numeric promotion gate with minimum OOS days, minimum scenario win rate, and maximum drawdown degradation."
-    },
-    {
-      "finding_id": "F-L2-003",
+      "finding_id": "F-L2-006",
       "dimension": "D3 Scope Calibration",
       "severity": "minor",
       "target_file": "ara_artifacts/case_lingxi/logic/solution/constraints.md",
@@ -154,33 +132,43 @@
       "suggestion": "Add a data-bias appendix with universe construction, delisting/survivorship risks, and sensitivity to alternate universes."
     },
     {
-      "finding_id": "F-L2-004",
+      "finding_id": "F-L2-007",
       "dimension": "D5 Exploration Integrity",
       "severity": "suggestion",
       "target_file": "ara_artifacts/case_lingxi/trace/exploration_tree.yaml",
       "target_entity": "Q01 children",
       "evidence_span": "Trace includes context router, RL router, market-tag ablation, promotion audit, SOTA/PITNorm, adaptive router, market-regime router, sparse-regime router, and validation-only selector.",
-      "observation": "The trace now captures the main current and prior branches, but lacks provenance tags.",
-      "reasoning": "Provenance tags would make it clearer which steps were user-suggested, AI-suggested, or AI-executed.",
+      "observation": "The trace captures the main current and prior branches, but lacks systematic provenance tags.",
+      "reasoning": "Provenance tags would make it clearer which steps were user-suggested, AI-suggested, AI-executed, or user-revised.",
       "suggestion": "Add provenance fields and timestamps in a later trace refinement."
     },
     {
-      "finding_id": "F-L2-005",
-      "dimension": "D4 Argument Coherence",
+      "finding_id": "F-L2-008",
+      "dimension": "D6 Methodological Rigor",
       "severity": "suggestion",
-      "target_file": "paper/related_work.md",
-      "target_entity": "Related work sections",
-      "evidence_span": "Local evidence paths are listed instead of full bibliographic citations.",
-      "observation": "The paper-level related work is not yet submission-grade.",
-      "reasoning": "The local references are useful for repository navigation, but a manuscript needs complete citations and venue/status verification.",
-      "suggestion": "Add BibTeX-backed citations and separate CCF-A/venue-verified claims from arXiv/preprint claims."
+      "target_file": "docs/reports/case_lingxi_llm_tag_ablation.md",
+      "target_entity": "Structured Market-Tag Ablation",
+      "evidence_span": "The current source is deterministic lagged market context.",
+      "observation": "The LLM-compatible tag schema is leakage-safe, but it has not yet been populated by timestamped LLM debate outputs.",
+      "reasoning": "This is appropriate for the current negative-control claim, but it limits claims about actual LLM debate utility.",
+      "suggestion": "If LLM debate is tested later, freeze dated tag outputs before OOS evaluation and compare against the same static menu."
+    },
+    {
+      "finding_id": "F-L2-009",
+      "dimension": "D6 Methodological Rigor",
+      "severity": "suggestion",
+      "target_file": "docs/theory/case_lingxi_promotion_gate.md",
+      "target_entity": "Remaining Statistical Gate Work",
+      "evidence_span": "Remaining optional upgrades: paired sign tests for daily return differences; turnover-difference confidence intervals; calibrated market-specific capacity model if real ADV/liquidity data is added.",
+      "observation": "The major statistical gates are implemented, but optional robustness extensions remain.",
+      "reasoning": "The current evidence supports the conservative conclusion, while future broader claims would need stronger robustness controls.",
+      "suggestion": "Keep optional robustness extensions scoped to future work unless the paper claims live-trading readiness."
     }
   ],
   "next_actions": [
-    "Extend paired bootstrap tests to Sharpe and drawdown differences.",
-    "Extend the unified CASE promotion audit to earlier sparse-regime, market-regime, and SOTA-proxy candidates.",
-    "Add provenance tags and timestamps to the expanded ARA trace.",
-    "Add numeric promotion thresholds.",
-    "Upgrade paper related work with BibTeX-backed citations."
+    "Add a data-bias appendix if alternate universe and survivorship data become available.",
+    "Add provenance tags and timestamps to the expanded ARA trace if a full process reconstruction is required.",
+    "Run a future frozen timestamped LLM-debate tag experiment only as an OOS research sleeve.",
+    "Select a target venue/template before doing final manuscript-specific bibliography and section polish."
   ]
 }

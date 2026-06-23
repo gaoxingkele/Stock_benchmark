@@ -128,4 +128,20 @@ These branches are included in the exploration trace because they shaped the fin
   - BibTeX keys: 35
   - finance-registry citations added: 31
   - pending finance-registry citations: 0
-- Decision: 31-method finance registry citation coverage is complete; remaining citation work is final submission formatting and optional additional related-work keys.
+- Decision: 31-method finance registry and current related-work citation coverage are complete; remaining citation work is venue-template-specific formatting.
+
+## Level 2 Rigor Review Refresh
+
+- Report file: `ara_artifacts/case_lingxi/level2_report.json`
+- Review date: 2026-06-23
+- Grade: Accept
+- Mean score: 4.0
+- Main resolved prior weaknesses:
+  - Sharpe and MDD bootstrap intervals added to promotion audit
+  - nonlinear capacity/slippage stress added
+  - 31-method BibTeX coverage completed
+  - additional time-series SOTA, foundation-model, multi-agent debate, and collaborative LLM-RL citations added
+- Remaining limitations:
+  - no live timestamped LLM-debate tag experiment yet
+  - no calibrated real-market ADV/liquidity capacity model
+  - trace provenance/timestamps are not fully reconstructed

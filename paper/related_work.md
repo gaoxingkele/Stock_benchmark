@@ -24,7 +24,7 @@ CASE-Lingxi differs from these works by treating failed adaptation as first-clas
 
 ## Time-Series SOTA And Non-Stationarity
 
-The Lingxi SOTA upgrade survey reviewed methods such as DLinear, Non-stationary Transformer, PatchTST [@nie2023patchtst], iTransformer [@liu2024itransformer], TimeMixer, FEDformer, and time-series foundation models.
+The Lingxi SOTA upgrade survey reviewed methods such as DLinear [@zeng2023dlinear], Non-stationary Transformer [@liu2022nonstationary], PatchTST [@nie2023patchtst], iTransformer [@liu2024itransformer], TimeMixer [@wang2024timemixer], FEDformer [@zhou2022fedformer], and time-series foundation models including TTM [@ekambaram2024ttm], TimesFM [@das2024timesfm], Chronos [@ansari2024chronos], Moirai [@woo2024moirai], and MOMENT [@goswami2024moment].
 
 The practical result was conservative. Lightweight proxies for MScale, Patch, LinearGuard, and VarAttn did not replace Lingxi. PITNorm was the only first-pass module with broad risk-control value. This supports the paper's theme: method novelty is not enough; promotion requires scenario-level OOS evidence.
 
@@ -38,7 +38,7 @@ experiments/lingxi_sota_upgrade_validation/lingxi_sota_upgrade_validation_summar
 
 ## Agentic Alpha Mining And Research Automation
 
-RD-Agent-Quant [@li2025rdagentquant], AlphaAgent [@tang2025alphaagent], CogAlpha, and AlphaPROBE are the closest finance-specific agentic references. They motivate using agents to generate factors, code, retrieval paths, and alpha hypotheses.
+RD-Agent-Quant [@li2025rdagentquant], AlphaAgent [@tang2025alphaagent], CogAlpha [@liu2025cogalpha], and AlphaPROBE [@guo2026alphaprobe] are the closest finance-specific agentic references. They motivate using agents to generate factors, code, retrieval paths, and alpha hypotheses.
 
 CASE-Lingxi adopts the agentic research loop but narrows the deployment claim. Agents may propose candidates and audits, but they do not directly control production trades. This is a deliberate response to the observed instability of adaptive routers in the current benchmark.
 
@@ -61,7 +61,7 @@ docs/reports/case_lingxi_rl_router_validation.md
 
 ## LLM Market Context And Multi-Agent Debate
 
-LLMs may be useful for summarizing macro context, identifying regime narratives, and auditing experiments. However, narrative plausibility is not tradable evidence.
+LLMs may be useful for summarizing macro context, identifying regime narratives, and auditing experiments. Multi-agent debate [@du2024multiagentdebate] and multi-agent RL for LLM collaboration [@liu2025magrpo] motivate this direction. However, narrative plausibility is not tradable evidence.
 
 The structured market-tag ablation establishes a safe interface:
 
@@ -103,4 +103,4 @@ The first citation pass covers the core infrastructure, adaptation, time-series,
 papers/metadata/case_lingxi_citation_coverage.csv
 ```
 
-The full registry still needs primary-source verification before manuscript submission.
+The full 31-method registry has primary-source-backed BibTeX coverage. Remaining citation work is venue-specific formatting after a target template is selected.

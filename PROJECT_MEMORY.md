@@ -192,16 +192,16 @@ CASE-Lingxi paper draft:
 - Core BibTeX entries are in `papers/metadata/references.bib`; full 31-method citation pass is complete.
 - 31-method citation coverage is tracked in `papers/metadata/case_lingxi_citation_coverage.csv`.
 - Citation coverage validation command: `python scripts\validate_case_lingxi_citations.py`; current result is PASS with 31 added and 0 pending finance-registry entries.
-- BibTeX hygiene validation command: `python scripts\validate_references_bib.py`; current result is PASS with 35 entries, 35 keys, no duplicate keys, no draft markers, and protected method-name capitalization.
+- BibTeX hygiene validation command: `python scripts\validate_references_bib.py`; current result is PASS with 46 entries, 46 keys, no duplicate keys, no draft markers, and protected method-name capitalization.
 - Draft BibTeX generation command: `python scripts\build_case_lingxi_draft_bib.py`; current result is 0 draft entries and no missing registry metadata rows.
 - Missing-registry ARA metadata recovery command: `python scripts\extract_case_lingxi_missing_citation_metadata.py`; current result is 0 recovery rows because no finance-registry rows remain pending.
 - Recovery output path: `papers/metadata/references_missing_metadata_from_ara.csv`.
-- The 31 finance-registry citation entries have been checked and promoted into `references.bib`; method-name capitalization is protected. Venue-specific bibliography polishing should wait until a target manuscript template is selected.
+- The 31 finance-registry citation entries and additional SOTA/agent references have been checked and promoted into `references.bib`; method-name capitalization is protected. Venue-specific bibliography polishing should wait until a target manuscript template is selected.
 
 CASE-Lingxi Level 2 ARA review:
 
 - Report path: `ara_artifacts/case_lingxi/level2_report.json`
-- Overall grade: Weak Accept
+- Overall grade: Accept
 - Promotion audit now exists: `experiments/case_lingxi_promotion_audit/case_lingxi_promotion_audit_summary.csv`
 - Promotion audit includes paired block-bootstrap CI checks for annualized daily-return difference, Sharpe difference, and MDD difference; no adaptive candidate has a positive lower-bound CI win on any of the three metrics.
 - Cost sensitivity now exists: `experiments/case_lingxi_cost_sensitivity/case_lingxi_cost_sensitivity_summary.csv`

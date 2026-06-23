@@ -43,7 +43,7 @@ Current validation result:
 ```text
 registry_rows=31
 coverage_rows=31
-bib_keys=35
+bib_keys=46
 coverage_added=31
 coverage_pending=0
 VALIDATION_PASS
@@ -58,8 +58,8 @@ python scripts\validate_references_bib.py
 Current BibTeX hygiene validation result:
 
 ```text
-entries=35
-keys=35
+entries=46
+keys=46
 REFERENCES_BIB_VALIDATION_PASS
 ```
 
@@ -139,5 +139,4 @@ Only verified entries should be used in the manuscript text. All 31 finance-regi
 
 ## Next Citation Work
 
-1. Add complete citation keys for DLinear, Non-stationary Transformer, TimeMixer, FEDformer, TTM, TimesFM, Chronos, Moirai, and MOMENT if they remain in the final related-work section.
-2. Perform venue-specific bibliography polishing only after a target manuscript template is selected.
+1. Perform venue-specific bibliography polishing only after a target manuscript template is selected.
