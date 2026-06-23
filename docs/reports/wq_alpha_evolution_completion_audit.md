@@ -20,6 +20,7 @@ python scripts\validate_sanitized_wq_run.py ara_artifacts\wq_alpha_evolution\evi
 | Run public proxy factor-mining experiment | `experiments/wq_functionevolve_proxy/functionevolve_proxy_summary.csv` | complete |
 | Feed FunctionEvolve proxy back into Lingxi | `scripts/run_lingxi_functionevolve_blend.py` | complete |
 | Run Lingxi5/Lingxi10 blend ablation | `experiments/lingxi_functionevolve_blend/lingxi_functionevolve_blend_summary.csv` | complete smoke-scale |
+| Expand local factor evolution and Lingxi blend to aligned 80-symbol proxy | `docs/reports/lingxi_functionevolve_expanded.md` | complete |
 | Record SIA/Godel-Agent research-harness role | `docs/reports/functionevolve_lingxi_feedback.md` | complete |
 | Prevent private WQ leakage | `scripts/validate_sanitized_wq_run.py` and `docs/reports/wq_private_run_entrypoint.md` | complete |
 | Validate ARA and bundle structure | `scripts/validate_wq_alpha_evolution_bundle.py` | complete |

@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import csv
 import math
+import re
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -98,7 +99,7 @@ def filtered_panel(source: Path, out_dir: Path, max_symbols: int) -> Path:
     return out_path
 
 
-def proxy_zscore10_ret5_close(panel_path: Path) -> dict[tuple[str, str], float]:
+def proxy_zscore_ret5_close(panel_path: Path, window: int) -> dict[tuple[str, str], float]:
     rows_by_symbol: dict[str, list[dict[str, str]]] = defaultdict(list)
     with panel_path.open("r", newline="", encoding="utf-8") as file:
         for row in csv.DictReader(file):
@@ -113,12 +114,12 @@ def proxy_zscore10_ret5_close(panel_path: Path) -> dict[tuple[str, str], float]:
             prev = closes[i - 5] if i >= 5 else float("nan")
             ret5.append(close / prev - 1.0 if close > 0 and prev > 0 else float("nan"))
         for i, row in enumerate(rows):
-            window = [value for value in ret5[max(0, i - 9) : i + 1] if math.isfinite(value)]
-            if len(window) < 2:
+            values = [value for value in ret5[max(0, i - window + 1) : i + 1] if math.isfinite(value)]
+            if len(values) < 2:
                 value = float("nan")
             else:
-                std = pstdev(window)
-                value = (ret5[i] - mean(window)) / std if std and math.isfinite(ret5[i]) else float("nan")
+                std = pstdev(values)
+                value = (ret5[i] - mean(values)) / std if std and math.isfinite(ret5[i]) else float("nan")
             raw_values[(row["date"], symbol)] = value
 
     by_date: dict[str, list[tuple[tuple[str, str], float]]] = defaultdict(list)
@@ -130,6 +131,22 @@ def proxy_zscore10_ret5_close(panel_path: Path) -> dict[tuple[str, str], float]:
         for (key, _value), zscore in zip(pairs, zscores):
             normalized[key] = zscore
     return normalized
+
+
+def proxy_scores_for_factors(panel_path: Path, factors: list[str]) -> dict[tuple[str, str], float]:
+    factor_maps: list[dict[tuple[str, str], float]] = []
+    for factor in factors:
+        match = re.fullmatch(r"zscore(\d+)\(ret5\(close\)\)", factor)
+        if not match:
+            raise ValueError(f"unsupported promoted proxy factor: {factor}")
+        factor_maps.append(proxy_zscore_ret5_close(panel_path, int(match.group(1))))
+    keys = set().union(*(set(values) for values in factor_maps))
+    combined: dict[tuple[str, str], float] = {}
+    for key in keys:
+        values = [factor_map.get(key, float("nan")) for factor_map in factor_maps]
+        clean = [value for value in values if math.isfinite(value)]
+        combined[key] = mean(clean) if clean else 0.0
+    return combined
 
 
 def add_neutral_scores(scored_rows: list[dict], score_field: str, out_field: str) -> None:
@@ -188,15 +205,13 @@ def main() -> int:
     panel_path = filtered_panel(Path(args.panel), out_dir, args.max_symbols)
 
     promoted = promoted_proxy_factors(Path(args.proxy_detail))
-    if promoted != ["zscore10(ret5(close))"]:
-        raise ValueError(f"unsupported promoted proxy factors for this smoke ablation: {promoted}")
 
     local_args = argparse.Namespace(**vars(args))
     local_args.panel = str(panel_path)
     local_args.model = ["rd_agent_quant"]
     rows, preds = fit_predictions(local_args, "rd_agent_quant")
     meta = read_meta(panel_path, read_industry(Path(args.stock_basic)))
-    proxy_scores = proxy_zscore10_ret5_close(panel_path)
+    proxy_scores = proxy_scores_for_factors(panel_path, promoted)
 
     scored_rows: list[dict] = []
     for row, pred in zip(rows, preds):

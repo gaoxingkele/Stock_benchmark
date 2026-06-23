@@ -15,6 +15,8 @@ This ARA intentionally separates private closed-platform evidence from public pr
 | E-FUNCTIONEVOLVE-DETAIL | `experiments/wq_functionevolve_proxy/functionevolve_proxy_detail.csv` | present in repo | Candidate-level AST factor metrics |
 | E-LINGXI-BLEND | `experiments/lingxi_functionevolve_blend/lingxi_functionevolve_blend_summary.csv` | present in repo | Lingxi Top5/Top10 blend ablation |
 | E-LINGXI-BLEND-REPORT | `docs/reports/lingxi_functionevolve_blend.md` | present in repo | Interpretation of FunctionEvolve feedback into Lingxi |
+| E-FUNCTIONEVOLVE-EXPANDED | `experiments/wq_functionevolve_proxy_expanded/functionevolve_proxy_summary.csv` | present in repo | 80-symbol local AST proxy evolution |
+| E-LINGXI-BLEND-EXPANDED | `experiments/lingxi_functionevolve_blend_expanded/lingxi_functionevolve_blend_summary.csv` | present in repo | Expanded Lingxi blend ablation |
 | E-WQ-PRIVATE-ENTRYPOINT | `docs/reports/wq_private_run_entrypoint.md` | present in repo | Safe path for future private WQ aggregate runs |
 | E-WQ-COMPLETION-AUDIT | `docs/reports/wq_alpha_evolution_completion_audit.md` | present in repo | Requirement-level audit and external dependency statement |
 | E-CASE-LINGXI | `docs/reports/case_lingxi_completion_audit.md` | present in repo | Existing strategy-level benchmark |

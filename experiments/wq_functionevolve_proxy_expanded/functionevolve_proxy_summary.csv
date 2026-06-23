@@ -1,0 +1,2 @@
+run_id,market,train_period,test_period,generator,candidate_count,valid_factor_count,promoted_factor_count,mean_ic,icir,rank_ic,rank_icir,turnover,cost_bps,long_short_return,max_drawdown,max_prior_factor_corr,promotion_status,notes
+functionevolve_proxy_cn_a_share_v1,cn_a_share,2018-01-02:2021-12-31,2022-01-04:2024-12-31,functionevolve_style_ast_v1,18,18,2,0.00902681,0.04750415,0.01204159,0.06197736,0.83592961,10.00,0.00115008,-0.62001970,0.00000000,research_only,Public AST proxy run; no WorldQuant private records used.

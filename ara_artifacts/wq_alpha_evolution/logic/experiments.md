@@ -98,6 +98,9 @@ Successful proxy runs should show better candidate efficiency or novelty control
 Current result:
 The smoke-scale public proxy generated 18 AST candidates, 18 valid factors, and 1 factor passing the strict OOS IC, cost-adjusted return, turnover, and novelty promotion gate. The result is research-only because the experiment is small-scale and the promoted factor still has severe drawdown.
 
+Expanded result:
+The 80-symbol aligned proxy run generated 18 AST candidates, 18 valid factors, and 2 promoted research-only factors: `zscore3(ret5(close))` and `zscore10(ret5(close))`.
+
 ## E03: WQ-vs-Lingxi comparison
 
 Verifies:
@@ -166,6 +169,9 @@ If transferable, the memory upgrade should improve promotion-gate pass rates wit
 
 Current result:
 Smoke-scale evidence is positive for raw Lingxi5/Lingxi10 and mixed for neutral variants. The sleeve remains research-only until full-universe validation and promotion-audit checks pass.
+
+Expanded result:
+The 80-symbol aligned blend supports a conservative `0.15` FunctionEvolve-memory weight. It improves raw Lingxi5/Lingxi10 and neutral Lingxi5, while neutral Lingxi10 remains weak.
 
 ## E05: Self-improving research harness
 

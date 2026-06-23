@@ -31,6 +31,7 @@ REQUIRED_FILES = [
     "docs/reports/wq_alpha_evolution_comparison_plan.md",
     "docs/reports/functionevolve_lingxi_feedback.md",
     "docs/reports/lingxi_functionevolve_blend.md",
+    "docs/reports/lingxi_functionevolve_expanded.md",
     "docs/reports/wq_private_run_entrypoint.md",
     "docs/reports/wq_alpha_evolution_completion_audit.md",
     "scripts/run_wq_functionevolve_proxy.py",
@@ -39,6 +40,9 @@ REQUIRED_FILES = [
     "experiments/wq_functionevolve_proxy/functionevolve_proxy_summary.csv",
     "experiments/wq_functionevolve_proxy/functionevolve_proxy_detail.csv",
     "experiments/lingxi_functionevolve_blend/lingxi_functionevolve_blend_summary.csv",
+    "experiments/wq_functionevolve_proxy_expanded/functionevolve_proxy_summary.csv",
+    "experiments/wq_functionevolve_proxy_expanded/functionevolve_proxy_detail.csv",
+    "experiments/lingxi_functionevolve_blend_expanded/lingxi_functionevolve_blend_summary.csv",
 ]
 
 SCHEMA_FILES = {
@@ -64,6 +68,9 @@ ROW_COUNT_CHECKS = {
     "experiments/wq_functionevolve_proxy/functionevolve_proxy_summary.csv": 1,
     "experiments/wq_functionevolve_proxy/functionevolve_proxy_detail.csv": 18,
     "experiments/lingxi_functionevolve_blend/lingxi_functionevolve_blend_summary.csv": 12,
+    "experiments/wq_functionevolve_proxy_expanded/functionevolve_proxy_summary.csv": 1,
+    "experiments/wq_functionevolve_proxy_expanded/functionevolve_proxy_detail.csv": 18,
+    "experiments/lingxi_functionevolve_blend_expanded/lingxi_functionevolve_blend_summary.csv": 12,
 }
 
 SUMMARY_REQUIRED_COLUMNS = {
@@ -198,6 +205,33 @@ def main() -> int:
     print(f"blend_raw_sharpe top5_base={top5_base['sharpe']} top5_best={top5_best:.8f} top10_base={top10_base['sharpe']} top10_best={top10_best:.8f}")
     if top5_best <= float(top5_base["sharpe"]) or top10_best <= float(top10_base["sharpe"]):
         print("ERROR blend did not improve raw Top5/Top10 Sharpe")
+        return 1
+
+    expanded_summary = PROJECT_ROOT / "experiments/wq_functionevolve_proxy_expanded/functionevolve_proxy_summary.csv"
+    with expanded_summary.open(newline="", encoding="utf-8") as file:
+        expanded_proxy_rows = list(csv.DictReader(file))
+    expanded_promoted = int(expanded_proxy_rows[0]["promoted_factor_count"])
+    print(f"expanded_proxy_promoted={expanded_promoted}")
+    if expanded_promoted != 2:
+        print("ERROR expanded proxy should promote exactly 2 factors")
+        return 1
+
+    expanded_blend_path = PROJECT_ROOT / "experiments/lingxi_functionevolve_blend_expanded/lingxi_functionevolve_blend_summary.csv"
+    with expanded_blend_path.open(newline="", encoding="utf-8") as file:
+        expanded_blend_rows = list(csv.DictReader(file))
+    expanded_raw_top5 = [row for row in expanded_blend_rows if row["topk"] == "5" and row["variant"] == "raw"]
+    expanded_raw_top10 = [row for row in expanded_blend_rows if row["topk"] == "10" and row["variant"] == "raw"]
+    expanded_top5_base = next(row for row in expanded_raw_top5 if row["method"] == "lingxi")
+    expanded_top10_base = next(row for row in expanded_raw_top10 if row["method"] == "lingxi")
+    expanded_top5_best = max(float(row["sharpe"]) for row in expanded_raw_top5 if row["method"] != "lingxi")
+    expanded_top10_best = max(float(row["sharpe"]) for row in expanded_raw_top10 if row["method"] != "lingxi")
+    print(
+        "expanded_blend_raw_sharpe "
+        f"top5_base={expanded_top5_base['sharpe']} top5_best={expanded_top5_best:.8f} "
+        f"top10_base={expanded_top10_base['sharpe']} top10_best={expanded_top10_best:.8f}"
+    )
+    if expanded_top5_best <= float(expanded_top5_base["sharpe"]) or expanded_top10_best <= float(expanded_top10_base["sharpe"]):
+        print("ERROR expanded blend did not improve raw Top5/Top10 Sharpe")
         return 1
 
     searchable_files = [

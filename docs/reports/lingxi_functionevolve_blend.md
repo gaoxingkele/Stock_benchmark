@@ -61,3 +61,9 @@ Use **Lingxi-FunctionEvolve-Memory** as a research sleeve:
 1. For raw Lingxi5/Lingxi10, the FunctionEvolve AST proxy is promising.
 2. For neutral Lingxi5/Lingxi10, use only low blend weights unless future full-universe evidence supports stronger mixing.
 3. Keep CASE-Lingxi production conclusion unchanged until full-universe and promotion-audit validation pass.
+
+Expanded follow-up:
+
+```text
+docs/reports/lingxi_functionevolve_expanded.md
+```
