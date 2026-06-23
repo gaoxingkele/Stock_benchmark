@@ -142,3 +142,28 @@ Disallowed use:
 - mix current or future information into historical backtests
 
 The next valid upgrade is an `LLM macro context adapter` whose tags are saved as dated structured features and evaluated out of sample.
+
+## Market-Regime Router Update
+
+The second-stage market-regime router adds lagged panel-derived features:
+
+- market return and 20/60 day momentum
+- 20/60 day volatility
+- 60 day drawdown
+- market breadth
+- cross-sectional dispersion
+- liquidity change
+- size concentration
+
+Validation result: useful but still selective.
+
+- It beats the previous contextual ridge router in 9 of 16 scenarios.
+- It beats the best fixed/static baseline in only 2 of 16 scenarios.
+- Keep it only for A-share Top5 neutral and crypto Top5 raw research sleeves.
+- Do not use it for US, HK, A-share raw, or crypto neutral production routing.
+
+Reproduction:
+
+```powershell
+python scripts\run_lingxi_regime_router_validation.py --out-dir experiments\lingxi_regime_router_validation_2026_ytd
+```
