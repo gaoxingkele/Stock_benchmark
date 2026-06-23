@@ -96,6 +96,24 @@ These branches are included in the exploration trace because they shaped the fin
 - Result: no adaptive candidate passes production gate at any tested cost level.
 - Decision: static production menu remains default; context router remains risk-control candidate only.
 
+## Capacity and Slippage Stress Audit
+
+- Script: `scripts/run_case_lingxi_capacity_slippage.py`
+- Summary file: `experiments/case_lingxi_capacity_slippage/case_lingxi_capacity_slippage_summary.csv`
+- Detail file: `experiments/case_lingxi_capacity_slippage/case_lingxi_capacity_slippage_detail.csv`
+- Rows:
+  - summary: 60
+  - detail: 960
+- Stress model:
+  - linear cost: 10 bps
+  - AUM multipliers: 0.5, 1, 2, 5, 10
+  - nonlinear impact bps: 0, 5, 10, 20
+- Result:
+  - context router max annualized wins: 3/16; max Sharpe wins: 5/16; max MDD wins: 10/16
+  - RL router max annualized wins: 6/16; max Sharpe wins: 5/16; max MDD wins: 6/16
+  - market-tag router max annualized wins: 2/16; max Sharpe wins: 3/16; max MDD wins: 8/16
+- Decision: nonlinear capacity/slippage stress does not promote any adaptive candidate.
+
 ## Citation Coverage Audit
 
 - Script: `scripts/validate_case_lingxi_citations.py`

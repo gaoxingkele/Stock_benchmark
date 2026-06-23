@@ -19,6 +19,7 @@ This file is the current execution-level benchmark index for the Lingxi workstre
 | `experiments/case_lingxi_llm_tag_ablation_2026_ytd/case_lingxi_llm_tag_ablation_summary.csv` | 128 | Structured LLM-compatible market-tag ablation |
 | `experiments/case_lingxi_promotion_audit/case_lingxi_promotion_audit_summary.csv` | 3 | Unified candidate-vs-menu promotion audit with paired bootstrap intervals |
 | `experiments/case_lingxi_cost_sensitivity/case_lingxi_cost_sensitivity_summary.csv` | 15 | Candidate-vs-menu cost sensitivity at 0/5/10/20/50 bps |
+| `experiments/case_lingxi_capacity_slippage/case_lingxi_capacity_slippage_summary.csv` | 60 | Nonlinear capacity/slippage stress at 10 bps base cost, 0.5-10x AUM, and 0-20 impact bps |
 | `data/ara_method_registry.csv` | 31 | Audited finance method registry with ARA and experiment-validation status |
 
 ## Scenario Winners From The SOTA Upgrade Run
@@ -87,6 +88,7 @@ New router evidence:
 8. LLM-compatible tags are therefore an audit/context interface, not a production routing signal yet.
 9. The unified promotion audit finds zero candidates with any positive annualized daily-return difference bootstrap lower-bound wins.
 10. The cost sensitivity audit finds no candidate reaches the production gate at 0, 5, 10, 20, or 50 bps.
+11. The nonlinear capacity/slippage stress audit also finds no candidate reaches the production gate; context router remains risk-control only.
 
 ## Next Benchmarks To Run
 

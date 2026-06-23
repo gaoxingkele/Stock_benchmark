@@ -35,7 +35,7 @@ A candidate can become `production` only if all conditions hold:
 3. MDD is not worse in more than 4/16 scenarios;
 4. no single major market group is consistently degraded;
 5. average turnover does not rise by more than 25% unless net return and Sharpe both clearly improve;
-6. the candidate passes a paired daily-return robustness check once that test is implemented.
+6. the candidate passes paired block-bootstrap robustness checks for annualized daily-return difference, Sharpe difference, and MDD difference.
 
 Current candidates do not pass this gate.
 
@@ -59,17 +59,21 @@ Current status:
 
 Promotion audit update:
 
-`experiments/case_lingxi_promotion_audit/case_lingxi_promotion_audit_summary.csv` recomputes candidate-vs-menu metrics from aligned daily files and adds block-bootstrap intervals. It finds:
+`experiments/case_lingxi_promotion_audit/case_lingxi_promotion_audit_summary.csv` recomputes candidate-vs-menu metrics from aligned daily files and adds block-bootstrap intervals for annualized daily-return difference, Sharpe difference, and MDD difference. It finds:
 
-| Candidate | Recomputed return wins | Recomputed Sharpe wins | MDD wins | Positive annualized-diff CI wins | State |
-|---|---:|---:|---:|---:|---|
-| CASE context router | 3/16 | 4/16 | 9/16 | 0/16 | `risk_control_candidate` |
-| Frozen tabular RL router | 4/16 | 4/16 | 6/16 | 0/16 | `negative_control` |
-| Structured market-tag router | 1/16 | 3/16 | 7/16 | 0/16 | `negative_control` |
+| Candidate | Return wins | Sharpe wins | MDD wins | Positive ann. CI wins | Positive Sharpe CI wins | Positive MDD CI wins | State |
+|---|---:|---:|---:|---:|---:|---:|---|
+| CASE context router | 3/16 | 4/16 | 9/16 | 0/16 | 0/16 | 0/16 | `risk_control_candidate` |
+| Frozen tabular RL router | 4/16 | 4/16 | 6/16 | 0/16 | 0/16 | 0/16 | `negative_control` |
+| Structured market-tag router | 1/16 | 3/16 | 7/16 | 0/16 | 0/16 | 0/16 | `negative_control` |
 
 Cost sensitivity update:
 
 `experiments/case_lingxi_cost_sensitivity/case_lingxi_cost_sensitivity_summary.csv` recomputes candidate-vs-menu metrics at 0, 5, 10, 20, and 50 bps. No candidate reaches the production gate at any tested cost level.
+
+Capacity/slippage update:
+
+`experiments/case_lingxi_capacity_slippage/case_lingxi_capacity_slippage_summary.csv` recomputes candidate-vs-menu metrics under a nonlinear stress model with 10 bps linear cost, 0.5-10x AUM multipliers, and 0-20 impact bps. No candidate reaches the production gate under any tested capacity/slippage setting.
 
 ## Research Sleeve Gate
 
@@ -96,14 +100,19 @@ A candidate is `rejected` if:
 4. it worsens return and Sharpe broadly;
 5. it requires unverifiable narrative judgment for production.
 
-## Next Statistical Gate
+## Remaining Statistical Gate Work
 
-The next implementation should add paired daily-return tests:
+Implemented:
 
-1. candidate-minus-menu mean daily return;
-2. bootstrap confidence interval;
-3. paired sign test or block bootstrap;
-4. drawdown difference summary;
-5. turnover difference summary.
+1. candidate-minus-menu annualized daily-return difference;
+2. paired block-bootstrap confidence interval;
+3. Sharpe difference bootstrap interval;
+4. MDD difference bootstrap interval;
+5. linear cost sensitivity;
+6. nonlinear capacity/slippage stress.
 
-Until this is implemented, promotion claims should remain conservative.
+Remaining optional upgrades:
+
+1. paired sign tests for daily return differences;
+2. turnover-difference confidence intervals;
+3. calibrated market-specific capacity model if real ADV/liquidity data is added.

@@ -71,6 +71,7 @@ Experiment summaries:
 | `experiments/case_lingxi_context_router_validation_2026_ytd/case_lingxi_context_router_validation_summary.csv` | 112 | Conservative CASE-Lingxi context-router validation |
 | `experiments/case_lingxi_rl_router_validation_2025_2026_ytd/case_lingxi_rl_router_validation_summary.csv` | 128 | Frozen research-only RL router validation |
 | `experiments/case_lingxi_llm_tag_ablation_2026_ytd/case_lingxi_llm_tag_ablation_summary.csv` | 128 | Structured LLM-compatible market-tag ablation |
+| `experiments/case_lingxi_capacity_slippage/case_lingxi_capacity_slippage_summary.csv` | 60 | Nonlinear capacity/slippage stress audit |
 
 Final reports:
 
@@ -91,6 +92,7 @@ Final reports:
 - `docs/reports/case_lingxi_llm_tag_ablation.md`
 - `docs/reports/case_lingxi_promotion_audit.md`
 - `docs/reports/case_lingxi_cost_sensitivity.md`
+- `docs/reports/case_lingxi_capacity_slippage.md`
 - `ara_artifacts/case_lingxi/PAPER.md`
 - `paper/outline.md`
 - `paper/abstract.md`
@@ -112,6 +114,7 @@ Core scripts:
 - `scripts/run_case_lingxi_llm_tag_ablation.py`
 - `scripts/run_case_lingxi_promotion_audit.py`
 - `scripts/run_case_lingxi_cost_sensitivity.py`
+- `scripts/run_case_lingxi_capacity_slippage.py`
 
 ## Reproduction Commands
 
@@ -201,4 +204,5 @@ CASE-Lingxi Level 2 ARA review:
 - Promotion audit now exists: `experiments/case_lingxi_promotion_audit/case_lingxi_promotion_audit_summary.csv`
 - Promotion audit includes paired block-bootstrap CI checks for annualized daily-return difference, Sharpe difference, and MDD difference; no adaptive candidate has a positive lower-bound CI win on any of the three metrics.
 - Cost sensitivity now exists: `experiments/case_lingxi_cost_sensitivity/case_lingxi_cost_sensitivity_summary.csv`
-- Main remaining improvements: nonlinear capacity/slippage stress tests and final bibliography formatting.
+- Capacity/slippage stress now exists: `experiments/case_lingxi_capacity_slippage/case_lingxi_capacity_slippage_summary.csv`; no adaptive candidate is promoted under the nonlinear stress grid.
+- Main remaining improvement: final bibliography formatting before manuscript submission.
