@@ -1,0 +1,120 @@
+# Project Memory: Stock Benchmark
+
+Last updated: 2026-06-23
+
+Repository:
+
+```text
+https://github.com/gaoxingkele/Stock_benchmark
+```
+
+Current restored state:
+
+```text
+main @ fc9066b Validate Lingxi meta selector
+```
+
+## Final Best Scheme
+
+The best validated scheme is **Lingxi Adaptive Suite**.
+
+This is not a single universal dynamic router. The final conclusion is a conservative strategy suite:
+
+1. Use fixed/scene-specific sleeves for production.
+2. Keep dynamic routers only as research sleeves.
+3. Do not use validation-Sharpe winner selection as a production meta-selector.
+4. Do not let LLMs directly route trades; use LLMs only as structured macro tag adapters or audit/explanation tools.
+
+## Production Menu
+
+| Market | Scenario | Production proxy |
+|---|---|---|
+| China A-share | raw Top10/Top5 | Lingxi |
+| China A-share | neutral Top10/Top5 | Lingxi |
+| US large cap | Top10/Top5 | Fixed/static baselines: PITNorm, ReturnFloor-Gate, static ensemble, or Lingxi depending scenario |
+| HK large cap | Top10/Top5 | PITNorm |
+| Crypto major | raw Top10/Top5 | ReturnFloor-Gate |
+| Crypto major | neutral Top10/Top5 | Lingxi or PITNorm |
+
+## Research Sleeves
+
+Keep these for further research, not production default:
+
+- A-share Top5 neutral sparse regime
+- Crypto Top10 raw sparse regime
+- Crypto Top5 raw market-regime ridge
+- HK Top5 raw sparse regime
+- A-share Top10 raw contextual ridge
+
+## Rejected Routes
+
+| Route | Reason |
+|---|---|
+| Universal adaptive router | Too few wins vs fixed/static baselines |
+| Full market-regime router everywhere | Adds signal but also adds noise |
+| Sparse regime router everywhere | Better than some routers, but only 3/16 wins vs fixed/static |
+| Validation-only Sharpe meta-selector | 2025: 2/16 wins; 2026 YTD: 0/16; combined: 1/16 |
+| Direct LLM trading router | Not reproducible enough and not validated out of sample |
+
+## Core Validation Evidence
+
+Experiment summaries:
+
+| Artifact | Expected row count | Meaning |
+|---|---:|---|
+| `experiments/lingxi_pitnorm_tuned_gate_validation_2026_ytd/lingxi_pitnorm_tuned_gate_validation_summary.csv` | 64 | Fixed Lingxi/PITNorm/ReturnFloor 2026 YTD source |
+| `experiments/lingxi_adaptive_router_validation_2026_ytd/lingxi_adaptive_router_validation_summary.csv` | 128 | First adaptive router comparison |
+| `experiments/lingxi_regime_router_validation_2026_ytd/lingxi_regime_router_validation_summary.csv` | 112 | Market-regime router comparison |
+| `experiments/lingxi_sparse_regime_router_validation_2026_ytd/lingxi_sparse_regime_router_validation_summary.csv` | 128 | Sparse/feature-capped router comparison |
+| `experiments/lingxi_meta_selector_validation/lingxi_meta_selector_selection_table.csv` | 16 | Frozen validation selections |
+| `experiments/lingxi_meta_selector_validation/lingxi_meta_selector_validation_summary.csv` | 416 | Validation/OOS meta-selector comparison |
+
+Final reports:
+
+- `docs/strategies/lingxi_adaptive_suite.md`
+- `docs/strategies/lingxi_adaptive_router.md`
+- `docs/reports/lingxi_adaptive_router_validation.md`
+- `docs/reports/lingxi_regime_router_validation.md`
+- `docs/reports/lingxi_sparse_regime_router_validation.md`
+- `docs/reports/lingxi_meta_selector_validation.md`
+
+Core scripts:
+
+- `scripts/run_lingxi_pitnorm_tuned_gate_validation.py`
+- `scripts/run_lingxi_adaptive_router_validation.py`
+- `scripts/run_lingxi_regime_router_validation.py`
+- `scripts/run_lingxi_sparse_regime_router_validation.py`
+- `scripts/run_lingxi_meta_selector_validation.py`
+
+## Reproduction Commands
+
+```powershell
+python scripts\run_lingxi_pitnorm_tuned_gate_validation.py --test-end 2026-06-18 --out-dir experiments\lingxi_pitnorm_tuned_gate_validation_2026_ytd
+python scripts\run_lingxi_adaptive_router_validation.py --source-dir experiments\lingxi_pitnorm_tuned_gate_validation_2026_ytd --out-dir experiments\lingxi_adaptive_router_validation_2026_ytd
+python scripts\run_lingxi_regime_router_validation.py --out-dir experiments\lingxi_regime_router_validation_2026_ytd
+python scripts\run_lingxi_sparse_regime_router_validation.py --out-dir experiments\lingxi_sparse_regime_router_validation_2026_ytd
+python scripts\run_lingxi_meta_selector_validation.py --out-dir experiments\lingxi_meta_selector_validation
+```
+
+## Recovery Checklist
+
+After cloning on another machine:
+
+1. Confirm branch and commit:
+
+```powershell
+git status -sb
+git log --oneline -5
+```
+
+2. Read:
+
+```text
+README.md
+PROJECT_MEMORY.md
+docs/strategies/lingxi_adaptive_suite.md
+```
+
+3. Confirm existing summary artifacts have the expected row counts listed above.
+
+4. Treat `Lingxi Adaptive Suite` as the current best scheme unless new out-of-sample evidence supersedes it.
