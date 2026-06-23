@@ -199,5 +199,6 @@ CASE-Lingxi Level 2 ARA review:
 - Report path: `ara_artifacts/case_lingxi/level2_report.json`
 - Overall grade: Weak Accept
 - Promotion audit now exists: `experiments/case_lingxi_promotion_audit/case_lingxi_promotion_audit_summary.csv`
+- Promotion audit includes paired block-bootstrap CI checks for annualized daily-return difference, Sharpe difference, and MDD difference; no adaptive candidate has a positive lower-bound CI win on any of the three metrics.
 - Cost sensitivity now exists: `experiments/case_lingxi_cost_sensitivity/case_lingxi_cost_sensitivity_summary.csv`
-- Main remaining improvements: Sharpe/MDD bootstrap tests, complete 31-method BibTeX, nonlinear capacity/slippage stress tests.
+- Main remaining improvements: nonlinear capacity/slippage stress tests and final bibliography formatting.

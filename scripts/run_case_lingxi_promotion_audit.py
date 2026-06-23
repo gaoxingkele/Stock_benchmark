@@ -60,14 +60,12 @@ def read_daily(path: Path) -> dict[str, float]:
 
 
 def max_drawdown(returns: np.ndarray) -> float:
-    nav = 1.0
-    peak = 1.0
-    worst = 0.0
-    for value in returns:
-        nav *= 1.0 + float(value)
-        peak = max(peak, nav)
-        worst = min(worst, nav / peak - 1.0)
-    return worst
+    if len(returns) == 0:
+        return 0.0
+    nav = np.cumprod(1.0 + returns)
+    peaks = np.maximum.accumulate(np.concatenate([np.asarray([1.0]), nav]))[1:]
+    drawdowns = nav / peaks - 1.0
+    return float(np.min(drawdowns))
 
 
 def sharpe(returns: np.ndarray) -> float:
@@ -103,6 +101,43 @@ def block_bootstrap_ci(diff: np.ndarray, samples: int, block_size: int, rng: np.
     return float(low), float(high)
 
 
+def block_bootstrap_metric_cis(
+    candidate_returns: np.ndarray,
+    menu_returns: np.ndarray,
+    samples: int,
+    block_size: int,
+    rng: np.random.Generator,
+) -> dict[str, tuple[float, float]]:
+    if len(candidate_returns) == 0:
+        return {
+            "ann": (0.0, 0.0),
+            "sharpe": (0.0, 0.0),
+            "mdd": (0.0, 0.0),
+        }
+    block_size = max(1, min(block_size, len(candidate_returns)))
+    ann_values = []
+    sharpe_values = []
+    mdd_values = []
+    starts = np.arange(0, len(candidate_returns))
+    for _ in range(samples):
+        sampled_idx = []
+        while len(sampled_idx) < len(candidate_returns):
+            start = int(rng.choice(starts))
+            end = min(len(candidate_returns), start + block_size)
+            sampled_idx.extend(range(start, end))
+        idx = np.asarray(sampled_idx[: len(candidate_returns)], dtype=int)
+        cand = candidate_returns[idx]
+        menu = menu_returns[idx]
+        ann_values.append(float(np.mean(cand - menu) * 252.0))
+        sharpe_values.append(float(sharpe(cand) - sharpe(menu)))
+        mdd_values.append(float(max_drawdown(cand) - max_drawdown(menu)))
+    return {
+        "ann": tuple(float(value) for value in np.quantile(np.asarray(ann_values), [0.025, 0.975])),
+        "sharpe": tuple(float(value) for value in np.quantile(np.asarray(sharpe_values), [0.025, 0.975])),
+        "mdd": tuple(float(value) for value in np.quantile(np.asarray(mdd_values), [0.025, 0.975])),
+    }
+
+
 def status_for(candidate: str, ann_win: bool, sharpe_win: bool, mdd_win: bool, ann_diff_ci_low: float) -> str:
     if candidate == "case_lingxi_context_router" and mdd_win and ann_diff_ci_low < 0:
         return "risk_control_candidate"
@@ -131,6 +166,8 @@ def main() -> int:
             "sharpe_wins": 0,
             "mdd_wins": 0,
             "positive_ann_ci_wins": 0,
+            "positive_sharpe_ci_wins": 0,
+            "positive_mdd_ci_wins": 0,
             "state": "",
         }
         candidate_rows = [row for row in rows if row["method"] == candidate]
@@ -146,7 +183,10 @@ def main() -> int:
             ann_diff = ann_return(cand_returns) - ann_return(menu_returns)
             sharpe_diff = sharpe(cand_returns) - sharpe(menu_returns)
             mdd_diff = max_drawdown(cand_returns) - max_drawdown(menu_returns)
-            ci_low, ci_high = block_bootstrap_ci(diff, args.bootstrap_samples, args.block_size, rng)
+            metric_cis = block_bootstrap_metric_cis(cand_returns, menu_returns, args.bootstrap_samples, args.block_size, rng)
+            ci_low, ci_high = metric_cis["ann"]
+            sharpe_ci_low, sharpe_ci_high = metric_cis["sharpe"]
+            mdd_ci_low, mdd_ci_high = metric_cis["mdd"]
             ann_win = ann_diff > 0
             sharpe_win = sharpe_diff > 0
             mdd_win = mdd_diff > 0
@@ -157,6 +197,8 @@ def main() -> int:
             aggregate[candidate]["sharpe_wins"] = int(aggregate[candidate]["sharpe_wins"]) + int(sharpe_win)
             aggregate[candidate]["mdd_wins"] = int(aggregate[candidate]["mdd_wins"]) + int(mdd_win)
             aggregate[candidate]["positive_ann_ci_wins"] = int(aggregate[candidate]["positive_ann_ci_wins"]) + int(ci_low > 0)
+            aggregate[candidate]["positive_sharpe_ci_wins"] = int(aggregate[candidate]["positive_sharpe_ci_wins"]) + int(sharpe_ci_low > 0)
+            aggregate[candidate]["positive_mdd_ci_wins"] = int(aggregate[candidate]["positive_mdd_ci_wins"]) + int(mdd_ci_low > 0)
 
             detail_rows.append(
                 {
@@ -177,10 +219,16 @@ def main() -> int:
                     "mdd_diff": f"{mdd_diff:.8f}",
                     "ann_diff_bootstrap_ci_low": f"{ci_low:.8f}",
                     "ann_diff_bootstrap_ci_high": f"{ci_high:.8f}",
+                    "sharpe_diff_bootstrap_ci_low": f"{sharpe_ci_low:.8f}",
+                    "sharpe_diff_bootstrap_ci_high": f"{sharpe_ci_high:.8f}",
+                    "mdd_diff_bootstrap_ci_low": f"{mdd_ci_low:.8f}",
+                    "mdd_diff_bootstrap_ci_high": f"{mdd_ci_high:.8f}",
                     "ann_win": str(ann_win),
                     "sharpe_win": str(sharpe_win),
                     "mdd_win": str(mdd_win),
                     "positive_ann_ci": str(ci_low > 0),
+                    "positive_sharpe_ci": str(sharpe_ci_low > 0),
+                    "positive_mdd_ci": str(mdd_ci_low > 0),
                     "state": state,
                     "candidate_daily_source": row["daily_source"],
                     "menu_daily_source": menu["daily_source"],
@@ -194,6 +242,8 @@ def main() -> int:
         sharpe_wins = int(row["sharpe_wins"])
         mdd_wins = int(row["mdd_wins"])
         positive_ci = int(row["positive_ann_ci_wins"])
+        positive_sharpe_ci = int(row["positive_sharpe_ci_wins"])
+        positive_mdd_ci = int(row["positive_mdd_ci_wins"])
         if ann_wins >= 10 and sharpe_wins >= 10 and mdd_wins >= 12 and positive_ci >= 8:
             state = "production_candidate"
         elif candidate == "case_lingxi_context_router" and mdd_wins >= 8:
@@ -209,6 +259,8 @@ def main() -> int:
                 "sharpe_wins": str(sharpe_wins),
                 "mdd_wins": str(mdd_wins),
                 "positive_ann_ci_wins": str(positive_ci),
+                "positive_sharpe_ci_wins": str(positive_sharpe_ci),
+                "positive_mdd_ci_wins": str(positive_mdd_ci),
                 "state": state,
             }
         )

@@ -74,8 +74,14 @@ These branches are included in the exploration trace because they shaped the fin
   - detail: 48
 - Result:
   - context router positive annualized-diff CI wins: 0/16
+  - context router positive Sharpe-diff CI wins: 0/16
+  - context router positive MDD-diff CI wins: 0/16
   - RL router positive annualized-diff CI wins: 0/16
+  - RL router positive Sharpe-diff CI wins: 0/16
+  - RL router positive MDD-diff CI wins: 0/16
   - market-tag router positive annualized-diff CI wins: 0/16
+  - market-tag router positive Sharpe-diff CI wins: 0/16
+  - market-tag router positive MDD-diff CI wins: 0/16
 - Decision: no adaptive candidate passes production gate.
 
 ## Cost Sensitivity Audit
