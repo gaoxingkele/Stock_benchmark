@@ -186,6 +186,7 @@ CASE-Lingxi paper draft:
 - The draft intentionally frames routers, RL, and LLM tags as negative or research-only evidence unless they beat the static menu OOS.
 - Core BibTeX entries are in `papers/metadata/references.bib`; full 31-method citation pass is still pending.
 - 31-method citation coverage is tracked in `papers/metadata/case_lingxi_citation_coverage.csv`.
+- Citation coverage validation command: `python scripts\validate_case_lingxi_citations.py`; current result is PASS with 4 added and 27 pending finance-registry entries.
 
 CASE-Lingxi Level 2 ARA review:
 

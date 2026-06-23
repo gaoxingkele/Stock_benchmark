@@ -10,6 +10,7 @@ This report tracks manuscript citation coverage for the 31-method finance regist
 papers/metadata/references.bib
 papers/metadata/case_lingxi_citation_coverage.csv
 paper/citation_map.md
+scripts/validate_case_lingxi_citations.py
 ```
 
 ## Current Coverage
@@ -20,6 +21,23 @@ paper/citation_map.md
 | BibTeX entries currently added for finance registry | 4 |
 | Pending finance-method citation checks | 27 |
 | Extra non-finance/agent/time-series entries currently added | 4 |
+
+Validation command:
+
+```powershell
+python scripts\validate_case_lingxi_citations.py
+```
+
+Current validation result:
+
+```text
+registry_rows=31
+coverage_rows=31
+bib_keys=8
+coverage_added=4
+coverage_pending=27
+VALIDATION_PASS
+```
 
 Added finance-registry keys:
 
