@@ -12,8 +12,10 @@ papers/metadata/case_lingxi_citation_coverage.csv
 paper/citation_map.md
 scripts/validate_case_lingxi_citations.py
 scripts/build_case_lingxi_draft_bib.py
+scripts/extract_case_lingxi_missing_citation_metadata.py
 papers/metadata/references_draft_from_registry.bib
 papers/metadata/references_draft_missing_registry.csv
+papers/metadata/references_missing_metadata_from_ara.csv
 ```
 
 ## Current Coverage
@@ -26,6 +28,8 @@ papers/metadata/references_draft_missing_registry.csv
 | Extra non-finance/agent/time-series entries currently added | 4 |
 | Draft BibTeX entries generated from local registry | 10 |
 | Pending entries missing local registry metadata | 17 |
+| Missing-registry rows with ARA metadata patch | 17 |
+| ARA metadata patch rows still missing verified authors | 17 |
 
 Validation command:
 
@@ -57,6 +61,19 @@ draft_bib=papers/metadata/references_draft_from_registry.bib entries=10
 missing_registry=papers/metadata/references_draft_missing_registry.csv rows=17
 ```
 
+ARA metadata patch command:
+
+```powershell
+python scripts\extract_case_lingxi_missing_citation_metadata.py
+```
+
+Current ARA metadata patch result:
+
+```text
+metadata_patch=papers/metadata/references_missing_metadata_from_ara.csv rows=17
+incomplete_authors=17
+```
+
 Added finance-registry keys:
 
 | Paper ID | BibTeX key | Role |
@@ -77,12 +94,12 @@ Added non-registry or cross-domain keys:
 
 ## Policy
 
-Only verified entries should be used in the manuscript text. Pending registry rows should not be cited with invented author, venue, DOI, or arXiv metadata.
+Only verified entries should be used in the manuscript text. Pending registry rows should not be cited with invented author, venue, DOI, or arXiv metadata. The ARA metadata patch is a recovery aid only: it identifies titles, years, venues, and local ARA source files for missing-registry rows, but the current patch has incomplete author metadata for all 17 rows and must not be promoted to `references.bib` without primary-source verification.
 
 ## Next Citation Work
 
 1. Verify the 10 draft BibTeX entries against primary sources, then promote valid entries to `references.bib`.
-2. Fill registry metadata for the 17 rows in `references_draft_missing_registry.csv`.
+2. Use `references_missing_metadata_from_ara.csv` to prioritize primary-source checks for the 17 rows missing local registry metadata.
 3. Verify the remaining finance-method references from primary sources.
 4. Replace pending rows in `papers/metadata/case_lingxi_citation_coverage.csv` with concrete keys.
 5. Add complete citation keys for DLinear, Non-stationary Transformer, TimeMixer, FEDformer, TTM, TimesFM, Chronos, Moirai, and MOMENT if they remain in the final related-work section.

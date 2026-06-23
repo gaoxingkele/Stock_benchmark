@@ -97,6 +97,8 @@ Final reports:
 - `paper/introduction.md`
 - `paper/method.md`
 - `paper/experiments.md`
+- `paper/citation_map.md`
+- `docs/literature/case_lingxi_citation_coverage.md`
 
 Core scripts:
 
@@ -188,6 +190,9 @@ CASE-Lingxi paper draft:
 - 31-method citation coverage is tracked in `papers/metadata/case_lingxi_citation_coverage.csv`.
 - Citation coverage validation command: `python scripts\validate_case_lingxi_citations.py`; current result is PASS with 4 added and 27 pending finance-registry entries.
 - Draft BibTeX generation command: `python scripts\build_case_lingxi_draft_bib.py`; current result is 10 draft entries and 17 missing registry metadata rows.
+- Missing-registry ARA metadata recovery command: `python scripts\extract_case_lingxi_missing_citation_metadata.py`; current result is 17 recovered ARA metadata rows, all still marked `incomplete_authors`.
+- Recovery output path: `papers/metadata/references_missing_metadata_from_ara.csv`.
+- Do not promote `references_draft_from_registry.bib` or `references_missing_metadata_from_ara.csv` into `references.bib` until every entry is checked against a primary source.
 
 CASE-Lingxi Level 2 ARA review:
 

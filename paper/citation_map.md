@@ -20,11 +20,15 @@ papers/metadata/references.bib
 papers/metadata/case_lingxi_citation_coverage.csv
 papers/metadata/references_draft_from_registry.bib
 papers/metadata/references_draft_missing_registry.csv
+papers/metadata/references_missing_metadata_from_ara.csv
 docs/literature/case_lingxi_citation_coverage.md
 scripts/validate_case_lingxi_citations.py
 scripts/build_case_lingxi_draft_bib.py
+scripts/extract_case_lingxi_missing_citation_metadata.py
 ```
 
 ## Source Policy
 
 Venue and author metadata should be checked against primary sources before final submission. Current entries were added from arXiv/ACM/OpenReview-facing metadata and local literature reports.
+
+`references_missing_metadata_from_ara.csv` is not a manuscript bibliography source. It is a reproducible audit aid extracted from existing ARA `PAPER.md` files for 17 rows missing local registry metadata; all 17 currently remain incomplete because author metadata is not verified.
