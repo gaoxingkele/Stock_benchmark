@@ -57,6 +57,16 @@ Current status:
 | Structured market-tag router | 0/16 | 2/16 | 7/16 | `negative_control` |
 | Validation-only meta-selector | 1/16 combined | 1/16 combined | not promoted | `rejected` |
 
+Promotion audit update:
+
+`experiments/case_lingxi_promotion_audit/case_lingxi_promotion_audit_summary.csv` recomputes candidate-vs-menu metrics from aligned daily files and adds block-bootstrap intervals. It finds:
+
+| Candidate | Recomputed return wins | Recomputed Sharpe wins | MDD wins | Positive annualized-diff CI wins | State |
+|---|---:|---:|---:|---:|---|
+| CASE context router | 3/16 | 4/16 | 9/16 | 0/16 | `risk_control_candidate` |
+| Frozen tabular RL router | 4/16 | 4/16 | 6/16 | 0/16 | `negative_control` |
+| Structured market-tag router | 1/16 | 3/16 | 7/16 | 0/16 | `negative_control` |
+
 ## Research Sleeve Gate
 
 A candidate can become `research_sleeve` if:
@@ -93,4 +103,3 @@ The next implementation should add paired daily-return tests:
 5. turnover difference summary.
 
 Until this is implemented, promotion claims should remain conservative.
-

@@ -114,3 +114,30 @@ python scripts\run_case_lingxi_llm_tag_ablation.py --out-dir experiments\case_li
 - **Expected outcome**:
   - A robust selector should beat the static menu in OOS periods; otherwise it is rejected.
 - **Outcome**: validation-only selector wins 2/16 in 2025, 0/16 in 2026 YTD, and 1/16 combined.
+
+## E06: Unified promotion audit with paired bootstrap intervals
+
+- **Verifies**: C01, C02, C03, C04
+- **Setup**:
+  - Candidates: conservative context router, frozen tabular RL router, structured market-tag router
+  - Comparator: CASE static production menu
+  - Data: aligned candidate and menu daily `net_return` files
+  - Bootstrap: 1000 samples, block size 5, seed 20260623
+- **Script**: `scripts/run_case_lingxi_promotion_audit.py`
+- **Command**:
+
+```powershell
+python scripts\run_case_lingxi_promotion_audit.py --out-dir experiments\case_lingxi_promotion_audit
+```
+
+- **Primary artifact**: `experiments/case_lingxi_promotion_audit/case_lingxi_promotion_audit_summary.csv`
+- **Detail artifact**: `experiments/case_lingxi_promotion_audit/case_lingxi_promotion_audit_detail.csv`
+- **Rows**: 3 summary rows, 48 detail rows
+- **Procedure**:
+  1. Align candidate and static-menu daily returns by date.
+  2. Recompute annualized return, Sharpe, and MDD differences.
+  3. Bootstrap daily return differences with block sampling.
+  4. Apply the promotion gate.
+- **Expected outcome**:
+  - A production candidate should have broad metric wins and positive annualized-difference confidence evidence.
+- **Outcome**: no candidate has any positive annualized-difference CI lower-bound wins; no candidate is promoted to production.

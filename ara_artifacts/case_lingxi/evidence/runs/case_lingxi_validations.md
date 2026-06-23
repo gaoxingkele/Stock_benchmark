@@ -53,3 +53,16 @@
   - combined wins: 1/16
 - Decision: rejected; named validation echo trap.
 
+## Unified Promotion Audit
+
+- Script: `scripts/run_case_lingxi_promotion_audit.py`
+- Summary file: `experiments/case_lingxi_promotion_audit/case_lingxi_promotion_audit_summary.csv`
+- Detail file: `experiments/case_lingxi_promotion_audit/case_lingxi_promotion_audit_detail.csv`
+- Rows:
+  - summary: 3
+  - detail: 48
+- Result:
+  - context router positive annualized-diff CI wins: 0/16
+  - RL router positive annualized-diff CI wins: 0/16
+  - market-tag router positive annualized-diff CI wins: 0/16
+- Decision: no adaptive candidate passes production gate.

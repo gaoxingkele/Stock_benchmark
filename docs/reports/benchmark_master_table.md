@@ -17,6 +17,7 @@ This file is the current execution-level benchmark index for the Lingxi workstre
 | `experiments/case_lingxi_context_router_validation_2026_ytd/case_lingxi_context_router_validation_summary.csv` | 112 | Conservative CASE-Lingxi context-router validation |
 | `experiments/case_lingxi_rl_router_validation_2025_2026_ytd/case_lingxi_rl_router_validation_summary.csv` | 128 | Frozen research-only RL router validation on 2025-2026 YTD OOS |
 | `experiments/case_lingxi_llm_tag_ablation_2026_ytd/case_lingxi_llm_tag_ablation_summary.csv` | 128 | Structured LLM-compatible market-tag ablation |
+| `experiments/case_lingxi_promotion_audit/case_lingxi_promotion_audit_summary.csv` | 3 | Unified candidate-vs-menu promotion audit with paired bootstrap intervals |
 | `data/ara_method_registry.csv` | 31 | Audited finance method registry with ARA and experiment-validation status |
 
 ## Scenario Winners From The SOTA Upgrade Run
@@ -83,9 +84,10 @@ New router evidence:
 6. The RL router is also research-only and does not supersede the static menu.
 7. CASE-Lingxi structured market-tag router wins annualized return in 0/16, Sharpe in 2/16, and MDD in 7/16 versus the static menu.
 8. LLM-compatible tags are therefore an audit/context interface, not a production routing signal yet.
+9. The unified promotion audit finds zero candidates with any positive annualized daily-return difference bootstrap lower-bound wins.
 
 ## Next Benchmarks To Run
 
 1. Re-run Lingxi10/Lingxi5 plus PITNorm on 2026 YTD with the same table shape as the 2023-2025 SOTA upgrade report.
-2. Build the CASE-Lingxi ARA package with claims tied to the benchmark, context-router, RL-router, and market-tag evidence.
-3. Draft the paper outline and method section.
+2. Expand the ARA trace with earlier sparse-regime, market-regime, and SOTA-proxy branches.
+3. Upgrade paper related work with BibTeX-backed citations.

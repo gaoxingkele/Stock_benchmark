@@ -27,8 +27,21 @@ Portfolio settings:
 | Frozen RL router | `scripts/run_case_lingxi_rl_router_baseline.py` | `experiments/case_lingxi_rl_router_validation_2025_2026_ytd/case_lingxi_rl_router_validation_summary.csv` | 128 |
 | Market-tag ablation | `scripts/run_case_lingxi_llm_tag_ablation.py` | `experiments/case_lingxi_llm_tag_ablation_2026_ytd/case_lingxi_llm_tag_ablation_summary.csv` | 128 |
 | Validation-only selector | `scripts/run_lingxi_meta_selector_validation.py` | `experiments/lingxi_meta_selector_validation/lingxi_meta_selector_validation_summary.csv` | 416 |
+| Promotion audit | `scripts/run_case_lingxi_promotion_audit.py` | `experiments/case_lingxi_promotion_audit/case_lingxi_promotion_audit_summary.csv` | 3 |
 
 ## Main Results
+
+### Promotion Audit
+
+The unified promotion audit recomputes candidate-vs-menu daily differences and adds block-bootstrap confidence intervals. No adaptive candidate has any scenario where the annualized daily-return difference bootstrap lower bound is positive.
+
+| Candidate | Ann. wins | Sharpe wins | MDD wins | Positive annualized-diff CI wins |
+|---|---:|---:|---:|---:|
+| Conservative context router | 3 / 16 | 4 / 16 | 9 / 16 | 0 / 16 |
+| Frozen tabular RL router | 4 / 16 | 4 / 16 | 6 / 16 | 0 / 16 |
+| Structured market-tag router | 1 / 16 | 3 / 16 | 7 / 16 | 0 / 16 |
+
+This is the strictest current evidence against production promotion of the adaptive candidates.
 
 ### Conservative Context Router
 
@@ -86,5 +99,5 @@ python scripts\run_case_lingxi_context_router.py --out-dir experiments\case_ling
 python scripts\run_case_lingxi_rl_router_baseline.py --out-dir experiments\case_lingxi_rl_router_validation_2025_2026_ytd
 python scripts\run_case_lingxi_llm_tag_ablation.py --out-dir experiments\case_lingxi_llm_tag_ablation_2026_ytd
 python scripts\run_lingxi_meta_selector_validation.py --out-dir experiments\lingxi_meta_selector_validation
+python scripts\run_case_lingxi_promotion_audit.py --out-dir experiments\case_lingxi_promotion_audit
 ```
-

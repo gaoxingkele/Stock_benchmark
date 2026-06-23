@@ -9,6 +9,7 @@
 | E03 | `experiments/case_lingxi_rl_router_validation_2025_2026_ytd/case_lingxi_rl_router_validation_summary.csv` | C03 |
 | E04 | `experiments/case_lingxi_llm_tag_ablation_2026_ytd/case_lingxi_llm_tag_ablation_summary.csv` | C04 |
 | E05 | `experiments/lingxi_meta_selector_validation/lingxi_meta_selector_validation_summary.csv` | C05 |
+| E06 | `experiments/case_lingxi_promotion_audit/case_lingxi_promotion_audit_summary.csv` | C01, C02, C03, C04 |
 
 ## Run Summary
 

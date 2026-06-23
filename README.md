@@ -42,6 +42,7 @@ Primary documents:
 - CASE context-router validation: `docs/reports/case_lingxi_context_router_validation.md`
 - CASE RL-router validation: `docs/reports/case_lingxi_rl_router_validation.md`
 - CASE LLM-tag ablation: `docs/reports/case_lingxi_llm_tag_ablation.md`
+- CASE promotion audit: `docs/reports/case_lingxi_promotion_audit.md`
 - CASE-Lingxi ARA package: `ara_artifacts/case_lingxi/PAPER.md`
 - CASE-Lingxi paper draft: `paper/outline.md`
 - 31-method registry: `data/ara_method_registry.csv`

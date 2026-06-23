@@ -4,7 +4,7 @@
   "review_date": "2026-06-23",
   "overall_grade": "Weak Accept",
   "mean_score": 3.83,
-  "summary": "CASE-Lingxi has a coherent evidence-backed thesis: conservative static production menus currently dominate tested adaptive routers, and agents should remain in the research/audit layer until OOS promotion gates are passed. The ARA is structurally complete, claims are falsifiable, and negative paths are preserved. The main weaknesses are statistical rigor, limited formal proof of promotion thresholds, and incomplete treatment of capacity/slippage/data-bias constraints.",
+  "summary": "CASE-Lingxi has a coherent evidence-backed thesis: conservative static production menus currently dominate tested adaptive routers, and agents should remain in the research/audit layer until OOS promotion gates are passed. The ARA is structurally complete, claims are falsifiable, and negative paths are preserved. A first paired bootstrap promotion audit has now been added. The main remaining weaknesses are broader statistical testing, capacity/slippage/data-bias constraints, and submission-grade bibliographic detail.",
   "dimensions": [
     {
       "id": "D1",
@@ -17,11 +17,11 @@
       ],
       "weaknesses": [
         "The production-menu claim relies on a benchmark master table plus reports rather than a single unified promotion-test manifest.",
-        "Some evidence is summarized by win counts without exposing confidence intervals or paired daily-return tests."
+        "The new promotion audit adds paired daily-return bootstrap intervals for the main adaptive candidates, but not yet for every older Lingxi/SOTA comparison."
       ],
       "suggestions": [
-        "Add a unified CASE promotion summary CSV with one row per scenario and candidate.",
-        "Add paired daily-return difference statistics for each candidate versus static menu."
+        "Extend the promotion audit to earlier sparse-regime, market-regime, and SOTA-proxy candidates.",
+        "Add drawdown and Sharpe bootstrap intervals, not only annualized return difference intervals."
       ]
     },
     {
@@ -33,11 +33,10 @@
         "Production versus research-only labels are testable against committed scripts and artifacts."
       ],
       "weaknesses": [
-        "Promotion thresholds are described qualitatively as broad wins rather than fixed numeric gate rules.",
-        "Future-falsification criteria do not specify the minimum OOS window length or required markets."
+        "Production thresholds are now numeric, but future-falsification criteria still need minimum OOS window length and market coverage rules."
       ],
       "suggestions": [
-        "Define explicit promotion thresholds such as minimum Sharpe win rate, maximum acceptable drawdown degradation, and minimum OOS days.",
+        "Add minimum OOS window length.",
         "Separate production gate criteria for return-seeking and risk-control sleeves."
       ]
     },
@@ -101,17 +100,18 @@
       "score": 3,
       "strengths": [
         "Experiments use explicit scripts, row counts, costs, OOS windows, and comparable scenario matrices.",
+        "A unified promotion audit now adds paired daily-return block bootstrap intervals for the main adaptive candidates.",
         "The RL router freezes training before OOS evaluation.",
         "LLM-compatible tags are generated with a leakage-aware point-in-time schema."
       ],
       "weaknesses": [
-        "No statistical significance testing or bootstrap confidence intervals are included.",
+        "Bootstrap confidence intervals currently cover annualized daily-return differences only for the main adaptive candidates.",
         "No multiple-comparison correction is applied despite many scenarios and candidates.",
         "Execution realism is limited to a fixed 10 bps cost and does not include market impact or capacity.",
         "The LLM-tag experiment uses deterministic proxy tags rather than actual timestamped LLM debate outputs."
       ],
       "suggestions": [
-        "Add paired bootstrap tests over daily return differences.",
+        "Extend paired bootstrap tests to Sharpe, drawdown, and earlier candidate families.",
         "Add sensitivity grids for transaction cost, TopK, and OOS window definitions.",
         "Add a future experiment with frozen timestamped LLM debate tags while preserving the same schema.",
         "Add capacity and liquidity diagnostics for production-facing claims."
@@ -125,10 +125,10 @@
       "severity": "major",
       "target_file": "ara_artifacts/case_lingxi/logic/experiments.md",
       "target_entity": "E02-E04",
-      "evidence_span": "Outcome fields report win counts such as annualized return wins 3/16, Sharpe wins 3/16, MDD wins 9/16.",
-      "observation": "Router conclusions are based on scenario win counts without paired statistical testing.",
-      "reasoning": "Win counts are interpretable but do not show whether daily-return differences are statistically stable or economically meaningful after multiple comparisons.",
-      "suggestion": "Add paired bootstrap confidence intervals and p-values for candidate-minus-menu daily returns and drawdowns."
+      "evidence_span": "E06 adds block-bootstrap intervals for candidate-minus-menu daily returns.",
+      "observation": "The main router conclusions now include paired annualized daily-return bootstrap intervals, but the audit does not yet cover Sharpe or drawdown intervals.",
+      "reasoning": "Annualized return intervals improve rigor, but promotion decisions also depend on Sharpe and drawdown.",
+      "suggestion": "Add paired bootstrap confidence intervals for Sharpe and drawdown differences."
     },
     {
       "finding_id": "F-L2-002",
@@ -176,8 +176,8 @@
     }
   ],
   "next_actions": [
-    "Implement paired bootstrap candidate-vs-menu statistical tests.",
-    "Create a unified CASE promotion summary CSV.",
+    "Extend paired bootstrap tests to Sharpe and drawdown differences.",
+    "Extend the unified CASE promotion audit to earlier sparse-regime, market-regime, and SOTA-proxy candidates.",
     "Expand ARA trace to include earlier router and PITNorm/SOTA branches.",
     "Add numeric promotion thresholds.",
     "Upgrade paper related work with BibTeX-backed citations."
