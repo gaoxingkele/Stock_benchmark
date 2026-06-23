@@ -96,6 +96,7 @@ Final reports:
 - `docs/reports/case_lingxi_completion_audit.md`
 - `docs/reports/wq_alpha_evolution_comparison_plan.md`
 - `docs/reports/functionevolve_lingxi_feedback.md`
+- `docs/reports/lingxi_functionevolve_blend.md`
 - `ara_artifacts/case_lingxi/PAPER.md`
 - `ara_artifacts/wq_alpha_evolution/PAPER.md`
 - `paper/outline.md`
@@ -122,6 +123,7 @@ Core scripts:
 - `scripts/validate_case_lingxi_bundle.py`
 - `scripts/validate_wq_alpha_evolution_bundle.py`
 - `scripts/run_wq_functionevolve_proxy.py`
+- `scripts/run_lingxi_functionevolve_blend.py`
 
 ## Reproduction Commands
 
@@ -235,6 +237,7 @@ Current artifact:
 - FunctionEvolve feedback report: `docs/reports/functionevolve_lingxi_feedback.md`
 - Current comparison table: `ara_artifacts/wq_alpha_evolution/evidence/current_cross_framework_comparison.csv`
 - Public proxy result: `experiments/wq_functionevolve_proxy/functionevolve_proxy_summary.csv`
+- Lingxi blend result: `experiments/lingxi_functionevolve_blend/lingxi_functionevolve_blend_summary.csv`
 - Bundle validation command: `python scripts\validate_wq_alpha_evolution_bundle.py`
 
 Current scope:
@@ -257,4 +260,6 @@ Current status:
 - FunctionEvolve-style public proxy run exists: 18 AST candidates, 18 valid factors, 1 promoted research-only factor.
 - Current proxy run command: `python scripts\run_wq_functionevolve_proxy.py --max-candidates 18 --promotion-top 5 --max-symbols 25`
 - Current proxy interpretation: the AST factor evolution loop is wired and reproducible, but the promoted factor is research-only because drawdown remains severe and the run is smoke-scale.
-- Empirical private WQ run and Lingxi FunctionEvolve-memory blending ablation are still future experiments, not yet committed evidence.
+- Lingxi-FunctionEvolve-Memory smoke ablation exists: raw Lingxi5/Lingxi10 improved, neutral variants are mixed and only improve at low blend weight.
+- Current blend command: `python scripts\run_lingxi_functionevolve_blend.py --max-symbols 80 --max-train-rows 50000`
+- Empirical private WQ run and full-universe Lingxi FunctionEvolve-memory promotion audit are still future experiments, not yet committed evidence.

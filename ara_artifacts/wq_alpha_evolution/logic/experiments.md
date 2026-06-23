@@ -136,11 +136,24 @@ Add a frozen memory component to the Lingxi experiment scripts and compare again
 Procedure:
 Train or build memory only before the OOS segment, run the same markets and costs, then evaluate promotion-gate metrics.
 
-Status:
-Planned, not implemented in this artifact. It requires a future script that freezes memory before OOS evaluation.
+Current implementation:
+
+```powershell
+python scripts\run_lingxi_functionevolve_blend.py --max-symbols 80 --max-train-rows 50000
+```
+
+Current output:
+
+```text
+experiments/lingxi_functionevolve_blend/lingxi_functionevolve_blend_summary.csv
+docs/reports/lingxi_functionevolve_blend.md
+```
 
 Expected:
 If transferable, the memory upgrade should improve promotion-gate pass rates without increasing drawdown or correlation concentration.
+
+Current result:
+Smoke-scale evidence is positive for raw Lingxi5/Lingxi10 and mixed for neutral variants. The sleeve remains research-only until full-universe validation and promotion-audit checks pass.
 
 ## E05: Self-improving research harness
 

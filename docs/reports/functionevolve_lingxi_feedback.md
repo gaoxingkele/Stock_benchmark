@@ -66,14 +66,20 @@ Immediate transferable ideas:
 5. Freeze memory and candidate pools before OOS evaluation.
 6. Treat Meta/Target/Feedback agents as research-loop components, not direct trade routers.
 
-Recommended next empirical step:
+Implemented next empirical step:
 
-Implement `Lingxi-FunctionEvolve-Memory` as a research-only sleeve:
+`Lingxi-FunctionEvolve-Memory` has been implemented as a research-only sleeve:
 
 1. generate AST proxy factors on the training window;
 2. promote only factors passing IC, turnover, cost, and novelty gates;
 3. blend promoted factors into Lingxi5/Lingxi10 scoring;
 4. compare against current Lingxi5/Lingxi10 and CASE-Lingxi static menu under the existing promotion audit.
+
+Current blend report:
+
+```text
+docs/reports/lingxi_functionevolve_blend.md
+```
 
 ## Current Decision
 

@@ -110,7 +110,8 @@ Completed in this repository:
 5. cross-framework comparison protocol;
 6. current layer-aware baseline comparison table;
 7. FunctionEvolve-style public proxy factor-mining smoke run;
-8. bundle validator.
+8. Lingxi-FunctionEvolve-Memory smoke blending ablation;
+9. bundle validator.
 
 Current baseline table:
 
@@ -126,10 +127,19 @@ experiments/wq_functionevolve_proxy/functionevolve_proxy_summary.csv
 
 The first proxy run generated 18 AST candidates, produced 18 valid factors, and promoted 1 research-only factor under the strict OOS IC, cost-adjusted return, turnover, and novelty gate.
 
+Current Lingxi blend result:
+
+```text
+experiments/lingxi_functionevolve_blend/lingxi_functionevolve_blend_summary.csv
+docs/reports/lingxi_functionevolve_blend.md
+```
+
+The smoke-scale blend improves raw Lingxi5 and Lingxi10 Sharpe and annualized return. Neutral variants improve only at low blend weight, so the sleeve remains research-only.
+
 Not yet completed:
 
 1. private sanitized WQ empirical run;
 2. full-universe vectorized public proxy factor-mining run;
-3. Lingxi FunctionEvolve-memory blending ablation.
+3. full-universe Lingxi FunctionEvolve-memory blending ablation and promotion audit.
 
 These are empirical follow-up experiments, not blockers for the current comparison-plan artifact or the current smoke-scale proxy evidence.

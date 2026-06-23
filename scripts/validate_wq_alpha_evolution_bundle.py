@@ -29,9 +29,12 @@ REQUIRED_FILES = [
     "ara_artifacts/wq_alpha_evolution/evidence/schemas/cross_framework_comparison_schema.csv",
     "docs/reports/wq_alpha_evolution_comparison_plan.md",
     "docs/reports/functionevolve_lingxi_feedback.md",
+    "docs/reports/lingxi_functionevolve_blend.md",
     "scripts/run_wq_functionevolve_proxy.py",
+    "scripts/run_lingxi_functionevolve_blend.py",
     "experiments/wq_functionevolve_proxy/functionevolve_proxy_summary.csv",
     "experiments/wq_functionevolve_proxy/functionevolve_proxy_detail.csv",
+    "experiments/lingxi_functionevolve_blend/lingxi_functionevolve_blend_summary.csv",
 ]
 
 SCHEMA_FILES = {
@@ -53,9 +56,10 @@ SCHEMA_FILES = {
 }
 
 ROW_COUNT_CHECKS = {
-    "ara_artifacts/wq_alpha_evolution/evidence/current_cross_framework_comparison.csv": 7,
+    "ara_artifacts/wq_alpha_evolution/evidence/current_cross_framework_comparison.csv": 8,
     "experiments/wq_functionevolve_proxy/functionevolve_proxy_summary.csv": 1,
     "experiments/wq_functionevolve_proxy/functionevolve_proxy_detail.csv": 18,
+    "experiments/lingxi_functionevolve_blend/lingxi_functionevolve_blend_summary.csv": 12,
 }
 
 SUMMARY_REQUIRED_COLUMNS = {
@@ -77,6 +81,21 @@ SUMMARY_REQUIRED_COLUMNS = {
     "max_drawdown",
     "max_prior_factor_corr",
     "promotion_status",
+}
+
+BLEND_REQUIRED_COLUMNS = {
+    "market",
+    "method",
+    "variant",
+    "horizon",
+    "topk",
+    "cost_bps",
+    "days",
+    "ann_return",
+    "sharpe",
+    "mdd",
+    "avg_turnover",
+    "daily_source",
 }
 
 
@@ -152,6 +171,29 @@ def main() -> int:
     print(f"proxy_counts candidates={candidates} valid={valid} promoted={promoted}")
     if candidates != 18 or valid != 18 or promoted < 1:
         print("ERROR unexpected proxy factor counts")
+        return 1
+
+    blend_path = PROJECT_ROOT / "experiments/lingxi_functionevolve_blend/lingxi_functionevolve_blend_summary.csv"
+    with blend_path.open(newline="", encoding="utf-8") as file:
+        reader = csv.DictReader(file)
+        blend_columns = set(reader.fieldnames or [])
+        blend_rows = list(reader)
+    print(f"blend_columns={sorted(blend_columns)}")
+    if not BLEND_REQUIRED_COLUMNS.issubset(blend_columns):
+        print("ERROR blend summary missing required columns")
+        return 1
+    raw_top5 = [row for row in blend_rows if row["topk"] == "5" and row["variant"] == "raw"]
+    raw_top10 = [row for row in blend_rows if row["topk"] == "10" and row["variant"] == "raw"]
+    if len(raw_top5) != 3 or len(raw_top10) != 3:
+        print("ERROR unexpected raw blend rows")
+        return 1
+    top5_base = next(row for row in raw_top5 if row["method"] == "lingxi")
+    top10_base = next(row for row in raw_top10 if row["method"] == "lingxi")
+    top5_best = max(float(row["sharpe"]) for row in raw_top5 if row["method"] != "lingxi")
+    top10_best = max(float(row["sharpe"]) for row in raw_top10 if row["method"] != "lingxi")
+    print(f"blend_raw_sharpe top5_base={top5_base['sharpe']} top5_best={top5_best:.8f} top10_base={top10_base['sharpe']} top10_best={top10_best:.8f}")
+    if top5_best <= float(top5_base["sharpe"]) or top10_best <= float(top10_base["sharpe"]):
+        print("ERROR blend did not improve raw Top5/Top10 Sharpe")
         return 1
 
     searchable_files = [
