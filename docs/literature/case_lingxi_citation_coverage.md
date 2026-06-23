@@ -11,6 +11,7 @@ papers/metadata/references.bib
 papers/metadata/case_lingxi_citation_coverage.csv
 paper/citation_map.md
 scripts/validate_case_lingxi_citations.py
+scripts/validate_references_bib.py
 scripts/build_case_lingxi_draft_bib.py
 scripts/extract_case_lingxi_missing_citation_metadata.py
 papers/metadata/references_draft_from_registry.bib
@@ -46,6 +47,20 @@ bib_keys=35
 coverage_added=31
 coverage_pending=0
 VALIDATION_PASS
+```
+
+BibTeX hygiene validation command:
+
+```powershell
+python scripts\validate_references_bib.py
+```
+
+Current BibTeX hygiene validation result:
+
+```text
+entries=35
+keys=35
+REFERENCES_BIB_VALIDATION_PASS
 ```
 
 Draft generation command:
@@ -124,5 +139,5 @@ Only verified entries should be used in the manuscript text. All 31 finance-regi
 
 ## Next Citation Work
 
-1. Perform final bibliography-style cleanup before submission: normalize conference names, capitalization, page ranges, and DOI fields.
-2. Add complete citation keys for DLinear, Non-stationary Transformer, TimeMixer, FEDformer, TTM, TimesFM, Chronos, Moirai, and MOMENT if they remain in the final related-work section.
+1. Add complete citation keys for DLinear, Non-stationary Transformer, TimeMixer, FEDformer, TTM, TimesFM, Chronos, Moirai, and MOMENT if they remain in the final related-work section.
+2. Perform venue-specific bibliography polishing only after a target manuscript template is selected.
