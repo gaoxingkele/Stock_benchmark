@@ -109,7 +109,8 @@ Completed in this repository:
 4. sanitized CSV schemas;
 5. cross-framework comparison protocol;
 6. current layer-aware baseline comparison table;
-7. bundle validator.
+7. FunctionEvolve-style public proxy factor-mining smoke run;
+8. bundle validator.
 
 Current baseline table:
 
@@ -117,10 +118,18 @@ Current baseline table:
 ara_artifacts/wq_alpha_evolution/evidence/current_cross_framework_comparison.csv
 ```
 
+Current public proxy result:
+
+```text
+experiments/wq_functionevolve_proxy/functionevolve_proxy_summary.csv
+```
+
+The first proxy run generated 18 AST candidates, produced 18 valid factors, and promoted 1 research-only factor under the strict OOS IC, cost-adjusted return, turnover, and novelty gate.
+
 Not yet completed:
 
 1. private sanitized WQ empirical run;
-2. public proxy factor-mining run;
-3. Lingxi memory-ablation implementation.
+2. full-universe vectorized public proxy factor-mining run;
+3. Lingxi FunctionEvolve-memory blending ablation.
 
-These are empirical follow-up experiments, not blockers for the current comparison-plan artifact.
+These are empirical follow-up experiments, not blockers for the current comparison-plan artifact or the current smoke-scale proxy evidence.

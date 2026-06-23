@@ -95,6 +95,7 @@ Final reports:
 - `docs/reports/case_lingxi_capacity_slippage.md`
 - `docs/reports/case_lingxi_completion_audit.md`
 - `docs/reports/wq_alpha_evolution_comparison_plan.md`
+- `docs/reports/functionevolve_lingxi_feedback.md`
 - `ara_artifacts/case_lingxi/PAPER.md`
 - `ara_artifacts/wq_alpha_evolution/PAPER.md`
 - `paper/outline.md`
@@ -120,6 +121,7 @@ Core scripts:
 - `scripts/run_case_lingxi_capacity_slippage.py`
 - `scripts/validate_case_lingxi_bundle.py`
 - `scripts/validate_wq_alpha_evolution_bundle.py`
+- `scripts/run_wq_functionevolve_proxy.py`
 
 ## Reproduction Commands
 
@@ -230,7 +232,9 @@ Current artifact:
 
 - ARA path: `ara_artifacts/wq_alpha_evolution/`
 - Plan report: `docs/reports/wq_alpha_evolution_comparison_plan.md`
+- FunctionEvolve feedback report: `docs/reports/functionevolve_lingxi_feedback.md`
 - Current comparison table: `ara_artifacts/wq_alpha_evolution/evidence/current_cross_framework_comparison.csv`
+- Public proxy result: `experiments/wq_functionevolve_proxy/functionevolve_proxy_summary.csv`
 - Bundle validation command: `python scripts\validate_wq_alpha_evolution_bundle.py`
 
 Current scope:
@@ -240,6 +244,8 @@ Current scope:
 3. Compare at the correct layer: alpha-discovery loop efficiency, ARA reproducibility, and CASE-Lingxi strategy-level OOS validation.
 4. Exclude credentials, cookies, alpha IDs, raw private expressions, and raw PnL from the public repository.
 5. Use sanitized aggregate schemas for any future private WorldQuant run.
+6. Use FunctionEvolve-style AST factor evolution as the first public proxy factor-mining experiment.
+7. Use SIA/Godel-Agent ideas only for the research harness, not direct trading, until frozen OOS evidence supports promotion.
 
 Current status:
 
@@ -247,5 +253,8 @@ Current status:
 - Sanitized WQ run schema exists.
 - Public proxy factor-mining schema exists.
 - Cross-framework comparison schema exists.
-- Current layer-aware comparison table exists with 4 framework rows.
-- Empirical private WQ run and public proxy factor-mining run are still future experiments, not yet committed evidence.
+- Current layer-aware comparison table exists with 7 framework rows.
+- FunctionEvolve-style public proxy run exists: 18 AST candidates, 18 valid factors, 1 promoted research-only factor.
+- Current proxy run command: `python scripts\run_wq_functionevolve_proxy.py --max-candidates 18 --promotion-top 5 --max-symbols 25`
+- Current proxy interpretation: the AST factor evolution loop is wired and reproducible, but the promoted factor is research-only because drawdown remains severe and the run is smoke-scale.
+- Empirical private WQ run and Lingxi FunctionEvolve-memory blending ablation are still future experiments, not yet committed evidence.

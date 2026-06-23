@@ -28,6 +28,10 @@ REQUIRED_FILES = [
     "ara_artifacts/wq_alpha_evolution/evidence/schemas/proxy_factor_run_schema.csv",
     "ara_artifacts/wq_alpha_evolution/evidence/schemas/cross_framework_comparison_schema.csv",
     "docs/reports/wq_alpha_evolution_comparison_plan.md",
+    "docs/reports/functionevolve_lingxi_feedback.md",
+    "scripts/run_wq_functionevolve_proxy.py",
+    "experiments/wq_functionevolve_proxy/functionevolve_proxy_summary.csv",
+    "experiments/wq_functionevolve_proxy/functionevolve_proxy_detail.csv",
 ]
 
 SCHEMA_FILES = {
@@ -49,7 +53,30 @@ SCHEMA_FILES = {
 }
 
 ROW_COUNT_CHECKS = {
-    "ara_artifacts/wq_alpha_evolution/evidence/current_cross_framework_comparison.csv": 4,
+    "ara_artifacts/wq_alpha_evolution/evidence/current_cross_framework_comparison.csv": 7,
+    "experiments/wq_functionevolve_proxy/functionevolve_proxy_summary.csv": 1,
+    "experiments/wq_functionevolve_proxy/functionevolve_proxy_detail.csv": 18,
+}
+
+SUMMARY_REQUIRED_COLUMNS = {
+    "run_id",
+    "market",
+    "train_period",
+    "test_period",
+    "generator",
+    "candidate_count",
+    "valid_factor_count",
+    "promoted_factor_count",
+    "mean_ic",
+    "icir",
+    "rank_ic",
+    "rank_icir",
+    "turnover",
+    "cost_bps",
+    "long_short_return",
+    "max_drawdown",
+    "max_prior_factor_corr",
+    "promotion_status",
 }
 
 
@@ -103,11 +130,29 @@ def main() -> int:
     for relative, expected_rows in ROW_COUNT_CHECKS.items():
         path = PROJECT_ROOT / relative
         with path.open(newline="", encoding="utf-8") as file:
-            actual_rows = sum(1 for _row in csv.DictReader(file))
+            reader = csv.DictReader(file)
+            actual_rows = sum(1 for _row in reader)
         print(f"rows {relative} actual={actual_rows} expected={expected_rows}")
         if actual_rows != expected_rows:
             print(f"ERROR row count mismatch: {relative}")
             return 1
+
+    summary_path = PROJECT_ROOT / "experiments/wq_functionevolve_proxy/functionevolve_proxy_summary.csv"
+    with summary_path.open(newline="", encoding="utf-8") as file:
+        reader = csv.DictReader(file)
+        columns = set(reader.fieldnames or [])
+        rows = list(reader)
+    print(f"summary_columns={sorted(columns)}")
+    if not SUMMARY_REQUIRED_COLUMNS.issubset(columns):
+        print("ERROR proxy summary missing required columns")
+        return 1
+    promoted = int(rows[0]["promoted_factor_count"])
+    candidates = int(rows[0]["candidate_count"])
+    valid = int(rows[0]["valid_factor_count"])
+    print(f"proxy_counts candidates={candidates} valid={valid} promoted={promoted}")
+    if candidates != 18 or valid != 18 or promoted < 1:
+        print("ERROR unexpected proxy factor counts")
+        return 1
 
     searchable_files = [
         PROJECT_ROOT / "ara_artifacts/wq_alpha_evolution/PAPER.md",

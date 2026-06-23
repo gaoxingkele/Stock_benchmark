@@ -37,3 +37,21 @@ The missing piece is a layer-aware benchmark that compares:
 3. research-process ARA engineering.
 
 This artifact addresses the gap at protocol level and prepares the repository for future empirical runs.
+
+## Newly Added Self-Evolution References
+
+1. **Godel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement** (`arXiv:2410.04444`)
+   - Relevance: high-level recursive self-improvement framework for research agents.
+   - Use in this repository: constrain self-modifying research logic with ARA trace and frozen OOS gates.
+
+2. **FunctionEvolve: Structure-Guided Symbolic Regression with LLMs** (`arXiv:2606.07704`)
+   - Relevance: AST-based symbolic search with structural diversity, local mutation, and structure-aware scoring.
+   - Use in this repository: public proxy factor-mining experiment implemented in `scripts/run_wq_functionevolve_proxy.py`.
+
+3. **FunctionEvolve GitHub implementation** (`Phoinikas03/FunctionEvolve`)
+   - Relevance: engineering reference for expression-tree evolution.
+   - Use in this repository: informs the AST candidate representation and structural metadata in the proxy run.
+
+4. **SIA** (`hexo-ai/sia`)
+   - Relevance: self-improving AI harness with Meta, Target, and Feedback agents.
+   - Use in this repository: informs the proposed Lingxi research-loop upgrade, not direct trading.

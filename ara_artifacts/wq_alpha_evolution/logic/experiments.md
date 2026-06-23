@@ -54,6 +54,19 @@ Generate candidate factors, filter invalid candidates, evaluate OOS IC/return/co
 Required table:
 `evidence/schemas/proxy_factor_run_schema.csv`
 
+Current implementation:
+
+```powershell
+python scripts\run_wq_functionevolve_proxy.py --max-candidates 18 --promotion-top 5 --max-symbols 25
+```
+
+Current output:
+
+```text
+experiments/wq_functionevolve_proxy/functionevolve_proxy_summary.csv
+experiments/wq_functionevolve_proxy/functionevolve_proxy_detail.csv
+```
+
 Candidate metrics:
 
 1. IC mean and ICIR;
@@ -69,6 +82,9 @@ A factor is promoted only if it passes OOS IC, turnover, cost, and novelty thres
 
 Expected:
 Successful proxy runs should show better candidate efficiency or novelty control than a non-memory baseline.
+
+Current result:
+The smoke-scale public proxy generated 18 AST candidates, 18 valid factors, and 1 factor passing the strict OOS IC, cost-adjusted return, turnover, and novelty promotion gate. The result is research-only because the experiment is small-scale and the promoted factor still has severe drawdown.
 
 ## E03: WQ-vs-Lingxi comparison
 
@@ -125,3 +141,20 @@ Planned, not implemented in this artifact. It requires a future script that free
 
 Expected:
 If transferable, the memory upgrade should improve promotion-gate pass rates without increasing drawdown or correlation concentration.
+
+## E05: Self-improving research harness
+
+Verifies:
+Claims C3 and C4.
+
+Goal:
+Use SIA and Godel-Agent ideas to improve the research harness without allowing agents to directly route trades.
+
+Setup:
+Separate Meta-Agent, Target Agent, and Feedback Agent roles. All proposed harness or factor-search changes must be written to ARA trace and frozen before OOS evaluation.
+
+Procedure:
+Meta-Agent proposes the next research direction, Target Agent runs the experiment, Feedback Agent classifies failures and proposes rule updates. Rule updates are accepted only if later frozen OOS evidence improves the promotion gate.
+
+Expected:
+The harness should reduce repeated invalid or high-correlation factor attempts and make the research trace more reusable.
