@@ -27,11 +27,15 @@ REQUIRED_FILES = [
     "ara_artifacts/wq_alpha_evolution/evidence/schemas/sanitized_wq_run_schema.csv",
     "ara_artifacts/wq_alpha_evolution/evidence/schemas/proxy_factor_run_schema.csv",
     "ara_artifacts/wq_alpha_evolution/evidence/schemas/cross_framework_comparison_schema.csv",
+    "ara_artifacts/wq_alpha_evolution/evidence/templates/sanitized_wq_run_template.csv",
     "docs/reports/wq_alpha_evolution_comparison_plan.md",
     "docs/reports/functionevolve_lingxi_feedback.md",
     "docs/reports/lingxi_functionevolve_blend.md",
+    "docs/reports/wq_private_run_entrypoint.md",
+    "docs/reports/wq_alpha_evolution_completion_audit.md",
     "scripts/run_wq_functionevolve_proxy.py",
     "scripts/run_lingxi_functionevolve_blend.py",
+    "scripts/validate_sanitized_wq_run.py",
     "experiments/wq_functionevolve_proxy/functionevolve_proxy_summary.csv",
     "experiments/wq_functionevolve_proxy/functionevolve_proxy_detail.csv",
     "experiments/lingxi_functionevolve_blend/lingxi_functionevolve_blend_summary.csv",
@@ -208,6 +212,14 @@ def main() -> int:
                 print(f"ERROR forbidden secret-like pattern found in public text: {pattern} in {path}")
                 return 1
 
+    run_command(
+        [
+            sys.executable,
+            "scripts/validate_sanitized_wq_run.py",
+            "ara_artifacts/wq_alpha_evolution/evidence/templates/sanitized_wq_run_template.csv",
+            "--allow-empty",
+        ]
+    )
     run_command(
         [
             sys.executable,

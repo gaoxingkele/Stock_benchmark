@@ -97,6 +97,8 @@ Final reports:
 - `docs/reports/wq_alpha_evolution_comparison_plan.md`
 - `docs/reports/functionevolve_lingxi_feedback.md`
 - `docs/reports/lingxi_functionevolve_blend.md`
+- `docs/reports/wq_private_run_entrypoint.md`
+- `docs/reports/wq_alpha_evolution_completion_audit.md`
 - `ara_artifacts/case_lingxi/PAPER.md`
 - `ara_artifacts/wq_alpha_evolution/PAPER.md`
 - `paper/outline.md`
@@ -124,6 +126,7 @@ Core scripts:
 - `scripts/validate_wq_alpha_evolution_bundle.py`
 - `scripts/run_wq_functionevolve_proxy.py`
 - `scripts/run_lingxi_functionevolve_blend.py`
+- `scripts/validate_sanitized_wq_run.py`
 
 ## Reproduction Commands
 
@@ -238,6 +241,8 @@ Current artifact:
 - Current comparison table: `ara_artifacts/wq_alpha_evolution/evidence/current_cross_framework_comparison.csv`
 - Public proxy result: `experiments/wq_functionevolve_proxy/functionevolve_proxy_summary.csv`
 - Lingxi blend result: `experiments/lingxi_functionevolve_blend/lingxi_functionevolve_blend_summary.csv`
+- Private WQ entrypoint: `docs/reports/wq_private_run_entrypoint.md`
+- Completion audit: `docs/reports/wq_alpha_evolution_completion_audit.md`
 - Bundle validation command: `python scripts\validate_wq_alpha_evolution_bundle.py`
 
 Current scope:
@@ -263,3 +268,4 @@ Current status:
 - Lingxi-FunctionEvolve-Memory smoke ablation exists: raw Lingxi5/Lingxi10 improved, neutral variants are mixed and only improve at low blend weight.
 - Current blend command: `python scripts\run_lingxi_functionevolve_blend.py --max-symbols 80 --max-train-rows 50000`
 - Empirical private WQ run and full-universe Lingxi FunctionEvolve-memory promotion audit are still future experiments, not yet committed evidence.
+- Sanitized WQ template validation command: `python scripts\validate_sanitized_wq_run.py ara_artifacts\wq_alpha_evolution\evidence\templates\sanitized_wq_run_template.csv --allow-empty`

@@ -62,6 +62,7 @@ The central thesis is:
 | [schemas/proxy_factor_run_schema.csv](evidence/schemas/proxy_factor_run_schema.csv) | Required columns for public proxy factor-mining runs |
 | [schemas/cross_framework_comparison_schema.csv](evidence/schemas/cross_framework_comparison_schema.csv) | Required columns for WQ-vs-Lingxi comparison summaries |
 | [current_cross_framework_comparison.csv](evidence/current_cross_framework_comparison.csv) | Current layer-aware baseline comparison |
+| [templates/sanitized_wq_run_template.csv](evidence/templates/sanitized_wq_run_template.csv) | Header-only template for private WQ aggregate evidence |
 
 ## Current Status
 
@@ -70,3 +71,4 @@ This artifact is a protocol-level ARA, not a completed WQ run:
 1. WorldQuant BRAIN credentials, alpha IDs, raw expressions, and PnL series are intentionally excluded.
 2. The public comparison can be run through proxy factor libraries and the existing CASE-Lingxi benchmark outputs.
 3. A future private run can fill the sanitized schemas without changing the research claims.
+4. The safe private-run entrypoint is documented in `docs/reports/wq_private_run_entrypoint.md`.

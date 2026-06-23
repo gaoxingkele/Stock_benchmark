@@ -1,0 +1,1 @@
+run_id,run_segment,agent_model,skill_version,candidate_count,simulation_success_count,submission_count,accepted_count,spectacular_count,invalid_field_count,turnover_fail_count,fitness_fail_count,self_correlation_fail_count,other_fail_count,lesson_count,lesson_reused_count,notes

@@ -17,6 +17,15 @@ Aggregate each run segment into the sanitized schema, then remove all account-li
 Required table:
 `evidence/schemas/sanitized_wq_run_schema.csv`
 
+Template:
+`evidence/templates/sanitized_wq_run_template.csv`
+
+Validation:
+
+```powershell
+python scripts\validate_sanitized_wq_run.py path\to\sanitized_wq_run.csv
+```
+
 Metrics:
 
 1. `candidate_count`
@@ -36,6 +45,9 @@ The run is reportable only if each row is aggregated by date or run segment and 
 
 Expected:
 If the self-evolution loop works, repeated failure rates should decline and lesson reuse should increase over later run segments.
+
+Current result:
+No private WQ empirical aggregate is committed. The repository contains a validator and template only.
 
 ## E02: Public proxy factor-mining loop
 
