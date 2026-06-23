@@ -1,0 +1,63 @@
+nodes:
+  - id: Q01
+    type: question
+    title: "Can Lingxi be turned into a conservative agentic strategy-evolution framework?"
+    support_level: explicit
+    source_refs:
+      - docs/theory/case_lingxi_framework.md
+      - docs/reports/benchmark_master_table.md
+    children:
+      - id: D01
+        type: decision
+        title: "Keep Lingxi Adaptive Suite as the production anchor"
+        choice: "Use a scenario-specific static menu"
+        alternatives:
+          - "Use a universal dynamic router"
+          - "Use validation-only Sharpe selection"
+        rationale: "Static menu has stronger OOS support than tested routers."
+        support_level: explicit
+        source_refs:
+          - docs/strategies/lingxi_adaptive_suite.md
+          - docs/reports/benchmark_master_table.md
+      - id: E02
+        type: experiment
+        title: "Conservative context router validation"
+        result: "research_only"
+        support_level: explicit
+        source_refs:
+          - scripts/run_case_lingxi_context_router.py
+          - experiments/case_lingxi_context_router_validation_2026_ytd/case_lingxi_context_router_validation_summary.csv
+        evidence:
+          - C02
+      - id: E03
+        type: experiment
+        title: "Frozen tabular RL router validation"
+        result: "research_only_negative_control"
+        support_level: explicit
+        source_refs:
+          - scripts/run_case_lingxi_rl_router_baseline.py
+          - experiments/case_lingxi_rl_router_validation_2025_2026_ytd/case_lingxi_rl_router_validation_summary.csv
+        evidence:
+          - C03
+      - id: E04
+        type: experiment
+        title: "Structured market-tag ablation"
+        result: "research_only_negative_control"
+        support_level: explicit
+        source_refs:
+          - scripts/run_case_lingxi_llm_tag_ablation.py
+          - experiments/case_lingxi_llm_tag_ablation_2026_ytd/case_lingxi_llm_tag_ablation_summary.csv
+        evidence:
+          - C04
+      - id: F01
+        type: dead_end
+        title: "Validation-only Sharpe meta-selector"
+        result: "rejected"
+        rationale: "Wins only 2/16 in 2025, 0/16 in 2026 YTD, and 1/16 combined."
+        support_level: explicit
+        source_refs:
+          - docs/reports/lingxi_meta_selector_validation.md
+          - experiments/lingxi_meta_selector_validation/lingxi_meta_selector_validation_summary.csv
+        evidence:
+          - C05
+

@@ -88,6 +88,7 @@ Final reports:
 - `docs/reports/case_lingxi_context_router_validation.md`
 - `docs/reports/case_lingxi_rl_router_validation.md`
 - `docs/reports/case_lingxi_llm_tag_ablation.md`
+- `ara_artifacts/case_lingxi/PAPER.md`
 
 Core scripts:
 
@@ -161,3 +162,9 @@ First CASE-Lingxi LLM-compatible tag result:
 
 - Structured market-tag router versus static production menu: annualized return wins 0/16, Sharpe wins 2/16, MDD wins 7/16.
 - Interpretation: market tags are useful as a frozen audit/context interface, but not a production routing signal yet.
+
+CASE-Lingxi ARA:
+
+- Artifact path: `ara_artifacts/case_lingxi/`
+- Level 1 structural validation: PASS with no warnings on 2026-06-23.
+- Validation command: `python C:/Users/xmupt/.codex/skills/ara-paper/scripts/validate_ara.py ara_artifacts/case_lingxi`

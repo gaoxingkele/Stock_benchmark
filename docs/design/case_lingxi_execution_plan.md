@@ -143,7 +143,7 @@ Acceptance criteria:
 
 ## Phase 7: ARA Upgrade
 
-Status: planned.
+Status: completed Level 1.
 
 Target:
 
@@ -176,6 +176,17 @@ Acceptance criteria:
 2. Claims point to experiment IDs.
 3. Experiments point to exact CSVs/scripts.
 4. Failed routers and meta-selectors are represented in the trace.
+
+Current result:
+
+```text
+python C:/Users/xmupt/.codex/skills/ara-paper/scripts/validate_ara.py ara_artifacts/case_lingxi
+ARA Level 1 structural check: PASS
+```
+
+Next ARA action:
+
+Run a Level 2 semantic rigor review after the paper draft is created.
 
 ## Current Next Command Targets
 

@@ -41,6 +41,7 @@ Primary documents:
 - CASE context-router validation: `docs/reports/case_lingxi_context_router_validation.md`
 - CASE RL-router validation: `docs/reports/case_lingxi_rl_router_validation.md`
 - CASE LLM-tag ablation: `docs/reports/case_lingxi_llm_tag_ablation.md`
+- CASE-Lingxi ARA package: `ara_artifacts/case_lingxi/PAPER.md`
 - 31-method registry: `data/ara_method_registry.csv`
 - Project memory: `PROJECT_MEMORY.md`
 - Meta-selector rejection report: `docs/reports/lingxi_meta_selector_validation.md`
@@ -63,6 +64,7 @@ docs/design/case_lingxi_execution_plan.md
 docs/theory/case_lingxi_framework.md
 docs/reports/benchmark_master_table.md
 data/ara_method_registry.csv
+ara_artifacts/case_lingxi/PAPER.md
 ```
 
 Important latest commits:
