@@ -32,10 +32,10 @@ Key comparisons:
 
 | TopK | Variant | Baseline Sharpe | Best blend Sharpe | Baseline ann return | Best blend ann return | Decision |
 |---:|---|---:|---:|---:|---:|---|
-| 5 | raw | 3.10388546 | 3.84414611 | 0.37328694 | 0.49787207 | improves |
-| 5 | industry_size_neutral | 2.16249018 | 2.46672283 | 0.23647204 | 0.28322919 | improves at 0.15 weight only |
-| 10 | raw | 3.24419907 | 3.72355786 | 0.32943436 | 0.38426528 | improves |
-| 10 | industry_size_neutral | 1.82230126 | 1.89445111 | 0.17696504 | 0.18041527 | slight improvement at 0.15 weight |
+| 5 | raw | 3.73372670 | 4.33878038 | 0.84142770 | 1.03163564 | improves |
+| 5 | industry_size_neutral | 2.50165715 | 2.75303346 | 0.50755298 | 0.58751408 | improves at 0.15 weight |
+| 10 | raw | 3.51898322 | 3.74895216 | 0.65444500 | 0.71232064 | improves |
+| 10 | industry_size_neutral | 3.01713003 | 2.89877727 | 0.53065773 | 0.50453921 | does not improve |
 
 ## Interpretation
 
@@ -45,7 +45,7 @@ What improved:
 
 1. Raw Top5 and Top10 both improved annualized return and Sharpe.
 2. The best raw Top5 blend used 30% AST proxy weight.
-3. The best neutral blends used 15% AST proxy weight; higher 30% weight degraded neutral Top5/Top10.
+3. Neutral Top5 improved at 15% AST proxy weight, while neutral Top10 did not improve.
 
 What remains weak:
 
