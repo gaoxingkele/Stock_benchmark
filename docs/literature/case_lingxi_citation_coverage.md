@@ -23,13 +23,13 @@ papers/metadata/references_missing_metadata_from_ara.csv
 | Set | Count |
 |---|---:|
 | Finance methods in registry | 31 |
-| BibTeX entries currently added for finance registry | 14 |
-| Pending finance-method citation checks | 17 |
+| BibTeX entries currently added for finance registry | 31 |
+| Pending finance-method citation checks | 0 |
 | Extra non-finance/agent/time-series entries currently added | 4 |
 | Draft BibTeX entries generated from local registry | 0 |
-| Pending entries missing local registry metadata | 17 |
-| Missing-registry rows with ARA metadata patch | 17 |
-| ARA metadata patch rows still missing verified authors | 17 |
+| Pending entries missing local registry metadata | 0 |
+| Missing-registry rows with ARA metadata patch | 0 |
+| ARA metadata patch rows still missing verified authors | 0 |
 
 Validation command:
 
@@ -42,9 +42,9 @@ Current validation result:
 ```text
 registry_rows=31
 coverage_rows=31
-bib_keys=18
-coverage_added=14
-coverage_pending=17
+bib_keys=35
+coverage_added=31
+coverage_pending=0
 VALIDATION_PASS
 ```
 
@@ -58,7 +58,7 @@ Current draft result:
 
 ```text
 draft_bib=papers/metadata/references_draft_from_registry.bib entries=0
-missing_registry=papers/metadata/references_draft_missing_registry.csv rows=17
+missing_registry=papers/metadata/references_draft_missing_registry.csv rows=0
 ```
 
 ARA metadata patch command:
@@ -70,8 +70,7 @@ python scripts\extract_case_lingxi_missing_citation_metadata.py
 Current ARA metadata patch result:
 
 ```text
-metadata_patch=papers/metadata/references_missing_metadata_from_ara.csv rows=17
-incomplete_authors=17
+metadata_patch=papers/metadata/references_missing_metadata_from_ara.csv rows=0
 ```
 
 Added finance-registry keys:
@@ -91,7 +90,24 @@ Added finance-registry keys:
 | `2022_ddg_da_li` | `li2022ddgda` | concept drift adaptation reference |
 | `2021_tcts_wu` | `wu2021tcts` | task scheduling / stock forecasting reference |
 | `2025_rd_agent_quant_li` | `li2025rdagentquant` | agentic quant reference |
+| `2022_factorvae_duan` | `duan2022factorvae` | dynamic factor model reference |
+| `2021_hatr_wang` | `wang2021hatr` | temporal-relational stock reference |
+| `2022_alsp_tf_wang` | `wang2022alsptf` | long-short pattern transformer reference |
+| `2024_ci_sthpan_xia` | `xia2024cisthpan` | hypergraph stock selection reference |
+| `2024_mdgnn_li` | `qian2024mdgnn` | dynamic graph stock reference |
+| `2021_deeptrader_wang` | `wang2021deeptrader` | RL portfolio reference |
+| `2019_alphastock_wang` | `wang2019alphastock` | RL stock selection reference |
+| `2020_doubleensemble_zhang` | `zhang2020doubleensemble` | ensemble finance reference |
+| `2024_diffsformer_gao` | `gao2024diffsformer` | diffusion stock factor reference |
+| `2025_finmamba_hu` | `hu2025finmamba` | Mamba stock movement reference |
+| `2024_lsr_igru_zhu` | `zhu2024lsrigru` | improved GRU stock reference |
+| `2025_timefilter_hu` | `hu2025timefilter` | time-series SOTA reference |
 | `2025_alphaagent_tang` | `tang2025alphaagent` | agentic alpha-mining reference |
+| `2025_cogalpha_liu` | `liu2025cogalpha` | agentic alpha-mining reference |
+| `2025_quantbench_wang` | `wang2025quantbench` | benchmark reference |
+| `2025_fintsb` | `hu2025fintsb` | benchmark reference |
+| `2024_technical_indicator_impact` | `deep2024technicalindicators` | technical indicator reference |
+| `2025_tin` | `lu2025tin` | technical indicator reference |
 
 Added non-registry or cross-domain keys:
 
@@ -104,11 +120,9 @@ Added non-registry or cross-domain keys:
 
 ## Policy
 
-Only verified entries should be used in the manuscript text. Pending registry rows should not be cited with invented author, venue, DOI, or arXiv metadata. The ARA metadata patch is a recovery aid only: it identifies titles, years, venues, and local ARA source files for missing-registry rows, but the current patch has incomplete author metadata for all 17 rows and must not be promoted to `references.bib` without primary-source verification.
+Only verified entries should be used in the manuscript text. All 31 finance-registry rows now have BibTeX keys in `references.bib`. The ARA metadata patch remains a recovery aid only; because there are no pending rows, it currently emits an empty table.
 
 ## Next Citation Work
 
-1. Use `references_missing_metadata_from_ara.csv` to prioritize primary-source checks for the 17 rows missing local registry metadata.
-2. Verify the remaining finance-method references from primary sources.
-3. Replace pending rows in `papers/metadata/case_lingxi_citation_coverage.csv` with concrete keys.
-4. Add complete citation keys for DLinear, Non-stationary Transformer, TimeMixer, FEDformer, TTM, TimesFM, Chronos, Moirai, and MOMENT if they remain in the final related-work section.
+1. Perform final bibliography-style cleanup before submission: normalize conference names, capitalization, page ranges, and DOI fields.
+2. Add complete citation keys for DLinear, Non-stationary Transformer, TimeMixer, FEDformer, TTM, TimesFM, Chronos, Moirai, and MOMENT if they remain in the final related-work section.

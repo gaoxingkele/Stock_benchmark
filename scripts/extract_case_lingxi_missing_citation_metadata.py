@@ -32,6 +32,8 @@ def resolve(path: str) -> Path:
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:
+    if not path.exists():
+        return []
     with path.open(newline="", encoding="utf-8") as file:
         return list(csv.DictReader(file))
 
@@ -95,7 +97,18 @@ def main() -> int:
     out = resolve(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     with out.open("w", newline="", encoding="utf-8") as file:
-        writer = csv.DictWriter(file, fieldnames=list(output_rows[0]))
+        fieldnames = [
+            "paper_id",
+            "ara_paper_exists",
+            "title",
+            "authors",
+            "year",
+            "venue",
+            "doi_or_url",
+            "metadata_status",
+            "source",
+        ]
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(output_rows)
     print(f"metadata_patch={out} rows={len(output_rows)}")

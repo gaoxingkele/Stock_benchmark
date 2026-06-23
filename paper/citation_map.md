@@ -7,12 +7,14 @@ This file maps paper-draft claims to BibTeX keys in `papers/metadata/references.
 | Quant platform / benchmark infrastructure | `yang2020qlib` | added |
 | Incremental financial adaptation | `zhao2023doubleadapt` | added |
 | Agentic quant research | `li2025rdagentquant`, `tang2025alphaagent` | added |
-| Agentic alpha generation / evolution | `shi2024alphaforge`, `guo2026alphaprobe` | added |
-| Financial routing / graph / transformer baselines | `lin2021tra`, `li2024master`, `xu2022hist`, `xiang2022thgnn`, `huynh2023estimate`, `wu2021tcts` | added |
+| Agentic alpha generation / evolution | `shi2024alphaforge`, `guo2026alphaprobe`, `liu2025cogalpha` | added |
+| Financial routing / graph / transformer baselines | `lin2021tra`, `li2024master`, `xu2022hist`, `xiang2022thgnn`, `huynh2023estimate`, `wu2021tcts`, `duan2022factorvae`, `wang2021hatr`, `wang2022alsptf`, `xia2024cisthpan`, `qian2024mdgnn`, `gao2024diffsformer`, `hu2025finmamba`, `zhu2024lsrigru` | added |
 | Time-series adaptation / concept drift | `du2021adarnn`, `li2022ddgda` | added |
-| Agent RL and self-evolution | `luo2025agentlightning`, `wang2025ragen` | added |
-| Time-series SOTA transfer | `nie2023patchtst`, `liu2024itransformer` | added |
-| Full 31-method finance registry | `papers/metadata/case_lingxi_citation_coverage.csv` | coverage registry added; 17 pending checks remain |
+| Agent RL and self-evolution | `luo2025agentlightning`, `wang2025ragen`, `wang2021deeptrader`, `wang2019alphastock` | added |
+| Time-series SOTA transfer | `nie2023patchtst`, `liu2024itransformer`, `hu2025timefilter` | added |
+| Benchmark and technical-indicator references | `wang2025quantbench`, `hu2025fintsb`, `deep2024technicalindicators`, `lu2025tin` | added |
+| Ensemble finance reference | `zhang2020doubleensemble` | added |
+| Full 31-method finance registry | `papers/metadata/case_lingxi_citation_coverage.csv` | coverage registry added; 0 pending checks remain |
 | Additional SOTA time-series models | pending | add DLinear, Non-stationary Transformer, TimeMixer, FEDformer, foundation models |
 | LLM debate / collaborative multi-agent RL | pending | add exact papers after venue/status verification |
 
@@ -32,6 +34,6 @@ scripts/extract_case_lingxi_missing_citation_metadata.py
 
 ## Source Policy
 
-Venue and author metadata should be checked against primary sources before final submission. Current entries were added from arXiv/ACM/OpenReview-facing metadata and local literature reports.
+Venue and author metadata should be checked against primary sources before final submission. Current entries were added from arXiv, ACM, AAAI, IJCAI, ICML/PMLR, journal, and local literature reports.
 
-`references_missing_metadata_from_ara.csv` is not a manuscript bibliography source. It is a reproducible audit aid extracted from existing ARA `PAPER.md` files for 17 rows missing local registry metadata; all 17 currently remain incomplete because author metadata is not verified.
+`references_missing_metadata_from_ara.csv` is not a manuscript bibliography source. It is a reproducible audit aid extracted from existing ARA `PAPER.md` files for missing local registry metadata; after the 31-method citation pass, it currently contains only the CSV header.

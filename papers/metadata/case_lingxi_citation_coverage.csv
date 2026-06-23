@@ -11,22 +11,22 @@ paper_id,title,bibtex_key,bibtex_status,citation_role,verification_needed
 2022_ddg_da_li,DDG-DA: Data Distribution Generation for Predictable Concept Drift Adaptation,li2022ddgda,added,time_series_adaptation_reference,verified arXiv and AAAI metadata
 2021_tcts_wu,Temporally Correlated Task Scheduling for Sequence Learning,wu2021tcts,added,finance_method_registry,verified PMLR and arXiv metadata
 2025_rd_agent_quant_li,R&D-Agent-Quant: A Multi-Agent Framework for Data-Centric Factors and Model Joint Optimization,li2025rdagentquant,added,core_agentic_quant_reference,verify arXiv metadata before submission
-2022_factorvae_duan,FactorVAE: A Probabilistic Dynamic Factor Model Based on Variational Autoencoder for Predicting Cross-Sectional Stock Returns,,pending,finance_method_registry,verify authors venue DOI/arXiv
-2021_hatr_wang,Hierarchical Adaptive Temporal-Relational Modeling for Stock Trend Prediction,,pending,finance_method_registry,verify authors venue DOI/arXiv
-2022_alsp_tf_wang,Adaptive Long-Short Pattern Transformer for Stock Investment Selection,,pending,finance_method_registry,verify authors venue DOI/arXiv
-2024_ci_sthpan_xia,CI-STHPAN: Pre-trained Attention Network for Stock Selection with Channel-Independent Spatio-Temporal Hypergraph,,pending,finance_method_registry,verify authors venue DOI/arXiv
-2024_mdgnn_li,MDGNN: Multi-Relational Dynamic Graph Neural Network for Comprehensive and Dynamic Stock Investment Prediction,,pending,finance_method_registry,verify authors venue DOI/arXiv
-2021_deeptrader_wang,DeepTrader: A Deep Reinforcement Learning Approach for Risk-Return Balanced Portfolio Management with Market Conditions Embedding,,pending,rl_finance_reference,verify authors venue DOI/arXiv
-2019_alphastock_wang,AlphaStock: A Buying-Winners-and-Selling-Losers Investment Strategy using Interpretable Deep Reinforcement Attention Networks,,pending,rl_finance_reference,verify authors venue DOI/arXiv
-2020_doubleensemble_zhang,DoubleEnsemble: A New Ensemble Method Based on Sample Reweighting and Feature Selection for Financial Data Analysis,,pending,ensemble_finance_reference,verify authors venue DOI/arXiv
-2024_diffsformer_gao,DiffsFormer: A Diffusion Transformer on Stock Factor Augmentation,,pending,finance_method_registry,verify authors venue DOI/arXiv
-2025_finmamba_hu,FinMamba: Market-Aware Graph Enhanced Multi-Level Mamba for Stock Movement Prediction,,pending,finance_method_registry,verify authors venue DOI/arXiv
-2024_lsr_igru_zhu,LSR-IGRU: Stock Trend Prediction Based on Long Short-Term Relationships and Improved GRU,,pending,finance_method_registry,verify authors venue DOI/arXiv
-2025_timefilter_hu,TimeFilter: Patch-Specific Spatial-Temporal Graph Filtration for Time Series Forecasting,,pending,time_series_sota_reference,verify authors venue DOI/arXiv
+2022_factorvae_duan,FactorVAE: A Probabilistic Dynamic Factor Model Based on Variational Autoencoder for Predicting Cross-Sectional Stock Returns,duan2022factorvae,added,finance_method_registry,verified AAAI DOI metadata
+2021_hatr_wang,Hierarchical Adaptive Temporal-Relational Modeling for Stock Trend Prediction,wang2021hatr,added,finance_method_registry,verified IJCAI DOI metadata
+2022_alsp_tf_wang,Adaptive Long-Short Pattern Transformer for Stock Investment Selection,wang2022alsptf,added,finance_method_registry,verified IJCAI DOI metadata
+2024_ci_sthpan_xia,CI-STHPAN: Pre-trained Attention Network for Stock Selection with Channel-Independent Spatio-Temporal Hypergraph,xia2024cisthpan,added,finance_method_registry,verified AAAI DOI metadata
+2024_mdgnn_li,MDGNN: Multi-Relational Dynamic Graph Neural Network for Comprehensive and Dynamic Stock Investment Prediction,qian2024mdgnn,added,finance_method_registry,verified AAAI DOI metadata
+2021_deeptrader_wang,DeepTrader: A Deep Reinforcement Learning Approach for Risk-Return Balanced Portfolio Management with Market Conditions Embedding,wang2021deeptrader,added,rl_finance_reference,verified AAAI DOI metadata
+2019_alphastock_wang,AlphaStock: A Buying-Winners-and-Selling-Losers Investment Strategy using Interpretable Deep Reinforcement Attention Networks,wang2019alphastock,added,rl_finance_reference,verified ACM DOI and arXiv metadata
+2020_doubleensemble_zhang,DoubleEnsemble: A New Ensemble Method Based on Sample Reweighting and Feature Selection for Financial Data Analysis,zhang2020doubleensemble,added,ensemble_finance_reference,verified arXiv metadata; venue kept conservative
+2024_diffsformer_gao,DiffsFormer: A Diffusion Transformer on Stock Factor Augmentation,gao2024diffsformer,added,finance_method_registry,verified arXiv metadata
+2025_finmamba_hu,FinMamba: Market-Aware Graph Enhanced Multi-Level Mamba for Stock Movement Prediction,hu2025finmamba,added,finance_method_registry,verified arXiv metadata
+2024_lsr_igru_zhu,LSR-IGRU: Stock Trend Prediction Based on Long Short-Term Relationships and Improved GRU,zhu2024lsrigru,added,finance_method_registry,verified ACM DOI and arXiv metadata
+2025_timefilter_hu,TimeFilter: Patch-Specific Spatial-Temporal Graph Filtration for Time Series Forecasting,hu2025timefilter,added,time_series_sota_reference,verified ICML/PMLR and arXiv metadata
 2020_qlib_yang,Qlib: An AI-oriented Quantitative Investment Platform,yang2020qlib,added,core_platform_reference,verify arXiv metadata before submission
 2025_alphaagent_tang,AlphaAgent: LLM-Driven Alpha Mining with Regularized Exploration to Counteract Alpha Decay,tang2025alphaagent,added,core_agentic_alpha_reference,verify KDD/ACM citation formatting before submission
-2025_cogalpha_liu,Cognitive Alpha Mining via LLM-Driven Code-Based Evolution,,pending,agentic_alpha_reference,verify authors venue DOI/arXiv
-2025_quantbench_wang,QuantBench: Benchmarking AI Methods for Quantitative Investment,,pending,benchmark_reference,verify authors venue DOI/arXiv
-2025_fintsb,FinTSB: A Comprehensive and Practical Benchmark for Financial Time Series,,pending,benchmark_reference,verify authors venue DOI/arXiv
-2024_technical_indicator_impact,Assessing the Impact of Technical Indicators on Machine Learning Models for High-Frequency Stock Price Prediction,,pending,technical_indicator_reference,verify authors venue DOI/arXiv
-2025_tin,Technical Indicator Networks: An Interpretable Neural Approach,,pending,technical_indicator_reference,verify authors venue DOI/arXiv
+2025_cogalpha_liu,Cognitive Alpha Mining via LLM-Driven Code-Based Evolution,liu2025cogalpha,added,agentic_alpha_reference,verified arXiv metadata
+2025_quantbench_wang,QuantBench: Benchmarking AI Methods for Quantitative Investment,wang2025quantbench,added,benchmark_reference,verified arXiv metadata
+2025_fintsb,FinTSB: A Comprehensive and Practical Benchmark for Financial Time Series,hu2025fintsb,added,benchmark_reference,verified arXiv metadata
+2024_technical_indicator_impact,Assessing the Impact of Technical Indicators on Machine Learning Models for High-Frequency Stock Price Prediction,deep2024technicalindicators,added,technical_indicator_reference,verified arXiv metadata
+2025_tin,Technical Indicator Networks: An Interpretable Neural Approach,lu2025tin,added,technical_indicator_reference,verified arXiv metadata

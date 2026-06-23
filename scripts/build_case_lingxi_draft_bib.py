@@ -116,16 +116,12 @@ def main() -> int:
     ]
     out.write_text("\n\n".join(["\n".join(header), *entries]) + "\n", encoding="utf-8")
     missing_out = resolve(args.missing_out)
-    if missing:
-        with missing_out.open("w", newline="", encoding="utf-8") as file:
-            writer = csv.DictWriter(file, fieldnames=["paper_id", "reason"])
-            writer.writeheader()
-            writer.writerows({"paper_id": paper_id, "reason": "not_found_in_paper_registry"} for paper_id in missing)
-    elif missing_out.exists():
-        missing_out.unlink()
+    with missing_out.open("w", newline="", encoding="utf-8") as file:
+        writer = csv.DictWriter(file, fieldnames=["paper_id", "reason"])
+        writer.writeheader()
+        writer.writerows({"paper_id": paper_id, "reason": "not_found_in_paper_registry"} for paper_id in missing)
     print(f"draft_bib={out} entries={len(entries)}")
-    if missing:
-        print(f"missing_registry={missing_out} rows={len(missing)}")
+    print(f"missing_registry={missing_out} rows={len(missing)}")
     return 0
 
 

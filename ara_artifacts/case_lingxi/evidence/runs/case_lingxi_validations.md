@@ -89,3 +89,19 @@ These branches are included in the exploration trace because they shaped the fin
 - Cost levels: 0, 5, 10, 20, 50 bps
 - Result: no adaptive candidate passes production gate at any tested cost level.
 - Decision: static production menu remains default; context router remains risk-control candidate only.
+
+## Citation Coverage Audit
+
+- Script: `scripts/validate_case_lingxi_citations.py`
+- Coverage file: `papers/metadata/case_lingxi_citation_coverage.csv`
+- BibTeX file: `papers/metadata/references.bib`
+- Recovery scripts:
+  - `scripts/build_case_lingxi_draft_bib.py`
+  - `scripts/extract_case_lingxi_missing_citation_metadata.py`
+- Result:
+  - finance registry rows: 31
+  - coverage rows: 31
+  - BibTeX keys: 35
+  - finance-registry citations added: 31
+  - pending finance-registry citations: 0
+- Decision: 31-method finance registry citation coverage is complete; remaining citation work is final submission formatting and optional additional related-work keys.
