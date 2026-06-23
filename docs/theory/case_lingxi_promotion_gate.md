@@ -67,6 +67,10 @@ Promotion audit update:
 | Frozen tabular RL router | 4/16 | 4/16 | 6/16 | 0/16 | `negative_control` |
 | Structured market-tag router | 1/16 | 3/16 | 7/16 | 0/16 | `negative_control` |
 
+Cost sensitivity update:
+
+`experiments/case_lingxi_cost_sensitivity/case_lingxi_cost_sensitivity_summary.csv` recomputes candidate-vs-menu metrics at 0, 5, 10, 20, and 50 bps. No candidate reaches the production gate at any tested cost level.
+
 ## Research Sleeve Gate
 
 A candidate can become `research_sleeve` if:

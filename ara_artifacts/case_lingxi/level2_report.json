@@ -4,7 +4,7 @@
   "review_date": "2026-06-23",
   "overall_grade": "Weak Accept",
   "mean_score": 3.83,
-  "summary": "CASE-Lingxi has a coherent evidence-backed thesis: conservative static production menus currently dominate tested adaptive routers, and agents should remain in the research/audit layer until OOS promotion gates are passed. The ARA is structurally complete, claims are falsifiable, and negative paths are preserved. A first paired bootstrap promotion audit has now been added. The main remaining weaknesses are broader statistical testing, capacity/slippage/data-bias constraints, and submission-grade bibliographic detail.",
+  "summary": "CASE-Lingxi has a coherent evidence-backed thesis: conservative static production menus currently dominate tested adaptive routers, and agents should remain in the research/audit layer until OOS promotion gates are passed. The ARA is structurally complete, claims are falsifiable, and negative paths are preserved. A first paired bootstrap promotion audit and transaction-cost sensitivity audit have now been added. The main remaining weaknesses are broader statistical testing, capacity/slippage/data-bias constraints beyond simple cost levels, and submission-grade bibliographic detail.",
   "dimensions": [
     {
       "id": "D1",
@@ -101,13 +101,14 @@
       "strengths": [
         "Experiments use explicit scripts, row counts, costs, OOS windows, and comparable scenario matrices.",
         "A unified promotion audit now adds paired daily-return block bootstrap intervals for the main adaptive candidates.",
+        "A cost sensitivity audit tests 0, 5, 10, 20, and 50 bps transaction-cost assumptions.",
         "The RL router freezes training before OOS evaluation.",
         "LLM-compatible tags are generated with a leakage-aware point-in-time schema."
       ],
       "weaknesses": [
         "Bootstrap confidence intervals currently cover annualized daily-return differences only for the main adaptive candidates.",
         "No multiple-comparison correction is applied despite many scenarios and candidates.",
-        "Execution realism is limited to a fixed 10 bps cost and does not include market impact or capacity.",
+        "Execution realism now includes multiple linear cost levels, but does not include nonlinear market impact or capacity.",
         "The LLM-tag experiment uses deterministic proxy tags rather than actual timestamped LLM debate outputs."
       ],
       "suggestions": [

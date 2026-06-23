@@ -77,3 +77,15 @@ These branches are included in the exploration trace because they shaped the fin
   - RL router positive annualized-diff CI wins: 0/16
   - market-tag router positive annualized-diff CI wins: 0/16
 - Decision: no adaptive candidate passes production gate.
+
+## Cost Sensitivity Audit
+
+- Script: `scripts/run_case_lingxi_cost_sensitivity.py`
+- Summary file: `experiments/case_lingxi_cost_sensitivity/case_lingxi_cost_sensitivity_summary.csv`
+- Detail file: `experiments/case_lingxi_cost_sensitivity/case_lingxi_cost_sensitivity_detail.csv`
+- Rows:
+  - summary: 15
+  - detail: 240
+- Cost levels: 0, 5, 10, 20, 50 bps
+- Result: no adaptive candidate passes production gate at any tested cost level.
+- Decision: static production menu remains default; context router remains risk-control candidate only.

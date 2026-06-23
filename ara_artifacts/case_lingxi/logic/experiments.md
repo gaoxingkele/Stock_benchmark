@@ -141,3 +141,30 @@ python scripts\run_case_lingxi_promotion_audit.py --out-dir experiments\case_lin
 - **Expected outcome**:
   - A production candidate should have broad metric wins and positive annualized-difference confidence evidence.
 - **Outcome**: no candidate has any positive annualized-difference CI lower-bound wins; no candidate is promoted to production.
+
+## E07: Cost sensitivity audit
+
+- **Verifies**: C01, C02, C03, C04
+- **Setup**:
+  - Candidates: conservative context router, frozen tabular RL router, structured market-tag router
+  - Comparator: CASE static production menu
+  - Cost levels: 0, 5, 10, 20, 50 bps
+  - Data: existing daily files with `net_return`, `cost`, and `turnover`
+- **Script**: `scripts/run_case_lingxi_cost_sensitivity.py`
+- **Command**:
+
+```powershell
+python scripts\run_case_lingxi_cost_sensitivity.py --out-dir experiments\case_lingxi_cost_sensitivity
+```
+
+- **Primary artifact**: `experiments/case_lingxi_cost_sensitivity/case_lingxi_cost_sensitivity_summary.csv`
+- **Detail artifact**: `experiments/case_lingxi_cost_sensitivity/case_lingxi_cost_sensitivity_detail.csv`
+- **Rows**: 15 summary rows, 240 detail rows
+- **Procedure**:
+  1. Reconstruct gross return as `net_return + cost`.
+  2. Recompute net return at each cost level from turnover.
+  3. Compare each candidate against the static menu.
+  4. Apply the promotion gate at each cost level.
+- **Expected outcome**:
+  - A robust production candidate should pass the gate across plausible cost assumptions.
+- **Outcome**: no candidate passes the production gate at any tested cost level.

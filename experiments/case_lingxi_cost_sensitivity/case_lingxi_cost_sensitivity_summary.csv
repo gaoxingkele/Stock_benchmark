@@ -1,0 +1,16 @@
+candidate,candidate_label,cost_bps,scenarios,ann_wins,sharpe_wins,mdd_wins,ann_win_rate,sharpe_win_rate,mdd_win_rate,state
+case_lingxi_context_router,Conservative context router,0.00,16,3,5,10,0.1875,0.3125,0.6250,risk_control_candidate
+case_lingxi_context_router,Conservative context router,5.00,16,3,4,9,0.1875,0.2500,0.5625,risk_control_candidate
+case_lingxi_context_router,Conservative context router,10.00,16,3,4,9,0.1875,0.2500,0.5625,risk_control_candidate
+case_lingxi_context_router,Conservative context router,20.00,16,3,5,10,0.1875,0.3125,0.6250,risk_control_candidate
+case_lingxi_context_router,Conservative context router,50.00,16,3,3,11,0.1875,0.1875,0.6875,risk_control_candidate
+case_lingxi_market_tag_router,Structured market-tag router,0.00,16,1,3,9,0.0625,0.1875,0.5625,not_promoted
+case_lingxi_market_tag_router,Structured market-tag router,5.00,16,1,4,9,0.0625,0.2500,0.5625,not_promoted
+case_lingxi_market_tag_router,Structured market-tag router,10.00,16,1,3,7,0.0625,0.1875,0.4375,not_promoted
+case_lingxi_market_tag_router,Structured market-tag router,20.00,16,2,3,9,0.1250,0.1875,0.5625,not_promoted
+case_lingxi_market_tag_router,Structured market-tag router,50.00,16,3,1,7,0.1875,0.0625,0.4375,not_promoted
+case_lingxi_tabular_rl_router,Frozen tabular RL router,0.00,16,4,4,6,0.2500,0.2500,0.3750,not_promoted
+case_lingxi_tabular_rl_router,Frozen tabular RL router,5.00,16,4,4,6,0.2500,0.2500,0.3750,not_promoted
+case_lingxi_tabular_rl_router,Frozen tabular RL router,10.00,16,4,4,6,0.2500,0.2500,0.3750,not_promoted
+case_lingxi_tabular_rl_router,Frozen tabular RL router,20.00,16,4,4,6,0.2500,0.2500,0.3750,not_promoted
+case_lingxi_tabular_rl_router,Frozen tabular RL router,50.00,16,6,6,4,0.3750,0.3750,0.2500,not_promoted

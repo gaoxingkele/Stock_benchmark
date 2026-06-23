@@ -28,6 +28,7 @@ Portfolio settings:
 | Market-tag ablation | `scripts/run_case_lingxi_llm_tag_ablation.py` | `experiments/case_lingxi_llm_tag_ablation_2026_ytd/case_lingxi_llm_tag_ablation_summary.csv` | 128 |
 | Validation-only selector | `scripts/run_lingxi_meta_selector_validation.py` | `experiments/lingxi_meta_selector_validation/lingxi_meta_selector_validation_summary.csv` | 416 |
 | Promotion audit | `scripts/run_case_lingxi_promotion_audit.py` | `experiments/case_lingxi_promotion_audit/case_lingxi_promotion_audit_summary.csv` | 3 |
+| Cost sensitivity | `scripts/run_case_lingxi_cost_sensitivity.py` | `experiments/case_lingxi_cost_sensitivity/case_lingxi_cost_sensitivity_summary.csv` | 15 |
 
 ## Main Results
 
@@ -42,6 +43,10 @@ The unified promotion audit recomputes candidate-vs-menu daily differences and a
 | Structured market-tag router | 1 / 16 | 3 / 16 | 7 / 16 | 0 / 16 |
 
 This is the strictest current evidence against production promotion of the adaptive candidates.
+
+### Cost Sensitivity
+
+The cost sensitivity audit recomputes candidate and static-menu returns at 0, 5, 10, 20, and 50 bps. No adaptive candidate reaches the production gate at any tested cost level. The context router remains a risk-control candidate because its MDD wins remain high, but its annualized return wins stay at 3/16 across all tested costs.
 
 ### Conservative Context Router
 
@@ -100,4 +105,5 @@ python scripts\run_case_lingxi_rl_router_baseline.py --out-dir experiments\case_
 python scripts\run_case_lingxi_llm_tag_ablation.py --out-dir experiments\case_lingxi_llm_tag_ablation_2026_ytd
 python scripts\run_lingxi_meta_selector_validation.py --out-dir experiments\lingxi_meta_selector_validation
 python scripts\run_case_lingxi_promotion_audit.py --out-dir experiments\case_lingxi_promotion_audit
+python scripts\run_case_lingxi_cost_sensitivity.py --out-dir experiments\case_lingxi_cost_sensitivity
 ```

@@ -90,6 +90,7 @@ Final reports:
 - `docs/reports/case_lingxi_rl_router_validation.md`
 - `docs/reports/case_lingxi_llm_tag_ablation.md`
 - `docs/reports/case_lingxi_promotion_audit.md`
+- `docs/reports/case_lingxi_cost_sensitivity.md`
 - `ara_artifacts/case_lingxi/PAPER.md`
 - `paper/outline.md`
 - `paper/abstract.md`
@@ -108,6 +109,7 @@ Core scripts:
 - `scripts/run_case_lingxi_rl_router_baseline.py`
 - `scripts/run_case_lingxi_llm_tag_ablation.py`
 - `scripts/run_case_lingxi_promotion_audit.py`
+- `scripts/run_case_lingxi_cost_sensitivity.py`
 
 ## Reproduction Commands
 
@@ -189,4 +191,5 @@ CASE-Lingxi Level 2 ARA review:
 - Report path: `ara_artifacts/case_lingxi/level2_report.json`
 - Overall grade: Weak Accept
 - Promotion audit now exists: `experiments/case_lingxi_promotion_audit/case_lingxi_promotion_audit_summary.csv`
-- Main remaining improvements: Sharpe/MDD bootstrap tests, expanded trace, BibTeX-backed related work, capacity/slippage stress tests.
+- Cost sensitivity now exists: `experiments/case_lingxi_cost_sensitivity/case_lingxi_cost_sensitivity_summary.csv`
+- Main remaining improvements: Sharpe/MDD bootstrap tests, complete 31-method BibTeX, nonlinear capacity/slippage stress tests.
