@@ -192,3 +192,27 @@ Reproduction:
 ```powershell
 python scripts\run_lingxi_sparse_regime_router_validation.py --out-dir experiments\lingxi_sparse_regime_router_validation_2026_ytd
 ```
+
+## Validation-Only Meta-Selector Update
+
+A frozen meta-selector was tested by selecting the highest-Sharpe method in 2023-2024, then evaluating on 2025 and 2026 YTD.
+
+Result: reject.
+
+- 2025 wins vs best fixed/static baseline: 2 of 16.
+- 2026 YTD wins vs best fixed/static baseline: 0 of 16.
+- Combined 2025-2026 YTD wins: 1 of 16.
+
+This proves that "pick the validation Sharpe winner" is too unstable. It overfits regime-specific noise and should not be used as the production selector.
+
+Reproduction:
+
+```powershell
+python scripts\run_lingxi_meta_selector_validation.py --out-dir experiments\lingxi_meta_selector_validation
+```
+
+Current production stance:
+
+- Use fixed/scene-specific methods as the main strategy menu.
+- Keep dynamic routers only as research sleeves in the few scenarios where they repeatedly showed value.
+- Require any LLM macro adapter to beat the conservative fixed baseline out of sample, not merely to improve a weak router.
