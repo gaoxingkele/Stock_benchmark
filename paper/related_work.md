@@ -97,4 +97,10 @@ The current BibTeX file is:
 papers/metadata/references.bib
 ```
 
-The first citation pass covers the core infrastructure, adaptation, time-series, and agentic references used directly in the CASE-Lingxi argument. The full 31-method registry still needs a complete citation pass before manuscript submission.
+The first citation pass covers the core infrastructure, adaptation, time-series, and agentic references used directly in the CASE-Lingxi argument. The full 31-method citation coverage checklist is:
+
+```text
+papers/metadata/case_lingxi_citation_coverage.csv
+```
+
+The full registry still needs primary-source verification before manuscript submission.
