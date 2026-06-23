@@ -6,6 +6,17 @@
 - Rows: 96
 - Main conclusion: Lingxi remains the main production anchor; PITNorm is useful as risk control.
 
+## Prior Router Branches
+
+These branches are included in the exploration trace because they shaped the final static-menu decision:
+
+| Branch | Report | Summary artifact | Decision |
+|---|---|---|---|
+| Adaptive router | `docs/reports/lingxi_adaptive_router_validation.md` | `experiments/lingxi_adaptive_router_validation_2026_ytd/lingxi_adaptive_router_validation_summary.csv` | rejected as global production default |
+| Market-regime router | `docs/reports/lingxi_regime_router_validation.md` | `experiments/lingxi_regime_router_validation_2026_ytd/lingxi_regime_router_validation_summary.csv` | rejected as global production default |
+| Sparse regime router | `docs/reports/lingxi_sparse_regime_router_validation.md` | `experiments/lingxi_sparse_regime_router_validation_2026_ytd/lingxi_sparse_regime_router_validation_summary.csv` | rejected as global production default |
+| SOTA/PITNorm upgrade | `docs/reports/lingxi_sota_upgrade_validation.md` | `experiments/lingxi_sota_upgrade_validation/lingxi_sota_upgrade_validation_summary.csv` | PITNorm kept as risk-control candidate |
+
 ## Conservative Context Router
 
 - Script: `scripts/run_case_lingxi_context_router.py`

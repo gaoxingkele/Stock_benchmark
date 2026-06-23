@@ -29,6 +29,20 @@ nodes:
           - experiments/case_lingxi_context_router_validation_2026_ytd/case_lingxi_context_router_validation_summary.csv
         evidence:
           - C02
+      - id: E06
+        type: experiment
+        title: "Unified promotion audit with paired bootstrap intervals"
+        result: "no_candidate_promoted"
+        support_level: explicit
+        source_refs:
+          - scripts/run_case_lingxi_promotion_audit.py
+          - experiments/case_lingxi_promotion_audit/case_lingxi_promotion_audit_summary.csv
+          - docs/reports/case_lingxi_promotion_audit.md
+        evidence:
+          - C01
+          - C02
+          - C03
+          - C04
       - id: E03
         type: experiment
         title: "Frozen tabular RL router validation"
@@ -49,6 +63,51 @@ nodes:
           - experiments/case_lingxi_llm_tag_ablation_2026_ytd/case_lingxi_llm_tag_ablation_summary.csv
         evidence:
           - C04
+      - id: E07
+        type: experiment
+        title: "Lingxi SOTA/PITNorm upgrade validation"
+        result: "pitnorm_risk_control_only"
+        support_level: explicit
+        source_refs:
+          - scripts/run_lingxi_sota_upgrade_validation.py
+          - docs/reports/lingxi_sota_upgrade_validation.md
+          - experiments/lingxi_sota_upgrade_validation/lingxi_sota_upgrade_validation_summary.csv
+        rationale: "PITNorm is useful for risk control, but generic SOTA-inspired proxies do not replace Lingxi10/Lingxi5."
+        evidence:
+          - C01
+      - id: F02
+        type: dead_end
+        title: "Universal adaptive router as production default"
+        result: "rejected_as_global_default"
+        rationale: "Adaptive router is useful in a few cases but too few wins versus fixed/static baselines."
+        support_level: explicit
+        source_refs:
+          - docs/reports/lingxi_adaptive_router_validation.md
+          - experiments/lingxi_adaptive_router_validation_2026_ytd/lingxi_adaptive_router_validation_summary.csv
+        evidence:
+          - C01
+      - id: F03
+        type: dead_end
+        title: "Market-regime router everywhere"
+        result: "rejected_as_global_default"
+        rationale: "Market-regime router adds signal in some comparisons but does not broadly beat fixed/static production sleeves."
+        support_level: explicit
+        source_refs:
+          - docs/reports/lingxi_regime_router_validation.md
+          - experiments/lingxi_regime_router_validation_2026_ytd/lingxi_regime_router_validation_summary.csv
+        evidence:
+          - C01
+      - id: F04
+        type: dead_end
+        title: "Sparse/feature-capped regime router everywhere"
+        result: "rejected_as_global_default"
+        rationale: "Sparse regime router improves over some routers but remains too narrow for production replacement."
+        support_level: explicit
+        source_refs:
+          - docs/reports/lingxi_sparse_regime_router_validation.md
+          - experiments/lingxi_sparse_regime_router_validation_2026_ytd/lingxi_sparse_regime_router_validation_summary.csv
+        evidence:
+          - C01
       - id: F01
         type: dead_end
         title: "Validation-only Sharpe meta-selector"
@@ -60,4 +119,3 @@ nodes:
           - experiments/lingxi_meta_selector_validation/lingxi_meta_selector_validation_summary.csv
         evidence:
           - C05
-

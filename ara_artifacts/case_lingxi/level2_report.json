@@ -86,12 +86,12 @@
         "The artifact distinguishes production, research-only, and rejected states."
       ],
       "weaknesses": [
-        "The trace is concise and does not yet include every prior router variant such as sparse regime and market-regime routers.",
-        "Some decisions are summarized after the fact rather than linked to full chronological logs."
+        "The trace now includes prior adaptive, market-regime, sparse-regime, SOTA/PITNorm, and promotion-audit branches.",
+        "Some decisions are still summarized after the fact rather than linked to full chronological logs."
       ],
       "suggestions": [
-        "Expand exploration_tree.yaml with sparse regime, market-regime, SOTA proxy, and PITNorm-gate branches.",
-        "Add provenance tags for user-suggested, AI-suggested, and AI-executed events."
+        "Add provenance tags for user-suggested, AI-suggested, and AI-executed events.",
+        "Add chronological timestamps if a full research-process reconstruction is needed."
       ]
     },
     {
@@ -158,10 +158,10 @@
       "severity": "suggestion",
       "target_file": "ara_artifacts/case_lingxi/trace/exploration_tree.yaml",
       "target_entity": "Q01 children",
-      "evidence_span": "Trace includes context router, RL router, market-tag ablation, and validation-only selector.",
-      "observation": "The trace captures the main current branches but omits several prior experiments that shaped the final conclusion.",
-      "reasoning": "Adding sparse regime, market-regime, adaptive router, and PITNorm-gate branches would improve research process recoverability.",
-      "suggestion": "Expand the trace with prior router and SOTA-proxy branches linked to their reports."
+      "evidence_span": "Trace includes context router, RL router, market-tag ablation, promotion audit, SOTA/PITNorm, adaptive router, market-regime router, sparse-regime router, and validation-only selector.",
+      "observation": "The trace now captures the main current and prior branches, but lacks provenance tags.",
+      "reasoning": "Provenance tags would make it clearer which steps were user-suggested, AI-suggested, or AI-executed.",
+      "suggestion": "Add provenance fields and timestamps in a later trace refinement."
     },
     {
       "finding_id": "F-L2-005",
@@ -178,7 +178,7 @@
   "next_actions": [
     "Extend paired bootstrap tests to Sharpe and drawdown differences.",
     "Extend the unified CASE promotion audit to earlier sparse-regime, market-regime, and SOTA-proxy candidates.",
-    "Expand ARA trace to include earlier router and PITNorm/SOTA branches.",
+    "Add provenance tags and timestamps to the expanded ARA trace.",
     "Add numeric promotion thresholds.",
     "Upgrade paper related work with BibTeX-backed citations."
   ]
