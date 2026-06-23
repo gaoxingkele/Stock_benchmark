@@ -1,15 +1,15 @@
 paper_id,title,bibtex_key,bibtex_status,citation_role,verification_needed
-2021_tra_lin,Learning Multiple Stock Trading Patterns with Temporal Routing Adaptor and Optimal Transport,,pending,finance_method_registry,verify authors venue DOI/arXiv
+2021_tra_lin,Learning Multiple Stock Trading Patterns with Temporal Routing Adaptor and Optimal Transport,lin2021tra,added,finance_method_registry,verified arXiv and ACM DOI metadata
 2023_doubleadapt_zhao,DoubleAdapt: A Meta-learning Approach to Incremental Learning for Stock Trend Forecasting,zhao2023doubleadapt,added,core_adaptation_reference,verify ACM citation formatting before submission
-2024_master_li,MASTER: Market-Guided Stock Transformer for Stock Price Forecasting,,pending,finance_method_registry,verify authors venue DOI/arXiv
-2022_hist_xu,HIST: A Graph-based Framework for Stock Trend Forecasting via Mining Concept-Oriented Shared Information,,pending,finance_method_registry,verify authors venue DOI/arXiv
-2022_thgnn_xiang,Temporal and Heterogeneous Graph Neural Network for Financial Time Series Prediction,,pending,finance_method_registry,verify authors venue DOI/arXiv
-2023_estimate_huynh,Efficient Integration of Multi-Order Dynamics and Internal Dynamics in Stock Movement Prediction,,pending,finance_method_registry,verify authors venue DOI/arXiv
-2024_alphaforge_shi,AlphaForge: A Framework to Mine and Dynamically Combine Formulaic Alpha Factors,,pending,agentic_alpha_reference,verify authors venue DOI/arXiv
-2026_alphaprobe_guo,AlphaPROBE: Alpha Mining via Principled Retrieval and On-graph biased evolution,,pending,agentic_alpha_reference,verify authors venue DOI/arXiv
-2021_adarnn_du,AdaRNN: Adaptive Learning and Forecasting of Time Series,,pending,time_series_adaptation_reference,verify authors venue DOI/arXiv
-2022_ddg_da_li,DDG-DA: Data Distribution Generation for Predictable Concept Drift Adaptation,,pending,time_series_adaptation_reference,verify authors venue DOI/arXiv
-2021_tcts_wu,Temporally Correlated Task Scheduling for Sequence Learning,,pending,finance_method_registry,verify authors venue DOI/arXiv
+2024_master_li,MASTER: Market-Guided Stock Transformer for Stock Price Forecasting,li2024master,added,finance_method_registry,verified arXiv and AAAI metadata
+2022_hist_xu,HIST: A Graph-based Framework for Stock Trend Forecasting via Mining Concept-Oriented Shared Information,xu2022hist,added,finance_method_registry,verified arXiv metadata
+2022_thgnn_xiang,Temporal and Heterogeneous Graph Neural Network for Financial Time Series Prediction,xiang2022thgnn,added,finance_method_registry,verified arXiv and ACM DOI metadata
+2023_estimate_huynh,Efficient Integration of Multi-Order Dynamics and Internal Dynamics in Stock Movement Prediction,huynh2023estimate,added,finance_method_registry,verified arXiv and ACM DOI metadata
+2024_alphaforge_shi,AlphaForge: A Framework to Mine and Dynamically Combine Formulaic Alpha Factors,shi2024alphaforge,added,agentic_alpha_reference,verified arXiv metadata; venue kept conservative
+2026_alphaprobe_guo,AlphaPROBE: Alpha Mining via Principled Retrieval and On-graph biased evolution,guo2026alphaprobe,added,agentic_alpha_reference,verified arXiv metadata
+2021_adarnn_du,AdaRNN: Adaptive Learning and Forecasting of Time Series,du2021adarnn,added,time_series_adaptation_reference,verified arXiv and ACM DOI metadata
+2022_ddg_da_li,DDG-DA: Data Distribution Generation for Predictable Concept Drift Adaptation,li2022ddgda,added,time_series_adaptation_reference,verified arXiv and AAAI metadata
+2021_tcts_wu,Temporally Correlated Task Scheduling for Sequence Learning,wu2021tcts,added,finance_method_registry,verified PMLR and arXiv metadata
 2025_rd_agent_quant_li,R&D-Agent-Quant: A Multi-Agent Framework for Data-Centric Factors and Model Joint Optimization,li2025rdagentquant,added,core_agentic_quant_reference,verify arXiv metadata before submission
 2022_factorvae_duan,FactorVAE: A Probabilistic Dynamic Factor Model Based on Variational Autoencoder for Predicting Cross-Sectional Stock Returns,,pending,finance_method_registry,verify authors venue DOI/arXiv
 2021_hatr_wang,Hierarchical Adaptive Temporal-Relational Modeling for Stock Trend Prediction,,pending,finance_method_registry,verify authors venue DOI/arXiv

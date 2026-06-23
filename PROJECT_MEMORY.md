@@ -186,13 +186,13 @@ CASE-Lingxi paper draft:
 - Draft path: `paper/`
 - Current files: `outline.md`, `abstract.md`, `introduction.md`, `method.md`, `experiments.md`, `related_work.md`, `formulation.md`, `citation_map.md`.
 - The draft intentionally frames routers, RL, and LLM tags as negative or research-only evidence unless they beat the static menu OOS.
-- Core BibTeX entries are in `papers/metadata/references.bib`; full 31-method citation pass is still pending.
+- Core BibTeX entries are in `papers/metadata/references.bib`; full 31-method citation pass is partially complete.
 - 31-method citation coverage is tracked in `papers/metadata/case_lingxi_citation_coverage.csv`.
-- Citation coverage validation command: `python scripts\validate_case_lingxi_citations.py`; current result is PASS with 4 added and 27 pending finance-registry entries.
-- Draft BibTeX generation command: `python scripts\build_case_lingxi_draft_bib.py`; current result is 10 draft entries and 17 missing registry metadata rows.
+- Citation coverage validation command: `python scripts\validate_case_lingxi_citations.py`; current result is PASS with 14 added and 17 pending finance-registry entries.
+- Draft BibTeX generation command: `python scripts\build_case_lingxi_draft_bib.py`; current result is 0 draft entries and 17 missing registry metadata rows.
 - Missing-registry ARA metadata recovery command: `python scripts\extract_case_lingxi_missing_citation_metadata.py`; current result is 17 recovered ARA metadata rows, all still marked `incomplete_authors`.
 - Recovery output path: `papers/metadata/references_missing_metadata_from_ara.csv`.
-- Do not promote `references_draft_from_registry.bib` or `references_missing_metadata_from_ara.csv` into `references.bib` until every entry is checked against a primary source.
+- The 10 locally registered draft BibTeX entries have been checked and promoted into `references.bib`; do not promote `references_missing_metadata_from_ara.csv` into `references.bib` until every remaining entry is checked against a primary source.
 
 CASE-Lingxi Level 2 ARA review:
 

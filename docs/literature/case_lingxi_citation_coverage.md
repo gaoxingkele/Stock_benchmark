@@ -23,10 +23,10 @@ papers/metadata/references_missing_metadata_from_ara.csv
 | Set | Count |
 |---|---:|
 | Finance methods in registry | 31 |
-| BibTeX entries currently added for finance registry | 4 |
-| Pending finance-method citation checks | 27 |
+| BibTeX entries currently added for finance registry | 14 |
+| Pending finance-method citation checks | 17 |
 | Extra non-finance/agent/time-series entries currently added | 4 |
-| Draft BibTeX entries generated from local registry | 10 |
+| Draft BibTeX entries generated from local registry | 0 |
 | Pending entries missing local registry metadata | 17 |
 | Missing-registry rows with ARA metadata patch | 17 |
 | ARA metadata patch rows still missing verified authors | 17 |
@@ -42,9 +42,9 @@ Current validation result:
 ```text
 registry_rows=31
 coverage_rows=31
-bib_keys=8
-coverage_added=4
-coverage_pending=27
+bib_keys=18
+coverage_added=14
+coverage_pending=17
 VALIDATION_PASS
 ```
 
@@ -57,7 +57,7 @@ python scripts\build_case_lingxi_draft_bib.py
 Current draft result:
 
 ```text
-draft_bib=papers/metadata/references_draft_from_registry.bib entries=10
+draft_bib=papers/metadata/references_draft_from_registry.bib entries=0
 missing_registry=papers/metadata/references_draft_missing_registry.csv rows=17
 ```
 
@@ -79,7 +79,17 @@ Added finance-registry keys:
 | Paper ID | BibTeX key | Role |
 |---|---|---|
 | `2020_qlib_yang` | `yang2020qlib` | platform reference |
+| `2021_tra_lin` | `lin2021tra` | temporal routing reference |
 | `2023_doubleadapt_zhao` | `zhao2023doubleadapt` | adaptation reference |
+| `2024_master_li` | `li2024master` | stock transformer reference |
+| `2022_hist_xu` | `xu2022hist` | graph stock forecasting reference |
+| `2022_thgnn_xiang` | `xiang2022thgnn` | temporal heterogeneous graph reference |
+| `2023_estimate_huynh` | `huynh2023estimate` | hypergraph stock movement reference |
+| `2024_alphaforge_shi` | `shi2024alphaforge` | agentic alpha-mining reference |
+| `2026_alphaprobe_guo` | `guo2026alphaprobe` | agentic alpha-mining reference |
+| `2021_adarnn_du` | `du2021adarnn` | time-series adaptation reference |
+| `2022_ddg_da_li` | `li2022ddgda` | concept drift adaptation reference |
+| `2021_tcts_wu` | `wu2021tcts` | task scheduling / stock forecasting reference |
 | `2025_rd_agent_quant_li` | `li2025rdagentquant` | agentic quant reference |
 | `2025_alphaagent_tang` | `tang2025alphaagent` | agentic alpha-mining reference |
 
@@ -98,8 +108,7 @@ Only verified entries should be used in the manuscript text. Pending registry ro
 
 ## Next Citation Work
 
-1. Verify the 10 draft BibTeX entries against primary sources, then promote valid entries to `references.bib`.
-2. Use `references_missing_metadata_from_ara.csv` to prioritize primary-source checks for the 17 rows missing local registry metadata.
-3. Verify the remaining finance-method references from primary sources.
-4. Replace pending rows in `papers/metadata/case_lingxi_citation_coverage.csv` with concrete keys.
-5. Add complete citation keys for DLinear, Non-stationary Transformer, TimeMixer, FEDformer, TTM, TimesFM, Chronos, Moirai, and MOMENT if they remain in the final related-work section.
+1. Use `references_missing_metadata_from_ara.csv` to prioritize primary-source checks for the 17 rows missing local registry metadata.
+2. Verify the remaining finance-method references from primary sources.
+3. Replace pending rows in `papers/metadata/case_lingxi_citation_coverage.csv` with concrete keys.
+4. Add complete citation keys for DLinear, Non-stationary Transformer, TimeMixer, FEDformer, TTM, TimesFM, Chronos, Moirai, and MOMENT if they remain in the final related-work section.

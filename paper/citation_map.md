@@ -7,9 +7,12 @@ This file maps paper-draft claims to BibTeX keys in `papers/metadata/references.
 | Quant platform / benchmark infrastructure | `yang2020qlib` | added |
 | Incremental financial adaptation | `zhao2023doubleadapt` | added |
 | Agentic quant research | `li2025rdagentquant`, `tang2025alphaagent` | added |
+| Agentic alpha generation / evolution | `shi2024alphaforge`, `guo2026alphaprobe` | added |
+| Financial routing / graph / transformer baselines | `lin2021tra`, `li2024master`, `xu2022hist`, `xiang2022thgnn`, `huynh2023estimate`, `wu2021tcts` | added |
+| Time-series adaptation / concept drift | `du2021adarnn`, `li2022ddgda` | added |
 | Agent RL and self-evolution | `luo2025agentlightning`, `wang2025ragen` | added |
 | Time-series SOTA transfer | `nie2023patchtst`, `liu2024itransformer` | added |
-| Full 31-method finance registry | `papers/metadata/case_lingxi_citation_coverage.csv` | coverage registry added; 27 pending checks remain |
+| Full 31-method finance registry | `papers/metadata/case_lingxi_citation_coverage.csv` | coverage registry added; 17 pending checks remain |
 | Additional SOTA time-series models | pending | add DLinear, Non-stationary Transformer, TimeMixer, FEDformer, foundation models |
 | LLM debate / collaborative multi-agent RL | pending | add exact papers after venue/status verification |
 
