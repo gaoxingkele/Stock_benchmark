@@ -69,6 +69,7 @@ Experiment summaries:
 | `experiments/lingxi_meta_selector_validation/lingxi_meta_selector_selection_table.csv` | 16 | Frozen validation selections |
 | `experiments/lingxi_meta_selector_validation/lingxi_meta_selector_validation_summary.csv` | 416 | Validation/OOS meta-selector comparison |
 | `experiments/case_lingxi_context_router_validation_2026_ytd/case_lingxi_context_router_validation_summary.csv` | 112 | Conservative CASE-Lingxi context-router validation |
+| `experiments/case_lingxi_rl_router_validation_2025_2026_ytd/case_lingxi_rl_router_validation_summary.csv` | 128 | Frozen research-only RL router validation |
 
 Final reports:
 
@@ -84,6 +85,7 @@ Final reports:
 - `docs/reports/lingxi_sparse_regime_router_validation.md`
 - `docs/reports/lingxi_meta_selector_validation.md`
 - `docs/reports/case_lingxi_context_router_validation.md`
+- `docs/reports/case_lingxi_rl_router_validation.md`
 
 Core scripts:
 
@@ -93,6 +95,7 @@ Core scripts:
 - `scripts/run_lingxi_sparse_regime_router_validation.py`
 - `scripts/run_lingxi_meta_selector_validation.py`
 - `scripts/run_case_lingxi_context_router.py`
+- `scripts/run_case_lingxi_rl_router_baseline.py`
 
 ## Reproduction Commands
 
@@ -145,3 +148,8 @@ First CASE-Lingxi router result:
 
 - Conservative context router versus static production menu: annualized return wins 3/16, Sharpe wins 3/16, MDD wins 9/16.
 - Interpretation: useful drawdown-control research sleeve, not a production replacement.
+
+First CASE-Lingxi RL router result:
+
+- Frozen tabular RL router trained on 2023-2024 and tested on 2025-2026 YTD: annualized return wins 4/16, Sharpe wins 4/16, MDD wins 6/16 versus the static production menu.
+- Interpretation: research-only negative control; does not supersede the static menu.

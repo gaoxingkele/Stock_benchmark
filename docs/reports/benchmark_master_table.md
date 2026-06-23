@@ -15,6 +15,7 @@ This file is the current execution-level benchmark index for the Lingxi workstre
 | `experiments/lingxi_sparse_regime_router_validation_2026_ytd/lingxi_sparse_regime_router_validation_summary.csv` | 128 | Sparse/feature-capped regime router comparison |
 | `experiments/lingxi_meta_selector_validation/lingxi_meta_selector_validation_summary.csv` | 416 | Frozen validation-selector OOS failure evidence |
 | `experiments/case_lingxi_context_router_validation_2026_ytd/case_lingxi_context_router_validation_summary.csv` | 112 | Conservative CASE-Lingxi context-router validation |
+| `experiments/case_lingxi_rl_router_validation_2025_2026_ytd/case_lingxi_rl_router_validation_summary.csv` | 128 | Frozen research-only RL router validation on 2025-2026 YTD OOS |
 | `data/ara_method_registry.csv` | 31 | Audited finance method registry with ARA and experiment-validation status |
 
 ## Scenario Winners From The SOTA Upgrade Run
@@ -77,9 +78,11 @@ New router evidence:
 2. It wins Sharpe in 3/16 scenarios.
 3. It improves MDD in 9/16 scenarios.
 4. It is therefore a drawdown-control research sleeve, not a production replacement.
+5. CASE-Lingxi frozen tabular RL router wins annualized return in 4/16 scenarios, Sharpe in 4/16, and MDD in 6/16 on 2025-2026 YTD OOS.
+6. The RL router is also research-only and does not supersede the static menu.
 
 ## Next Benchmarks To Run
 
 1. Re-run Lingxi10/Lingxi5 plus PITNorm on 2026 YTD with the same table shape as the 2023-2025 SOTA upgrade report.
-2. Add an RL router as a research-only baseline with frozen actions, bounded turnover, and out-of-sample promotion gates.
-3. Add LLM market tags only as frozen structured context features; never let the LLM emit direct weights or trades.
+2. Add LLM market tags only as frozen structured context features; never let the LLM emit direct weights or trades.
+3. Build the CASE-Lingxi ARA package with claims tied to the benchmark, context-router, and RL-router evidence.

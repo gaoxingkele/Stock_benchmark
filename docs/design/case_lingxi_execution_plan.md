@@ -73,7 +73,7 @@ Result report:
 
 ## Phase 4: Research-Only RL Router
 
-Status: planned.
+Status: completed first pass.
 
 Implementation target:
 
@@ -88,9 +88,13 @@ Design:
 
 Acceptance criteria:
 
-1. must report both validation and OOS performance;
-2. must report validation-to-OOS decay;
-3. must be labeled research-only unless it beats the conservative fixed/static menu across multiple markets.
+1. frozen 2023-2024 training period;
+2. 2025-2026 YTD OOS output;
+3. labeled research-only because it wins annualized return only 4/16, Sharpe only 4/16, and MDD only 6/16 versus the static menu.
+
+Result report:
+
+`docs/reports/case_lingxi_rl_router_validation.md`
 
 ## Phase 5: LLM Market-Tag Ablation
 
