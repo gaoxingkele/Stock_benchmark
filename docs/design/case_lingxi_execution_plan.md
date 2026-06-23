@@ -234,6 +234,12 @@ The bundle validator checks:
 3. BibTeX hygiene;
 4. ARA Level 1 structure.
 
+Completion audit:
+
+```text
+docs/reports/case_lingxi_completion_audit.md
+```
+
 ## Remaining Future Work
 
 These are not blockers for the current CASE-Lingxi bundle:

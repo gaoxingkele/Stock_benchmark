@@ -93,6 +93,7 @@ Final reports:
 - `docs/reports/case_lingxi_promotion_audit.md`
 - `docs/reports/case_lingxi_cost_sensitivity.md`
 - `docs/reports/case_lingxi_capacity_slippage.md`
+- `docs/reports/case_lingxi_completion_audit.md`
 - `ara_artifacts/case_lingxi/PAPER.md`
 - `paper/outline.md`
 - `paper/abstract.md`
@@ -151,9 +152,9 @@ docs/strategies/lingxi_adaptive_suite.md
 
 4. Treat `Lingxi Adaptive Suite` as the current best scheme unless new out-of-sample evidence supersedes it.
 
-## Active Next Goal: CASE-Lingxi
+## Completed Goal: CASE-Lingxi
 
-The current expanded objective is to execute the CASE-Lingxi research plan:
+The expanded objective was to execute the CASE-Lingxi research plan:
 
 1. lock the benchmark baseline and 31-method registry;
 2. connect Lingxi to recent agentic RL / agent-evolution literature;
@@ -200,6 +201,12 @@ CASE-Lingxi paper draft:
 - Missing-registry ARA metadata recovery command: `python scripts\extract_case_lingxi_missing_citation_metadata.py`; current result is 0 recovery rows because no finance-registry rows remain pending.
 - Recovery output path: `papers/metadata/references_missing_metadata_from_ara.csv`.
 - The 31 finance-registry citation entries and additional SOTA/agent references have been checked and promoted into `references.bib`; method-name capitalization is protected. Venue-specific bibliography polishing should wait until a target manuscript template is selected.
+
+CASE-Lingxi completion audit:
+
+- Report path: `docs/reports/case_lingxi_completion_audit.md`
+- Bundle validation command: `python scripts\validate_case_lingxi_bundle.py`
+- Current result: `CASE_LINGXI_BUNDLE_VALIDATION_PASS`
 
 CASE-Lingxi Level 2 ARA review:
 

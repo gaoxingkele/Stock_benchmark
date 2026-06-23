@@ -23,6 +23,13 @@ ROW_COUNT_CHECKS = {
     "papers/metadata/case_lingxi_citation_coverage.csv": 31,
 }
 
+REQUIRED_FILES = [
+    "docs/reports/case_lingxi_completion_audit.md",
+    "docs/design/case_lingxi_execution_plan.md",
+    "PROJECT_MEMORY.md",
+    "ara_artifacts/case_lingxi/level2_report.json",
+]
+
 
 def count_csv_rows(path: Path) -> int:
     with path.open(newline="", encoding="utf-8") as file:
@@ -41,6 +48,13 @@ def run_command(command: list[str]) -> None:
 
 
 def main() -> int:
+    for relative in REQUIRED_FILES:
+        path = PROJECT_ROOT / relative
+        print(f"exists {relative} actual={path.exists()} expected=True")
+        if not path.exists():
+            print(f"ERROR missing required file: {relative}")
+            return 1
+
     for relative, expected in ROW_COUNT_CHECKS.items():
         path = PROJECT_ROOT / relative
         if not path.exists():
