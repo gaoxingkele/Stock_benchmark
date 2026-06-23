@@ -11,6 +11,9 @@ papers/metadata/references.bib
 papers/metadata/case_lingxi_citation_coverage.csv
 paper/citation_map.md
 scripts/validate_case_lingxi_citations.py
+scripts/build_case_lingxi_draft_bib.py
+papers/metadata/references_draft_from_registry.bib
+papers/metadata/references_draft_missing_registry.csv
 ```
 
 ## Current Coverage
@@ -21,6 +24,8 @@ scripts/validate_case_lingxi_citations.py
 | BibTeX entries currently added for finance registry | 4 |
 | Pending finance-method citation checks | 27 |
 | Extra non-finance/agent/time-series entries currently added | 4 |
+| Draft BibTeX entries generated from local registry | 10 |
+| Pending entries missing local registry metadata | 17 |
 
 Validation command:
 
@@ -37,6 +42,19 @@ bib_keys=8
 coverage_added=4
 coverage_pending=27
 VALIDATION_PASS
+```
+
+Draft generation command:
+
+```powershell
+python scripts\build_case_lingxi_draft_bib.py
+```
+
+Current draft result:
+
+```text
+draft_bib=papers/metadata/references_draft_from_registry.bib entries=10
+missing_registry=papers/metadata/references_draft_missing_registry.csv rows=17
 ```
 
 Added finance-registry keys:
@@ -63,7 +81,8 @@ Only verified entries should be used in the manuscript text. Pending registry ro
 
 ## Next Citation Work
 
-1. Verify the remaining 27 finance-method references from primary sources.
-2. Add BibTeX entries to `papers/metadata/references.bib`.
-3. Replace pending rows in `papers/metadata/case_lingxi_citation_coverage.csv` with concrete keys.
-4. Add complete citation keys for DLinear, Non-stationary Transformer, TimeMixer, FEDformer, TTM, TimesFM, Chronos, Moirai, and MOMENT if they remain in the final related-work section.
+1. Verify the 10 draft BibTeX entries against primary sources, then promote valid entries to `references.bib`.
+2. Fill registry metadata for the 17 rows in `references_draft_missing_registry.csv`.
+3. Verify the remaining finance-method references from primary sources.
+4. Replace pending rows in `papers/metadata/case_lingxi_citation_coverage.csv` with concrete keys.
+5. Add complete citation keys for DLinear, Non-stationary Transformer, TimeMixer, FEDformer, TTM, TimesFM, Chronos, Moirai, and MOMENT if they remain in the final related-work section.

@@ -18,8 +18,11 @@ This file maps paper-draft claims to BibTeX keys in `papers/metadata/references.
 ```text
 papers/metadata/references.bib
 papers/metadata/case_lingxi_citation_coverage.csv
+papers/metadata/references_draft_from_registry.bib
+papers/metadata/references_draft_missing_registry.csv
 docs/literature/case_lingxi_citation_coverage.md
 scripts/validate_case_lingxi_citations.py
+scripts/build_case_lingxi_draft_bib.py
 ```
 
 ## Source Policy

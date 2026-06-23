@@ -187,6 +187,7 @@ CASE-Lingxi paper draft:
 - Core BibTeX entries are in `papers/metadata/references.bib`; full 31-method citation pass is still pending.
 - 31-method citation coverage is tracked in `papers/metadata/case_lingxi_citation_coverage.csv`.
 - Citation coverage validation command: `python scripts\validate_case_lingxi_citations.py`; current result is PASS with 4 added and 27 pending finance-registry entries.
+- Draft BibTeX generation command: `python scripts\build_case_lingxi_draft_bib.py`; current result is 10 draft entries and 17 missing registry metadata rows.
 
 CASE-Lingxi Level 2 ARA review:
 
