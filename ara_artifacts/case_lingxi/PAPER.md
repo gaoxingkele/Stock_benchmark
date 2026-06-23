@@ -60,6 +60,12 @@ The central thesis is:
 | [README.md](evidence/README.md) | Evidence index and claim bindings |
 | [runs/case_lingxi_validations.md](evidence/runs/case_lingxi_validations.md) | Summary of local validation runs |
 
+### Review
+
+| File | Description |
+|---|---|
+| [level2_report.json](level2_report.json) | ARA Level 2 semantic rigor review |
+
 ## Current Status
 
 Supported production state:
@@ -67,4 +73,3 @@ Supported production state:
 1. Use **Lingxi Adaptive Suite** as a conservative scenario-specific production menu.
 2. Keep dynamic routers, RL routers, and structured market tags as research-only unless they beat the OOS promotion gate.
 3. Preserve failed routes as negative evidence for the paper thesis.
-

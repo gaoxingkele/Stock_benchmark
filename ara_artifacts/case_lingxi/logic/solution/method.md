@@ -48,3 +48,8 @@ A candidate enters production only when it beats the static menu under:
 
 Current evidence does not promote context router, RL router, or structured market-tag router.
 
+The current numeric gate is maintained in:
+
+```text
+docs/theory/case_lingxi_promotion_gate.md
+```

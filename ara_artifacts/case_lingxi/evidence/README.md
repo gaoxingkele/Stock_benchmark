@@ -18,7 +18,14 @@ See:
 evidence/runs/case_lingxi_validations.md
 ```
 
+## Level 2 Review
+
+```text
+ara_artifacts/case_lingxi/level2_report.json
+```
+
+Current grade: `Weak Accept`.
+
 ## Evidence Policy
 
 This ARA links to committed repository artifacts instead of copying all daily CSV files. The large daily files remain in `experiments/` and the scripts remain in `scripts/`.
-

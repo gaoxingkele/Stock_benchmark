@@ -45,6 +45,12 @@ docs/literature/agent_rl_strategy_evolution_survey.md
 docs/reports/lingxi10_lingxi5_sota_upgrade_survey.md
 ```
 
+Draft section:
+
+```text
+paper/related_work.md
+```
+
 ## 3. Problem Formulation
 
 Define:
@@ -56,6 +62,12 @@ Define:
 5. conservative promotion gate.
 
 The objective is not maximum validation Sharpe. The objective is robust OOS promotion under cost and drawdown constraints.
+
+Draft section:
+
+```text
+paper/formulation.md
+```
 
 ## 4. Method: CASE-Lingxi
 
@@ -144,4 +156,3 @@ Main discussion points:
 CASE-Lingxi supports a conservative principle:
 
 > In financial markets, the most reliable role for agents is to accelerate strategy evolution and failure detection, not to directly override production routing without out-of-sample proof.
-

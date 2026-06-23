@@ -36,6 +36,7 @@ Primary documents:
 - Router strategy notes: `docs/strategies/lingxi_adaptive_router.md`
 - Benchmark master table: `docs/reports/benchmark_master_table.md`
 - CASE-Lingxi theory: `docs/theory/case_lingxi_framework.md`
+- CASE-Lingxi promotion gate: `docs/theory/case_lingxi_promotion_gate.md`
 - CASE-Lingxi execution plan: `docs/design/case_lingxi_execution_plan.md`
 - Agentic RL survey: `docs/literature/agent_rl_strategy_evolution_survey.md`
 - CASE context-router validation: `docs/reports/case_lingxi_context_router_validation.md`
@@ -63,6 +64,7 @@ Current execution entry points:
 ```text
 docs/design/case_lingxi_execution_plan.md
 docs/theory/case_lingxi_framework.md
+docs/theory/case_lingxi_promotion_gate.md
 docs/reports/benchmark_master_table.md
 data/ara_method_registry.csv
 ara_artifacts/case_lingxi/PAPER.md

@@ -4,7 +4,7 @@
 
 - **Statement**: The current best supported production state is a conservative scenario-specific Lingxi Adaptive Suite, not a universal dynamic router.
 - **Status**: supported
-- **Falsification criteria**: A future OOS experiment shows a dynamic router beating the static menu across the required market/TopK/variant matrix under transaction costs.
+- **Falsification criteria**: A future OOS experiment satisfies the numeric production gate in `docs/theory/case_lingxi_promotion_gate.md`: annualized return wins at least 10/16, Sharpe wins at least 10/16, MDD is not worse in more than 4/16, and transaction costs are included.
 - **Proof**: E01, E02, E03, E04, E05
 - **Evidence basis**: `docs/reports/benchmark_master_table.md`, `docs/strategies/lingxi_adaptive_suite.md`, and committed experiment summaries.
 - **Dependencies**: none
@@ -14,7 +14,7 @@
 
 - **Statement**: The conservative CASE-Lingxi context router is useful as a drawdown-control research sleeve but does not replace the static menu.
 - **Status**: supported
-- **Falsification criteria**: Re-running `scripts/run_case_lingxi_context_router.py` produces broad annualized return and Sharpe wins versus the static menu.
+- **Falsification criteria**: Re-running or extending `scripts/run_case_lingxi_context_router.py` satisfies the production gate in `docs/theory/case_lingxi_promotion_gate.md`.
 - **Proof**: E02
 - **Evidence basis**: It wins annualized return 3/16, Sharpe 3/16, and MDD 9/16 versus the static menu.
 - **Dependencies**: C01
@@ -24,7 +24,7 @@
 
 - **Statement**: The first frozen tabular RL router does not supersede the static menu.
 - **Status**: supported
-- **Falsification criteria**: A future frozen RL policy beats the static menu across multiple markets and risk metrics on OOS data.
+- **Falsification criteria**: A future frozen RL policy satisfies the production gate in `docs/theory/case_lingxi_promotion_gate.md` on OOS data.
 - **Proof**: E03
 - **Evidence basis**: It wins annualized return 4/16, Sharpe 4/16, and MDD 6/16 on 2025-2026 YTD OOS.
 - **Dependencies**: C01
@@ -34,7 +34,7 @@
 
 - **Statement**: The first LLM-compatible market-tag router does not beat the production menu and should not be promoted.
 - **Status**: supported
-- **Falsification criteria**: Timestamped LLM debate tags or improved deterministic tags beat the static menu OOS while satisfying leakage constraints.
+- **Falsification criteria**: Timestamped LLM debate tags or improved deterministic tags satisfy the production gate in `docs/theory/case_lingxi_promotion_gate.md` while preserving leakage constraints.
 - **Proof**: E04
 - **Evidence basis**: It wins annualized return 0/16, Sharpe 2/16, and MDD 7/16 versus the static menu.
 - **Dependencies**: C01
@@ -49,4 +49,3 @@
 - **Evidence basis**: The validation-only selector wins 2/16 in 2025, 0/16 in 2026 YTD, and 1/16 combined.
 - **Dependencies**: none
 - **Tags**: overfitting, validation-echo-trap
-

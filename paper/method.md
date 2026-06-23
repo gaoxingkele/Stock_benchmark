@@ -96,6 +96,12 @@ scripts/run_case_lingxi_llm_tag_ablation.py
 
 A candidate can be promoted only if it beats the static menu out of sample under transaction costs and without unacceptable drawdown or turnover degradation.
 
+The current production gate requires annualized return wins in at least 10/16 scenarios, Sharpe wins in at least 10/16 scenarios, and MDD not worse in more than 4/16 scenarios. These thresholds are intentionally conservative and are documented in:
+
+```text
+docs/theory/case_lingxi_promotion_gate.md
+```
+
 Promotion states:
 
 | State | Meaning |
@@ -111,4 +117,3 @@ Current status:
 2. RL router: research-only negative control;
 3. market-tag router: research-only negative control;
 4. validation-only selector: rejected.
-

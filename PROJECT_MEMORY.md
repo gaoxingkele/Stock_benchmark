@@ -78,6 +78,7 @@ Final reports:
 - `docs/strategies/lingxi_adaptive_router.md`
 - `docs/reports/benchmark_master_table.md`
 - `docs/theory/case_lingxi_framework.md`
+- `docs/theory/case_lingxi_promotion_gate.md`
 - `docs/design/case_lingxi_execution_plan.md`
 - `docs/literature/agent_rl_strategy_evolution_survey.md`
 - `data/ara_method_registry.csv`
@@ -177,5 +178,11 @@ CASE-Lingxi ARA:
 CASE-Lingxi paper draft:
 
 - Draft path: `paper/`
-- Current files: `outline.md`, `abstract.md`, `introduction.md`, `method.md`, `experiments.md`.
+- Current files: `outline.md`, `abstract.md`, `introduction.md`, `method.md`, `experiments.md`, `related_work.md`, `formulation.md`.
 - The draft intentionally frames routers, RL, and LLM tags as negative or research-only evidence unless they beat the static menu OOS.
+
+CASE-Lingxi Level 2 ARA review:
+
+- Report path: `ara_artifacts/case_lingxi/level2_report.json`
+- Overall grade: Weak Accept
+- Main required improvements: paired statistical tests, unified promotion summary CSV, expanded trace, BibTeX-backed related work.
