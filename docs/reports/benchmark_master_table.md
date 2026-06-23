@@ -14,6 +14,7 @@ This file is the current execution-level benchmark index for the Lingxi workstre
 | `experiments/lingxi_regime_router_validation_2026_ytd/lingxi_regime_router_validation_summary.csv` | 112 | Market-regime router comparison |
 | `experiments/lingxi_sparse_regime_router_validation_2026_ytd/lingxi_sparse_regime_router_validation_summary.csv` | 128 | Sparse/feature-capped regime router comparison |
 | `experiments/lingxi_meta_selector_validation/lingxi_meta_selector_validation_summary.csv` | 416 | Frozen validation-selector OOS failure evidence |
+| `experiments/case_lingxi_context_router_validation_2026_ytd/case_lingxi_context_router_validation_summary.csv` | 112 | Conservative CASE-Lingxi context-router validation |
 | `data/ara_method_registry.csv` | 31 | Audited finance method registry with ARA and experiment-validation status |
 
 ## Scenario Winners From The SOTA Upgrade Run
@@ -70,9 +71,15 @@ Rejected production routes:
 3. Direct LLM trading router.
 4. Unvalidated fixed fusion of generic SOTA proxy features.
 
+New router evidence:
+
+1. CASE-Lingxi conservative context router wins annualized return in 3/16 scenarios versus the static production menu.
+2. It wins Sharpe in 3/16 scenarios.
+3. It improves MDD in 9/16 scenarios.
+4. It is therefore a drawdown-control research sleeve, not a production replacement.
+
 ## Next Benchmarks To Run
 
 1. Re-run Lingxi10/Lingxi5 plus PITNorm on 2026 YTD with the same table shape as the 2023-2025 SOTA upgrade report.
-2. Add a conservative context router that can only choose from already-approved sleeves.
-3. Add an RL router as a research-only baseline with frozen actions, bounded turnover, and out-of-sample promotion gates.
-4. Add LLM market tags only as frozen structured context features; never let the LLM emit direct weights or trades.
+2. Add an RL router as a research-only baseline with frozen actions, bounded turnover, and out-of-sample promotion gates.
+3. Add LLM market tags only as frozen structured context features; never let the LLM emit direct weights or trades.

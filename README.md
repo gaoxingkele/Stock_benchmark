@@ -38,6 +38,7 @@ Primary documents:
 - CASE-Lingxi theory: `docs/theory/case_lingxi_framework.md`
 - CASE-Lingxi execution plan: `docs/design/case_lingxi_execution_plan.md`
 - Agentic RL survey: `docs/literature/agent_rl_strategy_evolution_survey.md`
+- CASE context-router validation: `docs/reports/case_lingxi_context_router_validation.md`
 - 31-method registry: `data/ara_method_registry.csv`
 - Project memory: `PROJECT_MEMORY.md`
 - Meta-selector rejection report: `docs/reports/lingxi_meta_selector_validation.md`

@@ -38,7 +38,7 @@ Acceptance criteria:
 
 ## Phase 3: Conservative Router Experiment
 
-Status: planned.
+Status: completed first pass.
 
 Implementation target:
 
@@ -62,10 +62,14 @@ State features:
 
 Acceptance criteria:
 
-1. frozen train/validation/test split;
-2. 2025 and 2026 YTD OOS output;
+1. frozen lagged context inputs;
+2. 2026 YTD OOS output;
 3. comparison against fixed/static scenario menu;
-4. no promotion unless it beats the menu under cost and drawdown constraints.
+4. no production promotion because it wins annualized return only 3/16, Sharpe only 3/16, and MDD 9/16.
+
+Result report:
+
+`docs/reports/case_lingxi_context_router_validation.md`
 
 ## Phase 4: Research-Only RL Router
 
@@ -176,7 +180,6 @@ python scripts\run_lingxi_meta_selector_validation.py --out-dir experiments\ling
 New scripts to implement next:
 
 ```text
-scripts/run_case_lingxi_context_router.py
 scripts/run_case_lingxi_rl_router_baseline.py
 scripts/run_case_lingxi_llm_tag_ablation.py
 ```

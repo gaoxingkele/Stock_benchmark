@@ -68,6 +68,7 @@ Experiment summaries:
 | `experiments/lingxi_sparse_regime_router_validation_2026_ytd/lingxi_sparse_regime_router_validation_summary.csv` | 128 | Sparse/feature-capped router comparison |
 | `experiments/lingxi_meta_selector_validation/lingxi_meta_selector_selection_table.csv` | 16 | Frozen validation selections |
 | `experiments/lingxi_meta_selector_validation/lingxi_meta_selector_validation_summary.csv` | 416 | Validation/OOS meta-selector comparison |
+| `experiments/case_lingxi_context_router_validation_2026_ytd/case_lingxi_context_router_validation_summary.csv` | 112 | Conservative CASE-Lingxi context-router validation |
 
 Final reports:
 
@@ -82,6 +83,7 @@ Final reports:
 - `docs/reports/lingxi_regime_router_validation.md`
 - `docs/reports/lingxi_sparse_regime_router_validation.md`
 - `docs/reports/lingxi_meta_selector_validation.md`
+- `docs/reports/case_lingxi_context_router_validation.md`
 
 Core scripts:
 
@@ -90,6 +92,7 @@ Core scripts:
 - `scripts/run_lingxi_regime_router_validation.py`
 - `scripts/run_lingxi_sparse_regime_router_validation.py`
 - `scripts/run_lingxi_meta_selector_validation.py`
+- `scripts/run_case_lingxi_context_router.py`
 
 ## Reproduction Commands
 
@@ -137,3 +140,8 @@ The current expanded objective is to execute the CASE-Lingxi research plan:
 Key principle:
 
 Agents should improve the research loop, not directly route trades. Production promotion still requires frozen out-of-sample evidence against the conservative fixed/static menu.
+
+First CASE-Lingxi router result:
+
+- Conservative context router versus static production menu: annualized return wins 3/16, Sharpe wins 3/16, MDD wins 9/16.
+- Interpretation: useful drawdown-control research sleeve, not a production replacement.
