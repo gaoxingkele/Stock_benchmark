@@ -34,8 +34,33 @@ Primary documents:
 
 - Final suite: `docs/strategies/lingxi_adaptive_suite.md`
 - Router strategy notes: `docs/strategies/lingxi_adaptive_router.md`
+- Benchmark master table: `docs/reports/benchmark_master_table.md`
+- CASE-Lingxi theory: `docs/theory/case_lingxi_framework.md`
+- CASE-Lingxi execution plan: `docs/design/case_lingxi_execution_plan.md`
+- Agentic RL survey: `docs/literature/agent_rl_strategy_evolution_survey.md`
+- 31-method registry: `data/ara_method_registry.csv`
 - Project memory: `PROJECT_MEMORY.md`
 - Meta-selector rejection report: `docs/reports/lingxi_meta_selector_validation.md`
+
+## Active Research Workstream: CASE-Lingxi
+
+The next research goal is **CASE-Lingxi**: Conservative Agentic Strategy Evolution for Lingxi.
+
+This workstream keeps Lingxi Adaptive Suite as the current best production proxy, then builds a paper-grade research layer around it:
+
+- agents propose strategy modules, features, audits, and market-context tags;
+- frozen experiments decide whether candidates enter production, research sleeves, or rejection;
+- LLMs are used as context/audit tools, not direct traders;
+- RL routers are research-only baselines unless they beat the conservative fixed/static menu out of sample.
+
+Current execution entry points:
+
+```text
+docs/design/case_lingxi_execution_plan.md
+docs/theory/case_lingxi_framework.md
+docs/reports/benchmark_master_table.md
+data/ara_method_registry.csv
+```
 
 Important latest commits:
 

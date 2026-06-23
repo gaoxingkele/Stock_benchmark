@@ -11,7 +11,7 @@ https://github.com/gaoxingkele/Stock_benchmark
 Current restored state:
 
 ```text
-main @ fc9066b Validate Lingxi meta selector
+main @ latest local branch state after CASE-Lingxi planning documents
 ```
 
 ## Final Best Scheme
@@ -73,6 +73,11 @@ Final reports:
 
 - `docs/strategies/lingxi_adaptive_suite.md`
 - `docs/strategies/lingxi_adaptive_router.md`
+- `docs/reports/benchmark_master_table.md`
+- `docs/theory/case_lingxi_framework.md`
+- `docs/design/case_lingxi_execution_plan.md`
+- `docs/literature/agent_rl_strategy_evolution_survey.md`
+- `data/ara_method_registry.csv`
 - `docs/reports/lingxi_adaptive_router_validation.md`
 - `docs/reports/lingxi_regime_router_validation.md`
 - `docs/reports/lingxi_sparse_regime_router_validation.md`
@@ -118,3 +123,17 @@ docs/strategies/lingxi_adaptive_suite.md
 3. Confirm existing summary artifacts have the expected row counts listed above.
 
 4. Treat `Lingxi Adaptive Suite` as the current best scheme unless new out-of-sample evidence supersedes it.
+
+## Active Next Goal: CASE-Lingxi
+
+The current expanded objective is to execute the CASE-Lingxi research plan:
+
+1. lock the benchmark baseline and 31-method registry;
+2. connect Lingxi to recent agentic RL / agent-evolution literature;
+3. formulate the paper theory around conservative agentic strategy evolution;
+4. implement conservative context routing, research-only RL routing, and LLM tag ablations;
+5. upgrade the work into a CASE-Lingxi ARA package and paper draft.
+
+Key principle:
+
+Agents should improve the research loop, not directly route trades. Production promotion still requires frozen out-of-sample evidence against the conservative fixed/static menu.
