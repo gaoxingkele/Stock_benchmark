@@ -167,3 +167,28 @@ Reproduction:
 ```powershell
 python scripts\run_lingxi_regime_router_validation.py --out-dir experiments\lingxi_regime_router_validation_2026_ytd
 ```
+
+## Sparse Regime Router Update
+
+The third-stage router adds rolling feature selection before ridge fitting. It ranks contextual and regime features by lagged reward correlation, keeps at most 20 non-intercept features, and fits ridge on that capped subset.
+
+Validation result:
+
+- Beats the best fixed/static baseline in 3 of 16 scenarios.
+- Beats full market-regime ridge in 8 of 16 scenarios.
+- Beats non-regime contextual ridge in 10 of 16 scenarios.
+- Usually keeps about 19 features, so it is a feature-capped router rather than a truly sparse model.
+
+Keep only these research sleeves:
+
+- A-share Top5 neutral sparse regime
+- Crypto Top10 raw sparse regime
+- HK Top5 raw sparse regime
+
+Do not promote sparse regime routing as a global production router.
+
+Reproduction:
+
+```powershell
+python scripts\run_lingxi_sparse_regime_router_validation.py --out-dir experiments\lingxi_sparse_regime_router_validation_2026_ytd
+```
