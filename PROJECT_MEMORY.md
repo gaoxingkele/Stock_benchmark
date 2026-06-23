@@ -70,6 +70,7 @@ Experiment summaries:
 | `experiments/lingxi_meta_selector_validation/lingxi_meta_selector_validation_summary.csv` | 416 | Validation/OOS meta-selector comparison |
 | `experiments/case_lingxi_context_router_validation_2026_ytd/case_lingxi_context_router_validation_summary.csv` | 112 | Conservative CASE-Lingxi context-router validation |
 | `experiments/case_lingxi_rl_router_validation_2025_2026_ytd/case_lingxi_rl_router_validation_summary.csv` | 128 | Frozen research-only RL router validation |
+| `experiments/case_lingxi_llm_tag_ablation_2026_ytd/case_lingxi_llm_tag_ablation_summary.csv` | 128 | Structured LLM-compatible market-tag ablation |
 
 Final reports:
 
@@ -86,6 +87,7 @@ Final reports:
 - `docs/reports/lingxi_meta_selector_validation.md`
 - `docs/reports/case_lingxi_context_router_validation.md`
 - `docs/reports/case_lingxi_rl_router_validation.md`
+- `docs/reports/case_lingxi_llm_tag_ablation.md`
 
 Core scripts:
 
@@ -96,6 +98,7 @@ Core scripts:
 - `scripts/run_lingxi_meta_selector_validation.py`
 - `scripts/run_case_lingxi_context_router.py`
 - `scripts/run_case_lingxi_rl_router_baseline.py`
+- `scripts/run_case_lingxi_llm_tag_ablation.py`
 
 ## Reproduction Commands
 
@@ -153,3 +156,8 @@ First CASE-Lingxi RL router result:
 
 - Frozen tabular RL router trained on 2023-2024 and tested on 2025-2026 YTD: annualized return wins 4/16, Sharpe wins 4/16, MDD wins 6/16 versus the static production menu.
 - Interpretation: research-only negative control; does not supersede the static menu.
+
+First CASE-Lingxi LLM-compatible tag result:
+
+- Structured market-tag router versus static production menu: annualized return wins 0/16, Sharpe wins 2/16, MDD wins 7/16.
+- Interpretation: market tags are useful as a frozen audit/context interface, but not a production routing signal yet.

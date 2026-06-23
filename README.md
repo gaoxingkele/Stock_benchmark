@@ -40,6 +40,7 @@ Primary documents:
 - Agentic RL survey: `docs/literature/agent_rl_strategy_evolution_survey.md`
 - CASE context-router validation: `docs/reports/case_lingxi_context_router_validation.md`
 - CASE RL-router validation: `docs/reports/case_lingxi_rl_router_validation.md`
+- CASE LLM-tag ablation: `docs/reports/case_lingxi_llm_tag_ablation.md`
 - 31-method registry: `data/ara_method_registry.csv`
 - Project memory: `PROJECT_MEMORY.md`
 - Meta-selector rejection report: `docs/reports/lingxi_meta_selector_validation.md`

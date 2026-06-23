@@ -98,11 +98,11 @@ Result report:
 
 ## Phase 5: LLM Market-Tag Ablation
 
-Status: planned.
+Status: completed first pass.
 
 Implementation target:
 
-`docs/data/llm_market_tags/` or equivalent timestamped evidence directory, plus a runner script if tags become machine-readable.
+`scripts/run_case_lingxi_llm_tag_ablation.py`
 
 Rules:
 
@@ -113,10 +113,14 @@ Rules:
 
 Acceptance criteria:
 
-1. point-in-time tag file;
-2. tag schema;
-3. OOS comparison;
-4. audit notes for leakage risk.
+1. point-in-time tag files generated under `experiments/case_lingxi_llm_tag_ablation_2026_ytd/`;
+2. tag schema `case_lingxi_market_tags_v1`;
+3. 2026 YTD comparison against static menu and conservative context router;
+4. labeled research-only because it wins annualized return 0/16, Sharpe 2/16, and MDD 7/16 versus the static menu.
+
+Result report:
+
+`docs/reports/case_lingxi_llm_tag_ablation.md`
 
 ## Phase 6: Paper Draft
 
@@ -184,6 +188,6 @@ python scripts\run_lingxi_meta_selector_validation.py --out-dir experiments\ling
 New scripts to implement next:
 
 ```text
-scripts/run_case_lingxi_rl_router_baseline.py
-scripts/run_case_lingxi_llm_tag_ablation.py
+ara_artifacts/case_lingxi/
+paper/outline.md
 ```
