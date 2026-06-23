@@ -45,6 +45,7 @@ Primary documents:
 - CASE promotion audit: `docs/reports/case_lingxi_promotion_audit.md`
 - CASE-Lingxi ARA package: `ara_artifacts/case_lingxi/PAPER.md`
 - CASE-Lingxi paper draft: `paper/outline.md`
+- CASE-Lingxi citation map: `paper/citation_map.md`
 - 31-method registry: `data/ara_method_registry.csv`
 - Project memory: `PROJECT_MEMORY.md`
 - Meta-selector rejection report: `docs/reports/lingxi_meta_selector_validation.md`

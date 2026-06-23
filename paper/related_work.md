@@ -2,7 +2,7 @@
 
 ## Quantitative Investment Benchmarks And Platforms
 
-Qlib provides an AI-oriented quantitative investment platform and is the closest infrastructure reference for repeatable factor/model experiments. In this project it is represented by `2020_qlib_yang` in `data/ara_method_registry.csv`.
+Qlib provides an AI-oriented quantitative investment platform and is the closest infrastructure reference for repeatable factor/model experiments [@yang2020qlib]. In this project it is represented by `2020_qlib_yang` in `data/ara_method_registry.csv`.
 
 FinTSB and QuantBench are benchmark-oriented references for financial time-series and quantitative investment evaluation. They motivate CASE-Lingxi's emphasis on reproducible protocols, fixed costs, cross-market testing, and explicit result artifacts.
 
@@ -16,7 +16,7 @@ docs/reports/benchmark_master_table.md
 
 ## Adaptive Financial Prediction
 
-DoubleAdapt is the central prior for incremental stock trend forecasting under distribution shift. It motivates the need for adaptation, but CASE-Lingxi asks a different question: whether strategy-layer adaptation should be promoted after out-of-sample testing.
+DoubleAdapt is the central prior for incremental stock trend forecasting under distribution shift [@zhao2023doubleadapt]. It motivates the need for adaptation, but CASE-Lingxi asks a different question: whether strategy-layer adaptation should be promoted after out-of-sample testing.
 
 Other finance adaptation or routing references in the local 31-method registry include TRA, TCTS, MASTER, HIST, DoubleEnsemble, AlphaForge, AlphaPROBE, and RD-Agent-Quant.
 
@@ -24,7 +24,7 @@ CASE-Lingxi differs from these works by treating failed adaptation as first-clas
 
 ## Time-Series SOTA And Non-Stationarity
 
-The Lingxi SOTA upgrade survey reviewed methods such as DLinear, Non-stationary Transformer, PatchTST, iTransformer, TimeMixer, FEDformer, and time-series foundation models.
+The Lingxi SOTA upgrade survey reviewed methods such as DLinear, Non-stationary Transformer, PatchTST [@nie2023patchtst], iTransformer [@liu2024itransformer], TimeMixer, FEDformer, and time-series foundation models.
 
 The practical result was conservative. Lightweight proxies for MScale, Patch, LinearGuard, and VarAttn did not replace Lingxi. PITNorm was the only first-pass module with broad risk-control value. This supports the paper's theme: method novelty is not enough; promotion requires scenario-level OOS evidence.
 
@@ -38,13 +38,13 @@ experiments/lingxi_sota_upgrade_validation/lingxi_sota_upgrade_validation_summar
 
 ## Agentic Alpha Mining And Research Automation
 
-RD-Agent-Quant, AlphaAgent, CogAlpha, and AlphaPROBE are the closest finance-specific agentic references. They motivate using agents to generate factors, code, retrieval paths, and alpha hypotheses.
+RD-Agent-Quant [@li2025rdagentquant], AlphaAgent [@tang2025alphaagent], CogAlpha, and AlphaPROBE are the closest finance-specific agentic references. They motivate using agents to generate factors, code, retrieval paths, and alpha hypotheses.
 
 CASE-Lingxi adopts the agentic research loop but narrows the deployment claim. Agents may propose candidates and audits, but they do not directly control production trades. This is a deliberate response to the observed instability of adaptive routers in the current benchmark.
 
 ## Reinforcement Learning For Agents
 
-Recent agent RL systems such as Agent Lightning and RAGEN motivate training and diagnosing multi-step agent behavior. Their relevant idea for CASE-Lingxi is trajectory-level optimization:
+Recent agent RL systems such as Agent Lightning [@luo2025agentlightning] and RAGEN [@wang2025ragen] motivate training and diagnosing multi-step agent behavior. Their relevant idea for CASE-Lingxi is trajectory-level optimization:
 
 ```text
 hypothesis -> implementation -> validation -> OOS test -> promotion/rejection
@@ -89,3 +89,12 @@ CASE-Lingxi's novelty is not a new alpha model. Its contribution is a conservati
 4. require OOS promotion gates before production use;
 5. preserve claims, code, and failed paths in an ARA package.
 
+## Citation Status
+
+The current BibTeX file is:
+
+```text
+papers/metadata/references.bib
+```
+
+The first citation pass covers the core infrastructure, adaptation, time-series, and agentic references used directly in the CASE-Lingxi argument. The full 31-method registry still needs a complete citation pass before manuscript submission.

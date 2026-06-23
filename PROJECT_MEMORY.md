@@ -180,8 +180,9 @@ CASE-Lingxi ARA:
 CASE-Lingxi paper draft:
 
 - Draft path: `paper/`
-- Current files: `outline.md`, `abstract.md`, `introduction.md`, `method.md`, `experiments.md`, `related_work.md`, `formulation.md`.
+- Current files: `outline.md`, `abstract.md`, `introduction.md`, `method.md`, `experiments.md`, `related_work.md`, `formulation.md`, `citation_map.md`.
 - The draft intentionally frames routers, RL, and LLM tags as negative or research-only evidence unless they beat the static menu OOS.
+- Core BibTeX entries are in `papers/metadata/references.bib`; full 31-method citation pass is still pending.
 
 CASE-Lingxi Level 2 ARA review:
 
