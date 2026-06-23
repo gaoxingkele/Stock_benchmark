@@ -1,0 +1,18 @@
+column,required,description
+run_id,true,Opaque local run identifier without account or alpha IDs
+run_segment,true,Date or round segment label
+agent_model,true,Agent/model label used for generation
+skill_version,true,Local skill version or commit if publishable
+candidate_count,true,Number of generated candidate expressions
+simulation_success_count,true,Number of candidates with completed simulations
+submission_count,true,Number of submitted candidates
+accepted_count,true,Number of accepted or active candidates
+spectacular_count,true,Number of candidates classified as Spectacular by platform or local rule
+invalid_field_count,true,Number of invalid-field failures
+turnover_fail_count,true,Number of turnover failures
+fitness_fail_count,true,Number of fitness failures
+self_correlation_fail_count,true,Number of self-correlation failures
+other_fail_count,true,Other failures not covered above
+lesson_count,true,Number of lessons distilled into memory
+lesson_reused_count,true,Number of later decisions that reused prior lessons
+notes,false,Sanitized aggregate notes only

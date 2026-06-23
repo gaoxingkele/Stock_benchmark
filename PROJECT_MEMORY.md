@@ -94,7 +94,9 @@ Final reports:
 - `docs/reports/case_lingxi_cost_sensitivity.md`
 - `docs/reports/case_lingxi_capacity_slippage.md`
 - `docs/reports/case_lingxi_completion_audit.md`
+- `docs/reports/wq_alpha_evolution_comparison_plan.md`
 - `ara_artifacts/case_lingxi/PAPER.md`
+- `ara_artifacts/wq_alpha_evolution/PAPER.md`
 - `paper/outline.md`
 - `paper/abstract.md`
 - `paper/introduction.md`
@@ -117,6 +119,7 @@ Core scripts:
 - `scripts/run_case_lingxi_cost_sensitivity.py`
 - `scripts/run_case_lingxi_capacity_slippage.py`
 - `scripts/validate_case_lingxi_bundle.py`
+- `scripts/validate_wq_alpha_evolution_bundle.py`
 
 ## Reproduction Commands
 
@@ -127,6 +130,7 @@ python scripts\run_lingxi_regime_router_validation.py --out-dir experiments\ling
 python scripts\run_lingxi_sparse_regime_router_validation.py --out-dir experiments\lingxi_sparse_regime_router_validation_2026_ytd
 python scripts\run_lingxi_meta_selector_validation.py --out-dir experiments\lingxi_meta_selector_validation
 python scripts\validate_case_lingxi_bundle.py
+python scripts\validate_wq_alpha_evolution_bundle.py
 ```
 
 ## Recovery Checklist
@@ -217,3 +221,31 @@ CASE-Lingxi Level 2 ARA review:
 - Cost sensitivity now exists: `experiments/case_lingxi_cost_sensitivity/case_lingxi_cost_sensitivity_summary.csv`
 - Capacity/slippage stress now exists: `experiments/case_lingxi_capacity_slippage/case_lingxi_capacity_slippage_summary.csv`; no adaptive candidate is promoted under the nonlinear stress grid.
 - Main remaining improvement: optional venue-specific manuscript polish after selecting a target venue/template.
+
+## Active Goal: WQ Alpha Evolution Comparison
+
+The current objective is to complete the comparison-experiment plan for the open-source WorldQuant-style self-evolving factor-mining skill and the existing CASE-Lingxi benchmark.
+
+Current artifact:
+
+- ARA path: `ara_artifacts/wq_alpha_evolution/`
+- Plan report: `docs/reports/wq_alpha_evolution_comparison_plan.md`
+- Current comparison table: `ara_artifacts/wq_alpha_evolution/evidence/current_cross_framework_comparison.csv`
+- Bundle validation command: `python scripts\validate_wq_alpha_evolution_bundle.py`
+
+Current scope:
+
+1. Treat `QuantML-Research/wq-alpha-research` as an external open-source engineering reference for self-evolving alpha discovery.
+2. Build a separate ARA protocol instead of mixing raw WorldQuant outputs into Lingxi.
+3. Compare at the correct layer: alpha-discovery loop efficiency, ARA reproducibility, and CASE-Lingxi strategy-level OOS validation.
+4. Exclude credentials, cookies, alpha IDs, raw private expressions, and raw PnL from the public repository.
+5. Use sanitized aggregate schemas for any future private WorldQuant run.
+
+Current status:
+
+- Independent ARA scaffold exists.
+- Sanitized WQ run schema exists.
+- Public proxy factor-mining schema exists.
+- Cross-framework comparison schema exists.
+- Current layer-aware comparison table exists with 4 framework rows.
+- Empirical private WQ run and public proxy factor-mining run are still future experiments, not yet committed evidence.

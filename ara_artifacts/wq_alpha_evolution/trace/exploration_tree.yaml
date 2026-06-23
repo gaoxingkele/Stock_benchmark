@@ -1,0 +1,44 @@
+nodes:
+  - id: root
+    type: question
+    status: active
+    provenance: user
+    summary: "Can the open-source WorldQuant self-evolving alpha-mining skill be used and compared with CASE-Lingxi?"
+    children:
+      - verify_repository
+      - reject_direct_return_comparison
+      - build_ara_protocol
+      - design_cross_framework_comparison
+
+  - id: verify_repository
+    type: evidence_check
+    status: completed
+    provenance: ai-executed
+    summary: "Public GitHub page for QuantML-Research/wq-alpha-research was reachable on 2026-06-23."
+    evidence:
+      - "ara_artifacts/wq_alpha_evolution/logic/related_work.md"
+
+  - id: reject_direct_return_comparison
+    type: rejected_path
+    status: rejected
+    provenance: ai-suggested
+    summary: "Rejected direct comparison between Spectacular alpha count and Lingxi annualized return because the systems operate at different layers."
+    evidence:
+      - "ara_artifacts/wq_alpha_evolution/logic/solution/constraints.md"
+
+  - id: build_ara_protocol
+    type: method
+    status: completed
+    provenance: ai-executed
+    summary: "Created an ARA protocol that separates private WQ evidence from public proxy evidence."
+    evidence:
+      - "ara_artifacts/wq_alpha_evolution/PAPER.md"
+      - "ara_artifacts/wq_alpha_evolution/evidence/README.md"
+
+  - id: design_cross_framework_comparison
+    type: experiment_plan
+    status: completed
+    provenance: ai-executed
+    summary: "Defined layer-aware metrics for comparing WQ-style skill, ARA-WQ protocol, and CASE-Lingxi."
+    evidence:
+      - "docs/reports/wq_alpha_evolution_comparison_plan.md"

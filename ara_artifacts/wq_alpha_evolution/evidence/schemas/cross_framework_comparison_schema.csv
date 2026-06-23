@@ -1,0 +1,13 @@
+column,required,description
+framework,true,WQ Skill ARA-WQ CASE-Lingxi or variant name
+layer,true,alpha_discovery strategy_routing ara_audit hybrid
+evidence_type,true,private_sanitized public_proxy local_backtest protocol
+loop_autonomy,true,none assisted autonomous
+reproducibility_level,true,closed_platform partial public_full
+failure_memory,true,none weak structured
+correlation_control,true,none posthoc pretrade_or_prepromotion
+oos_gate,true,none weak frozen_strong
+production_status,true,production research_only protocol_only rejected
+primary_metric,true,Main metric for this layer
+current_evidence,true,Path or status proving current evidence
+next_required_evidence,false,Missing evidence needed for promotion

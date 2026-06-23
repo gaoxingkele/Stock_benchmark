@@ -1,0 +1,20 @@
+column,required,description
+run_id,true,Public proxy run identifier
+market,true,Market label such as cn_a_share us_large_cap hk_large_cap crypto_major
+train_period,true,Training or discovery period
+test_period,true,Frozen out-of-sample period
+generator,true,Factor generator or agent variant
+candidate_count,true,Number of generated factors
+valid_factor_count,true,Number of factors passing syntax/data checks
+promoted_factor_count,true,Number of factors passing promotion gates
+mean_ic,true,Mean IC in OOS period
+icir,true,IC information ratio in OOS period
+rank_ic,true,Mean rank IC in OOS period
+rank_icir,true,Rank IC information ratio in OOS period
+turnover,true,Average factor turnover
+cost_bps,true,Assumed one-way cost in basis points
+long_short_return,true,OOS long-short return
+max_drawdown,true,OOS maximum drawdown
+max_prior_factor_corr,true,Maximum correlation to previously promoted factors
+promotion_status,true,promoted research_only rejected
+notes,false,Public notes
