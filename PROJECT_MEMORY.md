@@ -89,6 +89,11 @@ Final reports:
 - `docs/reports/case_lingxi_rl_router_validation.md`
 - `docs/reports/case_lingxi_llm_tag_ablation.md`
 - `ara_artifacts/case_lingxi/PAPER.md`
+- `paper/outline.md`
+- `paper/abstract.md`
+- `paper/introduction.md`
+- `paper/method.md`
+- `paper/experiments.md`
 
 Core scripts:
 
@@ -168,3 +173,9 @@ CASE-Lingxi ARA:
 - Artifact path: `ara_artifacts/case_lingxi/`
 - Level 1 structural validation: PASS with no warnings on 2026-06-23.
 - Validation command: `python C:/Users/xmupt/.codex/skills/ara-paper/scripts/validate_ara.py ara_artifacts/case_lingxi`
+
+CASE-Lingxi paper draft:
+
+- Draft path: `paper/`
+- Current files: `outline.md`, `abstract.md`, `introduction.md`, `method.md`, `experiments.md`.
+- The draft intentionally frames routers, RL, and LLM tags as negative or research-only evidence unless they beat the static menu OOS.

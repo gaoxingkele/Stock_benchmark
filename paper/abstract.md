@@ -1,0 +1,8 @@
+# Abstract
+
+Financial markets are non-stationary, making adaptation attractive but also prone to overfitting. We present CASE-Lingxi, a conservative agentic strategy-evolution framework that separates alpha prediction, strategy routing, and research-layer agent evolution. Rather than allowing agents or reinforcement learning policies to directly emit trades, CASE-Lingxi uses agents to propose, audit, and document candidate strategy modules, while a conservative promotion gate decides whether a candidate can enter production based on frozen out-of-sample evidence.
+
+Across China A-share, US large-cap, HK large-cap, and major cryptocurrency markets, the current evidence supports a scenario-specific Lingxi Adaptive Suite rather than a universal dynamic router. A conservative context router improves maximum drawdown in 9/16 scenarios but wins annualized return and Sharpe in only 3/16 scenarios versus the static production menu. A frozen tabular RL router trained on 2023-2024 and tested on 2025-2026 YTD wins annualized return and Sharpe in only 4/16 scenarios. A structured LLM-compatible market-tag router wins annualized return in 0/16 and Sharpe in 2/16 scenarios. A validation-only Sharpe selector also fails out of sample, winning 2/16 in 2025, 0/16 in 2026 YTD, and 1/16 in the combined window.
+
+These results motivate a central principle: in non-stationary financial markets, agentic systems are most useful at the research-evolution layer, where they generate hypotheses, audits, and structured context, but production deployment should remain governed by conservative out-of-sample promotion gates.
+
