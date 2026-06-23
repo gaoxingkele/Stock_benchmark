@@ -115,6 +115,7 @@ Core scripts:
 - `scripts/run_case_lingxi_promotion_audit.py`
 - `scripts/run_case_lingxi_cost_sensitivity.py`
 - `scripts/run_case_lingxi_capacity_slippage.py`
+- `scripts/validate_case_lingxi_bundle.py`
 
 ## Reproduction Commands
 
@@ -124,6 +125,7 @@ python scripts\run_lingxi_adaptive_router_validation.py --source-dir experiments
 python scripts\run_lingxi_regime_router_validation.py --out-dir experiments\lingxi_regime_router_validation_2026_ytd
 python scripts\run_lingxi_sparse_regime_router_validation.py --out-dir experiments\lingxi_sparse_regime_router_validation_2026_ytd
 python scripts\run_lingxi_meta_selector_validation.py --out-dir experiments\lingxi_meta_selector_validation
+python scripts\validate_case_lingxi_bundle.py
 ```
 
 ## Recovery Checklist
@@ -183,6 +185,7 @@ CASE-Lingxi ARA:
 - Artifact path: `ara_artifacts/case_lingxi/`
 - Level 1 structural validation: PASS with no warnings on 2026-06-23.
 - Validation command: `python C:/Users/xmupt/.codex/skills/ara-paper/scripts/validate_ara.py ara_artifacts/case_lingxi`
+- Bundle validation command: `python scripts\validate_case_lingxi_bundle.py`
 
 CASE-Lingxi paper draft:
 

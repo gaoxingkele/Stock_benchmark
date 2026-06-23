@@ -6,7 +6,7 @@ This is the actionable work plan for turning the current Lingxi benchmark into a
 
 ## Phase 1: Baseline Lock
 
-Status: in progress.
+Status: completed.
 
 Deliverables:
 
@@ -22,7 +22,7 @@ Acceptance criteria:
 
 ## Phase 2: Literature And Theory Lock
 
-Status: in progress.
+Status: completed.
 
 Deliverables:
 
@@ -35,6 +35,7 @@ Acceptance criteria:
 1. Agent RL works are mapped to CASE modules.
 2. LLMs are scoped as research/context agents, not direct traders.
 3. The validation echo trap is defined as a paper-level contribution.
+4. `papers/metadata/references.bib` has 46 validated entries and 31/31 finance-registry coverage.
 
 ## Phase 3: Conservative Router Experiment
 
@@ -124,7 +125,7 @@ Result report:
 
 ## Phase 6: Paper Draft
 
-Status: planned.
+Status: completed draft.
 
 Deliverables:
 
@@ -140,10 +141,11 @@ Acceptance criteria:
 2. every method claim links to registry or literature notes;
 3. failed routes are included as negative evidence;
 4. production claims are narrower than research claims.
+5. paper citations resolve against `papers/metadata/references.bib`.
 
 ## Phase 7: ARA Upgrade
 
-Status: completed Level 1.
+Status: completed Level 1 and refreshed Level 2.
 
 Target:
 
@@ -184,21 +186,59 @@ python C:/Users/xmupt/.codex/skills/ara-paper/scripts/validate_ara.py ara_artifa
 ARA Level 1 structural check: PASS
 ```
 
-Next ARA action:
-
-Run a Level 2 semantic rigor review after the paper draft is created.
-
-## Current Next Command Targets
-
-```powershell
-python scripts\run_lingxi_sota_upgrade_validation.py --out-dir experiments\lingxi_sota_upgrade_validation
-python scripts\run_lingxi_pitnorm_tuned_gate_validation.py --test-end 2026-06-18 --out-dir experiments\lingxi_pitnorm_tuned_gate_validation_2026_ytd
-python scripts\run_lingxi_meta_selector_validation.py --out-dir experiments\lingxi_meta_selector_validation
-```
-
-New scripts to implement next:
+Current Level 2 result:
 
 ```text
-ara_artifacts/case_lingxi/
-paper/outline.md
+ara_artifacts/case_lingxi/level2_report.json
+overall_grade=Accept
+mean_score=4.0
 ```
+
+## Phase 8: Statistical And Trading-Realism Audits
+
+Status: completed first pass.
+
+Deliverables:
+
+1. `docs/reports/case_lingxi_promotion_audit.md`
+2. `docs/reports/case_lingxi_cost_sensitivity.md`
+3. `docs/reports/case_lingxi_capacity_slippage.md`
+
+Acceptance criteria:
+
+1. annualized-return, Sharpe, and MDD paired bootstrap intervals are computed for adaptive candidates;
+2. linear cost sensitivity covers 0, 5, 10, 20, and 50 bps;
+3. nonlinear capacity/slippage stress covers 0.5-10x AUM and 0-20 impact bps;
+4. no adaptive candidate is promoted unless it passes the numeric promotion gate.
+
+Current result:
+
+1. no adaptive candidate has a positive lower-bound bootstrap CI win for annualized return, Sharpe, or MDD;
+2. no adaptive candidate passes the production gate under linear cost sensitivity;
+3. no adaptive candidate passes the production gate under nonlinear capacity/slippage stress.
+
+## Phase 9: Bundle Validation
+
+Status: completed.
+
+Validation command:
+
+```powershell
+python scripts\validate_case_lingxi_bundle.py
+```
+
+The bundle validator checks:
+
+1. expected row counts for CASE-Lingxi summary/detail CSV files;
+2. 31/31 citation coverage;
+3. BibTeX hygiene;
+4. ARA Level 1 structure.
+
+## Remaining Future Work
+
+These are not blockers for the current CASE-Lingxi bundle:
+
+1. choose a target venue/template and polish manuscript structure accordingly;
+2. optionally add trace provenance timestamps for full research-process reconstruction;
+3. optionally run a future frozen timestamped LLM-debate tag experiment;
+4. optionally calibrate capacity with real ADV/liquidity data if live-trading readiness becomes a claim.

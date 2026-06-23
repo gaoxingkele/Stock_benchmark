@@ -145,3 +145,13 @@ These branches are included in the exploration trace because they shaped the fin
   - no live timestamped LLM-debate tag experiment yet
   - no calibrated real-market ADV/liquidity capacity model
   - trace provenance/timestamps are not fully reconstructed
+
+## Bundle Validation
+
+- Script: `scripts/validate_case_lingxi_bundle.py`
+- Checks:
+  - CASE-Lingxi summary/detail CSV row counts
+  - citation coverage validation
+  - BibTeX hygiene validation
+  - ARA Level 1 structural validation
+- Current result: `CASE_LINGXI_BUNDLE_VALIDATION_PASS`
