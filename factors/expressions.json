@@ -1,0 +1,89 @@
+{
+  "project": "SEMAS China A-share Alpha Factors",
+  "generated_at": "2026-07-07",
+  "universe": "CSI300",
+  "data_range": {
+    "start": "2021-06-01T00:00:00",
+    "end": "2026-05-25T00:00:00"
+  },
+  "combined_signals": [
+    "combined_5d",
+    "combined_20d",
+    "combined_10d"
+  ],
+  "performance_summary": {
+    "5d_library": {
+      "test_sharpe": 2.762927201399869,
+      "test_cost_adjusted_return": 0.32466024145329025,
+      "description": "Promoted in iteration 12; multi-horizon evolution with greedy correlation filtering."
+    },
+    "20d_library": {
+      "20d_hold_sharpe": 1.977425,
+      "20d_hold_cost_adjusted_return": 0.607828,
+      "description": "Promoted in iteration 22; 20-day forward evolution with realistic 20-day hold backtest."
+    },
+    "10d_library": {
+      "description": "Temporary library from a single 10-day evolution run; not promoted via hold backtest."
+    }
+  },
+  "libraries": {
+    "5d": {
+      "source_file": "live_library.csv",
+      "factor_map": {
+        "factor_57": "5d_factor_57",
+        "factor_22": "5d_factor_22",
+        "iter12_factor_26": "5d_iter12_factor_26",
+        "iter12_factor_8": "5d_iter12_factor_8",
+        "iter12_factor_13": "5d_iter12_factor_13",
+        "factor_61": "5d_factor_61",
+        "factor_17": "5d_factor_17",
+        "factor_27": "5d_factor_27",
+        "factor_29": "5d_factor_29",
+        "factor_12": "5d_factor_12"
+      }
+    },
+    "20d": {
+      "source_file": "live_library_20d.csv",
+      "factor_map": {
+        "high_zscore_20": "20d_high_zscore_20",
+        "factor_1": "20d_factor_1"
+      }
+    },
+    "10d": {
+      "source_file": "cleaned_library.csv",
+      "factor_map": {
+        "factor_12": "10d_factor_12",
+        "factor_5": "10d_factor_5",
+        "factor_16": "10d_factor_16",
+        "factor_23": "10d_factor_23"
+      }
+    }
+  },
+  "expressions": {
+    "5d_factor_57": "cs_zscore(div(sub(greater(eps, neg(0.033)), sub(ocfps, turnover_rate)), winsorize(total_mv)))",
+    "5d_factor_22": "cs_rank(ts_zscore(ts_argmin(log(pb), 3), 60))",
+    "5d_iter12_factor_26": "if_else(roe_dt, mul(ts_max(winsorize(eps), 3), neg(0.639)), mul(add(mul(sign(ts_mean(ts_corr(grossprofit_margin, circ_mv, 5), 10)), 0.552), net_mf_amount), 1.437))",
+    "5d_iter12_factor_8": "ts_zscore(netprofit_yoy, 3)",
+    "5d_iter12_factor_13": "ts_mean(net_elg_amount, 3)",
+    "5d_factor_61": "if_else(ts_min(if_else(less(0.917, close), less(vwap, net_mf_amount), if_else(0.982, 0.224, hk_vol)), 3), neg(if_else(-0.618, sign(volume), low)), ts_mean(if_else(if_else(grossprofit_margin, net_elg_amount, 0.312), -0.762, ts_rank(open, 20)), 10))",
+    "5d_factor_17": "cs_zscore(ts_zscore(high, 20))",
+    "5d_factor_27": "sign(ts_shift(ts_ema(ts_pct_change(grossprofit_margin, 20), 5), 60))",
+    "5d_factor_29": "div(0.745, cs_rank(debt_to_assets))",
+    "5d_factor_12": "cs_zscore(neg(ts_rank(if_else(neg(0.423), neg(0.806), volume), 10)))",
+    "20d_high_zscore_20": "cs_rank(ts_zscore(high, 20))",
+    "20d_factor_1": "net_mf_amount",
+    "10d_factor_12": "ts_mean(ts_skew(add(ts_skew(pb, 5), if_else(-0.375, hk_vol, 0.301)), 3), 20)",
+    "10d_factor_5": "add(net_mf_amount, ts_argmin(if_positive(-0.977, div(0.425, return)), 5))",
+    "10d_factor_16": "ts_delta(net_mf_amount, 60)",
+    "10d_factor_23": "ts_skew(mul(sign(ts_kurt(ts_pct_change(ts_shift(roe, 5), 20), 20)), 1.356), 60)"
+  },
+  "config_snippets": {
+    "forward_period_default": 1,
+    "forward_period_20d": 20,
+    "transaction_cost": 0.001,
+    "population_size": 30,
+    "max_generations": 8,
+    "top_n": 10,
+    "max_pairwise_corr": 0.4
+  }
+}

@@ -1,0 +1,41 @@
+# Hyper-parameters used to discover the exported alpha factors.
+
+universe: csi300
+data_source: tushare
+cache_dir: china_a_share_alpha_output/tushare_backtest/tushare_cache
+
+# In-sample / out-of-sample split
+train_end: "2023-12-31"
+val_start: "2024-01-01"
+val_end: "2024-12-31"
+test_start: "2025-01-01"
+test_end: "2026-05-25"
+
+# Evolution parameters
+population_size: 30
+max_generations: 8
+patience: 3
+elite_fraction: 0.2
+crossover_fraction: 0.3
+leaderboard_size: 40
+threshold: 0.005
+
+# Forward horizons
+forward_period_5d: 5
+forward_period_10d: 10
+forward_period_20d: 20
+
+# Cost and combination
+transaction_cost: 0.001
+combination_top_n: 10
+max_pairwise_corr: 0.4
+weight_method: equal
+smooth_span: 10
+
+# Cleaning thresholds
+min_train_ic: 0.001
+min_test_ic: 0.001
+min_test_sharpe: 0.0
+max_turnover: 0.6
+max_nan_frac: 0.5
+min_daily_coverage: 0.5
